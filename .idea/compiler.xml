@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="stack-buster-app" target="1.5" />
+      <module name="stack-buster-app" target="9" />
     </bytecodeTargetLevel>
   </component>
 </project>
