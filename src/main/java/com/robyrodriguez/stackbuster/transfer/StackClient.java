@@ -1,11 +1,9 @@
 package com.robyrodriguez.stackbuster.transfer;
 
 import org.eclipse.jetty.client.HttpClient;
-import org.eclipse.jetty.client.HttpProxy;
+import org.eclipse.jetty.client.Socks4Proxy;
 import org.eclipse.jetty.client.ProxyConfiguration;
 import org.eclipse.jetty.client.api.ContentResponse;
-import org.eclipse.jetty.client.api.Request;
-import org.eclipse.jetty.http.HttpField;
 import org.eclipse.jetty.http.HttpHeader;
 import org.eclipse.jetty.util.ssl.SslContextFactory;
 import org.eclipse.jetty.util.log.Log;
@@ -27,6 +25,11 @@ public class StackClient {
         SslContextFactory sslContextFactory = new SslContextFactory();
         // create HTTP client
         httpClient = new HttpClient(sslContextFactory);
+        // configure SOCKS proxy
+        ProxyConfiguration proxyConfig = httpClient.getProxyConfiguration();
+        Socks4Proxy proxy = new Socks4Proxy("localhost", 9050);
+        // add proxy to configuration
+        proxyConfig.getProxies().add(proxy);
         // start HTTP client
         httpClient.start();
     }
