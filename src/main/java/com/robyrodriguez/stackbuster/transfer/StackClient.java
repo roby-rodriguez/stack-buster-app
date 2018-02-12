@@ -10,6 +10,7 @@ import org.eclipse.jetty.util.log.Log;
 import org.eclipse.jetty.util.log.Logger;
 
 import com.robyrodriguez.stackbuster.utils.StringUtil;
+import com.robyrodriguez.stackbuster.constants.Agent;
 
 /**
  * Stack-specific HTTP client
@@ -22,7 +23,7 @@ public class StackClient {
 
     public StackClient() throws Exception {
         // configure SSL
-        SslContextFactory sslContextFactory = new SslContextFactory();
+        SslContextFactory sslContextFactory = new SslContextFactory(true);
         // create HTTP client
         httpClient = new HttpClient(sslContextFactory);
         // configure SOCKS proxy
@@ -35,10 +36,16 @@ public class StackClient {
     }
 
     public boolean incrementCounter(String url) throws Exception {
+        String agent = Agent.randomAgent();
         ContentResponse response = httpClient
                 .newRequest(url)
-                //.agent("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0")
-                //.header("upgrade-insecure-requests", "1")
+                .agent(agent)
+                .header("accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
+                .header("accept-encoding", "gzip, deflate, br")
+                .header("accept-language", "en-US,en;q=0.5")
+                .header("connection", "keep-alive")
+                .header("host", "stackoverflow.com")
+                .header("upgrade-insecure-requests", "1")
                 .send()
                 ;
 
@@ -47,14 +54,25 @@ public class StackClient {
 
             response = httpClient
                     .newRequest("https://stackoverflow.com" + ivcPath + "?_=" + System.currentTimeMillis())
-                    .agent("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0")
-                    .header(HttpHeader.REFERER, "https://stackoverflow.com/")
+                    .agent(agent)
+                    .header("accept", "*/*")
+                    .header("accept-encoding", "gzip, deflate, br")
+                    .header("accept-language", "en-US,en;q=0.5")
+                    .header("connection", "keep-alive")
+                    .header("host", "stackoverflow.com")
+                    .header(HttpHeader.REFERER, "https://stackoverflow.com/questions/42920606/spring-value-empty-list-as-default")
                     .send()
             ;
             return isSuccess(response);
-
         }
         return false;
+    }
+
+    public void makeSharedLink(String questionId, String userId) throws Exception {
+        ContentResponse response = httpClient
+                .newRequest("https://stackoverflow.com/gps/event")
+                .send()
+                ;
     }
 
     private boolean isSuccess(ContentResponse response) {

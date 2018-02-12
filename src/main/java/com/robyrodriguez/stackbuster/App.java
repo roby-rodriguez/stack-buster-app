@@ -14,7 +14,7 @@ public class App {
 
         while (true) {
             int kill = Runtime.getRuntime().exec("sudo pkill tor").waitFor(),
-                    start = Runtime.getRuntime().exec("sudo service tor start").waitFor();
+                start = Runtime.getRuntime().exec("sudo service tor start").waitFor();
 
             if (kill == 0 && start == 0) {
                 boolean success = client.incrementCounter("https://stackoverflow.com/q/25649725/5173530");
