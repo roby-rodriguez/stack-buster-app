@@ -9,8 +9,10 @@
   <properties>
     <jettyVersion>9.2.3.v20140905</jettyVersion>
     <jerseyVersion>2.25.1</jerseyVersion>
-    <maven.compiler.source>1.9</maven.compiler.source>
-    <maven.compiler.target>1.9</maven.compiler.target>
+    <springBootVersion>1.5.10.RELEASE</springBootVersion>
+    <apacheHttpClientVersion>4.5.5</apacheHttpClientVersion>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
   <repositories>
     <repository>
@@ -35,6 +37,23 @@
       <version>${jerseyVersion}</version>
     </dependency>
     <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <version>${springBootVersion}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <version>${springBootVersion}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>${apacheHttpClientVersion}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
@@ -44,43 +63,9 @@
   <build>
     <plugins>
       <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.7.0</version>
-        <configuration>
-          <source>9</source>
-          <target>9</target>
-          <compilerArgs>
-            <arg>--add-modules</arg>
-            <arg>jdk.incubator.httpclient</arg>
-            <arg>--add-modules</arg>
-            <arg>java.xml.bind</arg>
-          </compilerArgs>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>exec-maven-plugin</artifactId>
-        <version>1.6.0</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>java</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <mainClass>com.robyrodriguez.stackbuster.App</mainClass>
-          <executable>java</executable>
-          <arguments>
-            <arg>--add-modules</arg>
-            <arg>jdk.incubator.httpclient</arg>
-            <arg>--add-modules</arg>
-            <arg>java.xml.bind</arg>
-            <argument>-classpath</argument>
-            <classpath />
-            <argument>com.robyrodriguez.stackbuster.App</argument>
-          </arguments>
-        </configuration>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>${springBootVersion}</version>
       </plugin>
     </plugins>
   </build>
