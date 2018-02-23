@@ -1,6 +1,6 @@
 package com.robyrodriguez.stackbuster.client;
 
-import com.robyrodriguez.stackbuster.transfer.data.RequestAnalyzerDO;
+import com.robyrodriguez.stackbuster.transfer.RequestAnalyzerDO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;

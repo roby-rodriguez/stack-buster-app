@@ -25,4 +25,16 @@ public final class StringUtil {
         }
         return result;
     }
+
+    /**
+     * Checks if URL is a shared question link by some user
+     * i.e. format `https://stackoverflow.com/q/{qid}/{uid}`
+     *
+     * @param url shared question link
+     * @return true if valid format
+     */
+    public static boolean isSharedQuestionLink(String url) {
+        // TODO implement
+        return false;
+    }
 }

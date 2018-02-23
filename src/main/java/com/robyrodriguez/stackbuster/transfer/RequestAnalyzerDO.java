@@ -1,4 +1,4 @@
-package com.robyrodriguez.stackbuster.transfer.data;
+package com.robyrodriguez.stackbuster.transfer;
 
 import java.util.Map;
 import java.io.Serializable;
@@ -34,5 +34,4 @@ public class RequestAnalyzerDO implements Serializable {
         this.headers.forEach((k, v) -> sb.append(k).append(": ").append(v).append(", "));
         return "RequestAnalyzerDO{" + "headers: {" + sb.toString() + "}, ip: '" + ip + '\'' + '}';
     }
-
 }
