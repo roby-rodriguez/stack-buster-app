@@ -1,0 +1,10 @@
+# Logs
+*.log
+*.csv
+*.dat
+*.out
+*.zip
+*.gz
+
+# User specific configurations
+src/main/resources/config.properties
