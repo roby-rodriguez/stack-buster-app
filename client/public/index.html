@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>StackBuster client</title>
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+    <link href="//fonts.googleapis.com/css?family=Roboto" rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="//cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
     <link type="text/css" rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="favicon.ico" />
 </head>
 <body>
     <div id="firebaseui-header-container" class="sb-header">
-        <h1>StackBuster</h1>
+        <img class="sb-logo" src="sb_logo.PNG"><br />
     </div>
     <div id="firebaseui-auth-container"></div>
     <div id="loader" class="spinner">
@@ -18,23 +19,50 @@
         <span class="spinner-title">Loading...</span>
     </div>
     <div id="sb-input-container" style="display: none">
-        <input id="sb-input-text" placeholder="Enter question link..." class="w3-input w3-animate-input" type="text">
-        <div class="sb-select-badge-container">
-            <label>Badge type</label>
-            <select id="sb-badge-select" class="sb-select-badge">
-                <option value="POPULAR_QUESTION" selected>popular question</option>
-                <option value="NOTABLE_QUESTION">notable question</option>
-                <option value="FAMOUS_QUESTION">famous question</option>
-                <option value="ANNOUNCER">announcer</option>
-                <option value="BOOSTER">booster</option>
-                <option value="PUBLICIST">publicist</option>
-            </select>
-        </div>
-        <button class="w3-btn w3-white w3-border w3-round-large sb-btn-add" onclick="enqueue()">Enqueue</button>
-        <div class="alert" style="display: none">
-            <span class="close-btn" onclick="this.parentElement.style.display='none';">&times;</span>
-            <strong>Error</strong> Something went wrong.
-        </div>
+        <input id="tab1" class="sb-tab-input" type="radio" name="tabs" checked>
+        <label for="tab1">Enqueue</label>
+
+        <input id="tab2" class="sb-tab-input" type="radio" name="tabs">
+        <label for="tab2">Status</label>
+
+        <input id="tab3" class="sb-tab-input" type="radio" name="tabs">
+        <label for="tab3">API key</label>
+
+        <section id="content1">
+            <input id="sb-input-text" placeholder="Enter question link..." class="w3-input w3-animate-input" type="text">
+            <div class="sb-select-badge-container">
+                <label>Badge type</label>
+                <select id="sb-badge-select" class="sb-select-badge">
+                    <option value="POPULAR_QUESTION" selected>popular question</option>
+                    <option value="NOTABLE_QUESTION">notable question</option>
+                    <option value="FAMOUS_QUESTION">famous question</option>
+                    <option value="ANNOUNCER">announcer</option>
+                    <option value="BOOSTER">booster</option>
+                    <option value="PUBLICIST">publicist</option>
+                </select>
+            </div>
+            <button class="w3-btn w3-white w3-border w3-round-large sb-btn-add" onclick="enqueue()">Enqueue</button>
+            <div class="alert" style="display: none">
+                <span class="close-btn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <strong>Error</strong> Something went wrong. (TODO)
+            </div>
+        </section>
+        <section id="content2">
+            <p>
+                Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
+            </p>
+            <p>
+                Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
+            </p>
+        </section>
+        <section id="content3">
+            <p>
+                TODO
+            </p>
+            <p>
+                There is no API key for this user. You can request one at <a href="mailto:service@stack-buster.com">service@stack-buster.com</a>
+            </p>
+        </section>
     </div>
     <script src="//gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
     <script src="//gstatic.com/firebasejs/4.13.0/firebase-auth.js"></script>
@@ -70,6 +98,7 @@
                         welcomeText = document.createTextNode('Welcome, ' + window.stackBusterUser.displayName + '!');
 
                     avatar.src = window.stackBusterUser.photoURL;
+                    avatar.classList.add('sb-avatar');
                     header.appendChild(avatar);
                     welcome.appendChild(welcomeText);
                     header.appendChild(welcome);
