@@ -1,0 +1,142 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#sb-input-container {
+  text-align: center;
+}
+
+.w3-input {
+  padding: 8px;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  width: 135px;
+}
+.w3-animate-input {
+  transition: width 0.4s ease-in-out;
+}
+.w3-animate-input:focus {
+  width: 100% !important;
+}
+
+.w3-btn {
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  margin-bottom: 10px;
+}
+.w3-btn:hover {
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.19);
+}
+.w3-white, .w3-hover-white:hover {
+  color: #000!important;
+  background-color: #fff!important;
+}
+.w3-border {
+  border: 1px solid #ccc!important;
+}
+.w3-round-large {
+  border-radius: 8px;
+}
+
+.sb-header {
+  text-align: center;
+}
+.sb-header img {
+  width: 37px;
+  border-radius: 50%;
+}
+.sb-btn-add {
+  margin-top: 5px;
+}
+.sb-select-badge-container {
+  margin: 10px 0 5px 0;
+}
+.sb-select-badge {
+  display: inline-block;
+  height: 30px;
+  width: 150px;
+  outline: none;
+  color: #74646e;
+  border: 1px solid #C8BFC4;
+  border-radius: 4px;
+  box-shadow: inset 1px 1px 2px #ddd8dc;
+  background: #fff;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+.close-btn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close-btn:hover {
+  color: black;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  margin: 40px auto;
+}
+
+.spinner-title {
+  position: relative;
+  top: 45px;
+  left: -8px;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #bde;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% {
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+}

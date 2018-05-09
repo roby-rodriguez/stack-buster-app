@@ -7,7 +7,13 @@
 *.gz
 
 # User specific configurations
-src/main/resources/config.properties
+scheduler/src/main/resources/config.properties
 
 # User specific API-keys
-src/main/resources/serviceAccountKey.json
+scheduler/src/main/resources/serviceAccountKey.json
+
+# Targets & generated sources
+scheduler/target
+
+# Dependencies
+functions/functions/node_modules

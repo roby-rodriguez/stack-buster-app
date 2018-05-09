@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StackBuster client</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+    <link type="text/css" rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div id="firebaseui-header-container" class="sb-header">
+        <h1>StackBuster</h1>
+    </div>
+    <div id="firebaseui-auth-container"></div>
+    <div id="loader" class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+        <span class="spinner-title">Loading...</span>
+    </div>
+    <div id="sb-input-container" style="display: none">
+        <input id="sb-input-text" placeholder="Enter question link..." class="w3-input w3-animate-input" type="text">
+        <div class="sb-select-badge-container">
+            <label>Badge type</label>
+            <select id="sb-badge-select" class="sb-select-badge">
+                <option value="POPULAR_QUESTION" selected>popular question</option>
+                <option value="NOTABLE_QUESTION">notable question</option>
+                <option value="FAMOUS_QUESTION">famous question</option>
+                <option value="ANNOUNCER">announcer</option>
+                <option value="BOOSTER">booster</option>
+                <option value="PUBLICIST">publicist</option>
+            </select>
+        </div>
+        <button class="w3-btn w3-white w3-border w3-round-large sb-btn-add" onclick="enqueue()">Enqueue</button>
+        <div class="alert" style="display: none">
+            <span class="close-btn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <strong>Error</strong> Something went wrong.
+        </div>
+    </div>
+    <script src="//gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
+    <script src="//gstatic.com/firebasejs/4.13.0/firebase-auth.js"></script>
+    <script src="//gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
+    <script src="//cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <script>
+        var config = {
+            apiKey: "AIzaSyCdHDx5jQ0v856rnvYaC5AHPsdhKRu27uU",
+            authDomain: "stack-buster.firebaseapp.com",
+            databaseURL: "https://stack-buster.firebaseio.com",
+            projectId: "stack-buster",
+            storageBucket: "stack-buster.appspot.com",
+            messagingSenderId: "575911053973"
+        };
+        firebase.initializeApp(config);
+
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        ui.start('#firebaseui-auth-container', {
+            callbacks: {
+                signInSuccess: function(currentUser, credential, redirectUrl) {
+                    document.getElementById('sb-input-container').style.display = 'block';
+                    window.stackBusterUser = {
+                        uid: currentUser.uid,
+                        displayName: currentUser.displayName,
+                        email: currentUser.email,
+                        photoURL: currentUser.photoURL,
+                        signInMethod: credential.signInMethod
+                    };
+
+                    var header = document.getElementById('firebaseui-header-container'),
+                        avatar = document.createElement('img'),
+                        welcome = document.createElement('H3'),
+                        welcomeText = document.createTextNode('Welcome, ' + window.stackBusterUser.displayName + '!');
+
+                    avatar.src = window.stackBusterUser.photoURL;
+                    header.appendChild(avatar);
+                    welcome.appendChild(welcomeText);
+                    header.appendChild(welcome);
+                    return false
+                },
+                signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+                    // FIXME for some reason this doesn't get called
+                    return true;
+                },
+                uiShown: function() {
+                    // The widget is rendered.
+                    // Hide the loader.
+                    document.getElementById('loader').style.display = 'none';
+                }
+            },
+            // signInSuccessUrl: '',
+            signInFlow: 'popup',
+            signInOptions: [
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID
+            ]
+        });
+
+        function addQuestion(qid, uid, badgeType) {
+            var question = {};
+            if (uid) question.uid = uid;
+            question.badgeType = badgeType;
+            question.user_id = window.stackBusterUser.uid;
+            firebase.database()
+                .ref('questions/' + qid)
+                .set(question)
+                .then(function () {
+                    console.log('done')
+                })
+                .catch(function (error) {
+                    console.log(error)
+                })
+            ;
+        }
+
+        function enqueue() {
+            var questionLink = document.getElementById('sb-input-text').value,
+                badgeType = document.getElementById('sb-badge-select').value;
+
+            if (questionLink) {
+                var m, qid, uid;
+                var qRegex = /questions\/(\d+)/,
+                    qLinkRegex = /q\/(\d+)\/(\d+)/,
+                    qLinkRegexShort = /q\/(\d+)/;
+
+                if ((m = questionLink.match(qRegex)) && m.length === 2) {
+                    qid = m[1]
+                } else if ((m = questionLink.match(qLinkRegex)) && m.length === 3) {
+                    qid = m[1];
+                    uid = m[2]
+                } else if ((m = questionLink.match(qLinkRegexShort)) && m.length === 2) {
+                    qid = m[1]
+                }
+
+                addQuestion(qid, uid, badgeType)
+            }
+        }
+    </script>
+</body>
+</html>
