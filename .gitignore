@@ -8,3 +8,6 @@
 
 # User specific configurations
 src/main/resources/config.properties
+
+# User specific API-keys
+src/main/resources/serviceAccountKey.json

@@ -1,6 +1,9 @@
 package com.robyrodriguez.stackbuster.client;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.robyrodriguez.stackbuster.api.StackApi;
 import com.robyrodriguez.stackbuster.constants.Agent;
+import com.robyrodriguez.stackbuster.transfer.RequestAnalyzerDO;
 import com.robyrodriguez.stackbuster.utils.StringUtil;
 import org.eclipse.jetty.client.HttpClient;
 import org.eclipse.jetty.client.ProxyConfiguration;
@@ -8,8 +11,6 @@ import org.eclipse.jetty.client.Socks4Proxy;
 import org.eclipse.jetty.client.api.ContentResponse;
 import org.eclipse.jetty.http.HttpHeader;
 import org.eclipse.jetty.util.ssl.SslContextFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -19,9 +20,7 @@ import javax.annotation.PreDestroy;
  * Stack-specific HTTP client
  */
 @Component
-public class StackClient {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(StackClient.class);
+public class StackClient extends AbstractHttpClient {
 
     private HttpClient httpClient;
 
@@ -54,14 +53,17 @@ public class StackClient {
     /**
      * Increments question page views counter
      *
-     * @param url question link
+     * @param qid question id
+     * @param uid stack user id
      * @return true if success
-     * @throws Exception
+     * @throws Exception otherwise
      */
-    public boolean incrementCounter(String url) throws Exception {
-        String agent = Agent.randomAgent();
+    public boolean incrementCounter(String qid, String uid) throws Exception {
+        String agent = Agent.randomAgent(),
+               questionUrl = StackApi.QUESTION_LINK(qid, uid);
+        LOGGER.info("stack client increment counter for {}", questionUrl);
         ContentResponse response = httpClient
-                .newRequest(url)
+                .newRequest(questionUrl)
                 .agent(agent)
                 .header("accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
                 .header("accept-encoding", "gzip, deflate, br")
@@ -72,11 +74,12 @@ public class StackClient {
                 .send()
                 ;
 
-        if (isSuccess(response)) {
-            String ivcPath = StringUtil.extractIVC(response.getContentAsString());
-
+        if (uid != null && isSuccess(response)) {
+            String ivcPath = StringUtil.extractIVC(response.getContentAsString()),
+                   ivcUrl = StackApi.IVC_LINK(ivcPath);
+            LOGGER.info("stack client increment counter ivc: {}", ivcUrl);
             response = httpClient
-                    .newRequest("https://stackoverflow.com" + ivcPath + "?_=" + System.currentTimeMillis())
+                    .newRequest(ivcUrl)
                     .agent(agent)
                     .header("accept", "*/*")
                     .header("accept-encoding", "gzip, deflate, br")
@@ -89,6 +92,32 @@ public class StackClient {
             return isSuccess(response);
         }
         return false;
+    }
+
+    public RequestAnalyzerDO ping() throws Exception {
+        LOGGER.info("stack client ping: {}", getRequestAnalyzerURL());
+        ContentResponse response = httpClient
+                .newRequest(getRequestAnalyzerURL())
+                .send();
+        if (isSuccess(response)) {
+            ObjectMapper objectMapper = new ObjectMapper();
+            RequestAnalyzerDO requestAnalyzer = objectMapper.readValue(response.getContent(), RequestAnalyzerDO.class);
+            return  requestAnalyzer;
+        }
+        return null;
+    }
+
+    public <T> T get(String url, Class<? extends T> clazz) throws Exception {
+        LOGGER.info("stack client lookup: {}", url);
+        ContentResponse response = httpClient
+                .newRequest(url)
+                .send();
+        if (isSuccess(response)) {
+            ObjectMapper objectMapper = new ObjectMapper();
+            T t = objectMapper.readValue(response.getContent(), clazz);
+            return t;
+        }
+        return null;
     }
 
     /**
