@@ -31,7 +31,7 @@ section {
 input.sb-tab-input {
   display: none;
 }
-label {
+label.sb-tab-label {
   display: inline-block;
   margin: 0 0 -1px;
   padding: 15px 25px;
@@ -40,18 +40,18 @@ label {
   color: #bbb;
   border: 1px solid transparent;
 }
-label:before {
+label.sb-tab-label:before {
   font-weight: normal;
   margin-right: 10px;
 }
-label[for*='1']:before { content: '\2601'; }
-label[for*='2']:before { content: '\2630'; }
-label[for*='3']:before { content: '\26BF'; }
-label:hover {
+label.sb-tab-label[for*='1']:before { content: '\2601'; }
+label.sb-tab-label[for*='2']:before { content: '\2630'; }
+label.sb-tab-label[for*='3']:before { content: '\26BF'; }
+label.sb-tab-label:hover {
   color: #888;
   cursor: pointer;
 }
-input:checked + label {
+input:checked + label.sb-tab-label {
   color: #555;
   border: 1px solid #ddd;
   border-top: 2px solid #1A73E8;
@@ -203,17 +203,17 @@ input:checked + label {
 }
 
 @media screen and (max-width: 650px) {
-  label {
+  label.sb-tab-label {
     font-size: 0;
   }
-  label:before {
+  label.sb-tab-label:before {
     margin: 0;
     font-size: 18px;
   }
 }
 
 @media screen and (max-width: 400px) {
-  label {
+  label.sb-tab-label {
     padding: 15px;
   }
 }
