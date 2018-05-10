@@ -68,17 +68,8 @@
     <script src="//gstatic.com/firebasejs/4.13.0/firebase-auth.js"></script>
     <script src="//gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
     <script src="//cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <script src="firebase-config.js"></script>
     <script>
-        var config = {
-            apiKey: "AIzaSyCdHDx5jQ0v856rnvYaC5AHPsdhKRu27uU",
-            authDomain: "stack-buster.firebaseapp.com",
-            databaseURL: "https://stack-buster.firebaseio.com",
-            projectId: "stack-buster",
-            storageBucket: "stack-buster.appspot.com",
-            messagingSenderId: "575911053973"
-        };
-        firebase.initializeApp(config);
-
         var ui = new firebaseui.auth.AuthUI(firebase.auth());
         ui.start('#firebaseui-auth-container', {
             callbacks: {
@@ -120,6 +111,10 @@
                 firebase.auth.GoogleAuthProvider.PROVIDER_ID
             ]
         });
+
+        window.onload = function () {
+
+        };
 
         function addQuestion(qid, uid, badgeType) {
             var question = {};
