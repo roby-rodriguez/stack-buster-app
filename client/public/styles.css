@@ -154,6 +154,104 @@ input:checked + label.sb-tab-label {
   color: black;
 }
 
+.sb-status-table-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 33px 30px;
+}
+.sb-status-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.sb-status-table {
+  position: relative;
+  padding-top: 60px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+}
+.sb-status-table th, .sb-status-table td {
+  font-weight: unset;
+  padding-right: 10px;
+}
+.sb-status-table th {
+  text-align: left;
+}
+.sb-status-table-header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.sb-status-table-header table {
+  border-collapse: collapse;
+}
+.sb-status-table th {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.4;
+  background-color: #4fafd1;
+}
+.sb-status-table-header th, .sb-status-table-body td {
+  text-align: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.sb-status-table-body {
+  display: block;
+  overflow: auto;
+  width: 100%;
+  height: 300px;
+}
+.sb-status-table-delete {
+  width: 37px;
+  margin: 0 5px 0 0;
+  float: right;
+  cursor: pointer;
+}
+.sb-status-table-body tr:nth-child(even) {
+  background-color: #f8fafa;
+}
+.sb-status-table-cell-question {
+  width: 30%;
+}
+.sb-status-table-cell-completed {
+  width: 60%;
+}
+.sb-status-table-cell-completed-progress-container {
+  position: relative;
+  background-color: #f1f1f1;
+  border-radius: 16px;
+}
+.sb-status-table-cell-completed-progress {
+  color: #fff;
+  background-color: #7ddcff;
+  padding: 7px 0 5px 0;
+  border-radius: 16px;
+  min-height: 15px;
+  transition: width 5s ease-in-out;
+  animation: sb-progress-bar 5s;
+}
+.sb-status-table-cell-completed-progress-text {
+  position: absolute;
+  top: 5px;
+  left: 45%;
+  color: #7ddcff;
+}
+@-webkit-keyframes sb-progress-bar {
+  from { width: 0; } to { width: 100%;}
+}
+@keyframes sb-progress-bar {
+  from { width: 0; } to { width: 100%;}
+}
+
 .spinner {
   width: 40px;
   height: 40px;
@@ -161,13 +259,11 @@ input:checked + label.sb-tab-label {
   position: relative;
   margin: 40px auto;
 }
-
 .spinner-title {
   position: relative;
   top: 45px;
   left: -8px;
 }
-
 .double-bounce1, .double-bounce2 {
   width: 100%;
   height: 100%;
@@ -177,21 +273,17 @@ input:checked + label.sb-tab-label {
   position: absolute;
   top: 0;
   left: 0;
-
   -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
   animation: sk-bounce 2.0s infinite ease-in-out;
 }
-
 .double-bounce2 {
   -webkit-animation-delay: -1.0s;
   animation-delay: -1.0s;
 }
-
 @-webkit-keyframes sk-bounce {
   0%, 100% { -webkit-transform: scale(0.0) }
   50% { -webkit-transform: scale(1.0) }
 }
-
 @keyframes sk-bounce {
   0%, 100% {
     transform: scale(0.0);

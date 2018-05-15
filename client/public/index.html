@@ -13,16 +13,18 @@
         <img class="sb-logo" src="sb_logo.PNG"><br />
     </div>
     <div id="firebaseui-auth-container"></div>
-    <div id="loader" class="spinner">
-        <div class="double-bounce1"></div>
-        <div class="double-bounce2"></div>
-        <span class="spinner-title">Loading...</span>
+    <div id="sb-auth-loader-container">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+            <span class="spinner-title">Loading...</span>
+        </div>
     </div>
     <div id="sb-input-container" style="display: none">
         <input id="tab1" class="sb-tab-input" type="radio" name="tabs" checked>
         <label class="sb-tab-label" for="tab1">Enqueue</label>
 
-        <input id="tab2" class="sb-tab-input" type="radio" name="tabs">
+        <input id="tab2" class="sb-tab-input" type="radio" name="tabs" onclick="loadQuestions()">
         <label class="sb-tab-label" for="tab2">Status</label>
 
         <input id="tab3" class="sb-tab-input" type="radio" name="tabs">
@@ -48,12 +50,34 @@
             </div>
         </section>
         <section id="content2">
-            <p>
-                Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
-            </p>
-            <p>
-                Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
-            </p>
+            <div id="sb-status-loader-container">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+                <span>Loading queue items...</span>
+            </div>
+
+            <div id="sb-status-table-container" style="display: none;">
+                <div class="sb-status-table">
+                    <div class="sb-status-table-header">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th class="sb-status-table-cell-question">Question</th>
+                                <th class="sb-status-table-cell-completed">Completed</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="sb-status-table-body">
+                        <table>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="content3">
             <p>
@@ -68,9 +92,11 @@
     <script src="//gstatic.com/firebasejs/4.13.0/firebase-auth.js"></script>
     <script src="//gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
     <script src="//cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <script src="//unpkg.com/axios/dist/axios.min.js"></script>
     <script src="firebase-config.js"></script>
     <script>
         var ui = new firebaseui.auth.AuthUI(firebase.auth());
+
         ui.start('#firebaseui-auth-container', {
             callbacks: {
                 signInSuccess: function(currentUser, credential, redirectUrl) {
@@ -102,7 +128,7 @@
                 uiShown: function() {
                     // The widget is rendered.
                     // Hide the loader.
-                    document.getElementById('loader').style.display = 'none';
+                    hide('sb-auth-loader-container');
                 }
             },
             // signInSuccessUrl: '',
@@ -112,11 +138,15 @@
             ]
         });
 
-        window.onload = function () {
+        function hide(id) {
+            document.getElementById(id).style.display = 'none';
+        }
 
-        };
+        function show(id) {
+            document.getElementById(id).style.display = 'block';
+        }
 
-        function addQuestion(qid, uid, badgeType) {
+        function enqueueQuestion(qid, uid, badgeType) {
             var question = {};
             if (uid) question.uid = uid;
             question.badgeType = badgeType;
@@ -131,6 +161,83 @@
                     console.log(error)
                 })
             ;
+        }
+
+        function loadQuestions() {
+            firebase.database()
+                .ref('questions')
+                .orderByChild("user_id")
+                .equalTo(window.stackBusterUser.uid)
+                .on('value', function (snapshot) {
+                    var value = snapshot.val();
+                    hide('sb-status-loader-container');
+                    show('sb-status-table-container');
+                    appendQuestions(value)
+                })
+            ;
+        }
+
+        function appendQuestions(questionObject) {
+            var table = document.getElementById('sb-status-table-container').getElementsByTagName('tbody')[0];
+            if (questionObject) {
+                table.innerHtml = null;
+            }
+            for (var i = 0; i < 10; i++) {
+                for (var key in questionObject) {
+                    if (questionObject.hasOwnProperty(key)) {
+                        var question = Object.assign({}, questionObject[key], {id: key});
+                        appendQuestion(table, question)
+                    }
+                }
+            }
+        }
+
+        function appendQuestion(table, question) {
+            var tr = document.createElement('tr'),
+                tdq = document.createElement('td'),
+                tdc = document.createElement('td'),
+                tdi = document.createElement('td');
+            tdq.classList.add('sb-status-table-cell-question');
+            tdq.appendChild(document.createTextNode(question.id));
+
+            var thcc = document.createElement('div'),
+                thccc = document.createElement('div'),
+                thccp = document.createElement('div');
+
+            thcc.classList.add('sb-status-table-cell-completed-progress-container');
+            // FIXME ugly
+            question.completed = question.completed || "0%";
+            var progress = parseInt(question.completed);
+            if (progress < 10) {
+                var thccpt = document.createElement('span');
+                thccc.style.width = '7%';
+                thccpt.classList.add('sb-status-table-cell-completed-progress-text');
+                thccpt.appendChild(document.createTextNode(question.completed));
+                thccp.appendChild(thccpt)
+            } else {
+                thccc.style.width = question.completed;
+                thccp.appendChild(document.createTextNode(question.completed));
+            }
+            thccp.classList.add('sb-status-table-cell-completed-progress');
+            thccc.appendChild(thccp);
+            thcc.appendChild(thccc);
+            tdc.classList.add('sb-status-table-cell-completed');
+            tdc.appendChild(thcc);
+
+            var img = document.createElement('img');
+            img.src = 'trash.png';
+            img.addEventListener('click', function (e) {
+                // TODO bind firebase remove
+                console.log('Removing qid', question.id)
+            });
+            img.classList.add('sb-status-table-delete');
+            tdi.appendChild(img);
+
+            tr.appendChild(tdq);
+            tr.appendChild(tdc);
+            tr.appendChild(tdi);
+
+            table.appendChild(tr);
         }
 
         function enqueue() {
@@ -152,7 +259,7 @@
                     qid = m[1]
                 }
 
-                addQuestion(qid, uid, badgeType)
+                enqueueQuestion(qid, uid, badgeType)
             }
         }
     </script>
