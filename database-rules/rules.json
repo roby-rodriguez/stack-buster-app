@@ -5,7 +5,7 @@
         ".indexOn": "user_id",
         "$qid": {
           ".read": "data.child('user_id').val() == auth.uid",
-          ".write": "!data.exists() && newData.child('user_id').val() == auth.uid"
+          ".write": "(data.exists() && auth.uid === data.child('user_id').val()) || (newData.exists() && auth.uid === newData.child('user_id').val())",
         }            
       },
       "workingQuestions": {
