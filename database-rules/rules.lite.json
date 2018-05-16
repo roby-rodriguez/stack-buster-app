@@ -1,0 +1,16 @@
+{
+    "rules": {
+      "questions": {
+        ".read": "auth.uid != null && query.orderByChild == 'user_id' && query.equalTo == auth.uid",
+        ".indexOn": "user_id",
+        "$qid": {
+          ".read": "data.child('user_id').val() == auth.uid",
+          ".write": "!data.exists() && newData.child('user_id').val() == auth.uid"
+        }            
+      },
+      "workingQuestions": {
+        ".read": false,
+        ".write": false,
+      }
+    }
+}

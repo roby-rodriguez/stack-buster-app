@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="68873bd7-7968-4820-8b03-97c5bfc3f3b0" name="Default" comment="add base implementation for firebase I/O &amp; task scheduler">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../database-rules/rules.lite.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../functions/functions/index.lite.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../functions/functions/types/badge.type.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../functions/functions/index.ultra.lite.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../client/public/firebase-config.js" afterPath="$PROJECT_DIR$/../client/public/firebase-config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../database-rules/rules.json" afterPath="$PROJECT_DIR$/../database-rules/rules.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../functions/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../functions/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../functions/README.MD" afterPath="$PROJECT_DIR$/../functions/README.MD" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -653,6 +654,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-15" width="1936" height="1096" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />

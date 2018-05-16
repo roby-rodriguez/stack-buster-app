@@ -6,11 +6,27 @@
         "$qid": {
           ".read": "data.child('user_id').val() == auth.uid",
           ".write": "(data.exists() && auth.uid === data.child('user_id').val()) || (newData.exists() && auth.uid === newData.child('user_id').val())",
-        }            
+					".validate": "$qid.matches(/^\\d+$/) && newData.hasChildren(['badgeType', 'user_id']) || newData.hasChildren(['completed'])",
+          "completed": {
+            ".validate": "newData.isString() && newData.val().matches(/^\\d{1,2}[%]$/)"
+          },
+          "uid": {
+            ".validate": "newData.isString() && newData.val().matches(/^\\d+$/)"
+          },
+          "badgeType": {
+            ".validate": "'POPULAR_QUESTION' === newData.val() || 'NOTABLE_QUESTION' === newData.val() || 'FAMOUS_QUESTION' === newData.val() || 'ANNOUNCER' === newData.val() || 'BOOSTER' === newData.val() || 'PUBLICIST' === newData.val()"
+          },
+          "user_id": {
+            ".validate": "newData.isString()"
+          },
+          "$others": {
+            ".validate": false
+          }
+        }
       },
       "workingQuestions": {
         ".read": false,
-        ".write": false,
+        ".write": false
       }
     }
 }
