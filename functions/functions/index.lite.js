@@ -19,7 +19,10 @@ exports.sanitize = functions.database
         // qid should contain only digits
         if (/^\d+$/.test(qid)) {
             // if data has no qid / badge type, do nothing
-            if (!BadgeType.isValid(badgeType)) return
+            if (!BadgeType.isValid(badgeType)) return ref.remove()
+            // if user badge check uid
+            if (BadgeType.isUserInvolved(badgeType) && !(uid && /^\d+$/.test(uid)))
+                return ref.remove()
             // check if authentication exists
             if (user_id && user_id.length) {
                 // if validated then initialize

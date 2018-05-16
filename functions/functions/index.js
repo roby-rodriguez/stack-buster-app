@@ -49,6 +49,7 @@ const updateRef = (ref, data, qid) => request(StackApiUrls.QUESTION(qid), { gzip
         return ref.set(intialized)
     })
 
+//TODO this needs some refactoring
 exports.sanitize = functions.database
     .ref('/questions/{qid}')
     .onWrite(event => {

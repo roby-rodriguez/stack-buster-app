@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83a02c61-94ff-4929-9395-a4f49e63f98f" name="Default" comment="add &quot;light&quot; ruleset for validation">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../database-rules/rules.lite.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/functions/index.ultra.lite.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../client/README.md" afterPath="$PROJECT_DIR$/../client/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../client/public/firebase-config.js" afterPath="$PROJECT_DIR$/../client/public/firebase-config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../database-rules/rules.json" afterPath="$PROJECT_DIR$/../database-rules/rules.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../client/public/index.html" afterPath="$PROJECT_DIR$/../client/public/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.MD" afterPath="$PROJECT_DIR$/README.MD" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/index.js" afterPath="$PROJECT_DIR$/functions/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/index.lite.js" afterPath="$PROJECT_DIR$/functions/index.lite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/index.ultra.lite.js" afterPath="$PROJECT_DIR$/functions/index.ultra.lite.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -34,8 +35,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-675">
-              <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+            <state relative-caret-position="189">
+              <caret line="51" column="12" lean-forward="false" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -84,21 +85,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.lite.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.lite.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions/index.lite.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+            <state relative-caret-position="354">
+              <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.ultra.lite.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.ultra.lite.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions/index.ultra.lite.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="32" lean-forward="false" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+            <state relative-caret-position="399">
+              <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -117,8 +118,8 @@
       <file leaf-file-name="badge.type.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions/types/badge.type.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+            <state relative-caret-position="189">
+              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -158,10 +159,10 @@
         <option value="$PROJECT_DIR$/functions/index_old.js" />
         <option value="$PROJECT_DIR$/functions/node_modules/badge.type.js" />
         <option value="$PROJECT_DIR$/functions/badge.type.js" />
-        <option value="$PROJECT_DIR$/functions/index.ultra.lite.js" />
-        <option value="$PROJECT_DIR$/functions/index.lite.js" />
-        <option value="$PROJECT_DIR$/functions/index.js" />
         <option value="$PROJECT_DIR$/README.MD" />
+        <option value="$PROJECT_DIR$/functions/index.lite.js" />
+        <option value="$PROJECT_DIR$/functions/index.ultra.lite.js" />
+        <option value="$PROJECT_DIR$/functions/index.js" />
       </list>
     </option>
   </component>
@@ -475,16 +476,15 @@
       <workItem from="1525861891233" duration="48000" />
       <workItem from="1525861963942" duration="1072000" />
       <workItem from="1525864057109" duration="25000" />
-      <workItem from="1526374069480" duration="21485000" />
+      <workItem from="1526374069480" duration="23319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87128000" />
+    <option name="totallyTimeSpent" value="88962000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-15" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -860,30 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-675">
-          <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/types/badge.type.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/index.lite.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.MD">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -895,10 +871,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/functions/types/badge.type.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/functions/index.ultra.lite.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="32" lean-forward="false" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        <state relative-caret-position="399">
+          <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="51" column="12" lean-forward="false" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/index.lite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
           <folding />
         </state>
       </provider>
