@@ -6,9 +6,10 @@ var StackBusterUtil = {};
  *
  * @param questionLink question link
  * @param badge badge type
+ * @param user logged in user
  * @param callback Node-style callback(err, data)
  */
-StackBusterUtil.check = function (questionLink, badge, callback) {
+StackBusterUtil.check = function (questionLink, badge, user, callback) {
 
     if (!StackBusterAPI.BadgeType.isValid(badge)) {
         callback(new Error("Invalid badge type: " + badge));
@@ -44,8 +45,11 @@ StackBusterUtil.check = function (questionLink, badge, callback) {
                                                 if (items[0].user_id === parseInt(uid)) {
                                                     callback(null, {
                                                         qid: qid,
-                                                        uid: uid,
-                                                        badgeType: badge
+                                                        question: {
+                                                            uid: uid,
+                                                            user_id: user.uid,
+                                                            badgeType: badge
+                                                        }
                                                     })
                                                 } else {
                                                     // branches like these shouldn't really be reached
@@ -66,7 +70,10 @@ StackBusterUtil.check = function (questionLink, badge, callback) {
                             } else {
                                 callback(null, {
                                     qid: qid,
-                                    badgeType: badge
+                                    question: {
+                                        user_id: user.uid,
+                                        badgeType: badge
+                                    }
                                 })
                             }
                         } else {

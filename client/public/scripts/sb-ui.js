@@ -7,6 +7,12 @@ var StackBusterUI = (new function () {
         document.getElementById(id).style.display = 'none';
     };
 
+    /**
+     * Display welcome logo
+     *
+     * @param id container id
+     * @param user logged in user
+     */
     this.buildLogo = function (id, user) {
         var header = document.getElementById(id),
             avatar = document.createElement('img'),
@@ -20,10 +26,42 @@ var StackBusterUI = (new function () {
         header.appendChild(welcome);
     };
 
-    this.buildError = function (error) {
-        // TODO
+    /**
+     * Display messages
+     *
+     * @param message info or error message
+     */
+    this.buildMessage = function (message) {
+        var container = document.getElementById('sb-message-container'),
+            close = document.createElement('span'),
+            title = document.createElement('strong'),
+            self = this;
+
+        // initialize stuff if necessary
+        message = message || {};
+        message.name = message.name || 'Error';
+        message.message = message.message || 'Something went wrong.';
+
+        container.className = 'alert alert-' + message.name;
+        container.innerHTML = null;
+        close.addEventListener('click', function () {
+            self.hide('sb-message-container')
+        });
+        close.className = 'close-btn';
+        close.appendChild(document.createTextNode('\u02DF'));
+        container.appendChild(close);
+        title.appendChild(document.createTextNode(message.name));
+        container.appendChild(title);
+        container.appendChild(document.createTextNode(message.message));
+        this.show('sb-message-container')
     };
 
+    /**
+     * Displays questions to table
+     *
+     * @param id table id
+     * @param questionObject question object
+     */
     this.buildQuestions = function (id, questionObject) {
         var table = document.getElementById(id).getElementsByTagName('tbody')[0];
         // always clear out table
@@ -70,9 +108,8 @@ var StackBusterUI = (new function () {
 
         var img = document.createElement('img');
         img.src = 'resources/trash.png';
-        img.addEventListener('click', function (e) {
-            // TODO bind firebase remove
-            console.log('Removing qid', question.id)
+        img.addEventListener('click', function () {
+            StackBusterAPI.remove(question.id)
         });
         img.classList.add('sb-status-table-delete');
         tdi.appendChild(img);

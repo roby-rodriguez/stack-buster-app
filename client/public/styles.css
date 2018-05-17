@@ -137,21 +137,34 @@ input:checked + label.sb-tab-label {
 
 .alert {
   padding: 20px;
-  background-color: #f44336;
-  color: white;
+  border-radius: .25rem;
+}
+.alert-Error {
+  background-color: #f2dede;
+  color: #a94442;
+  border: 1px solid #ebcccc;
+}
+.alert-Info {
+  background-color: #dff0d8;
+  border-color: #d0e9c6;
+  color: #3c763d;
+}
+.alert strong {
+  padding-right: 5px;
 }
 .close-btn {
-  margin-left: 15px;
   color: white;
   font-weight: bold;
   float: right;
-  font-size: 22px;
-  line-height: 20px;
+  font-size: 35px;
   cursor: pointer;
   transition: 0.3s;
 }
-.close-btn:hover {
-  color: black;
+.alert-Error .close-btn:hover {
+  color: #a94442;
+}
+.alert-Info .close-btn:hover {
+  color: #3c763d;
 }
 
 .sb-status-table-container {

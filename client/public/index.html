@@ -44,10 +44,7 @@
                 </select>
             </div>
             <button class="w3-btn w3-white w3-border w3-round-large sb-btn-add" onclick="enqueue()">Enqueue</button>
-            <div class="alert" style="display: none">
-                <span class="close-btn" onclick="this.parentElement.style.display='none';">&times;</span>
-                <strong>Error</strong> Something went wrong. (TODO)
-            </div>
+            <div id="sb-message-container" style="display: none"></div>
         </section>
         <section id="content2">
             <div id="sb-status-loader-container">
@@ -132,46 +129,26 @@
             ]
         });
 
-        function enqueueQuestion(qid, uid, badgeType) {
-            var question = {};
-            if (uid) question.uid = uid;
-            question.badgeType = badgeType;
-            question.user_id = window.stackBusterUser.uid;
-            firebase.database()
-                .ref('questions/' + qid)
-                .set(question)
-                .then(function () {
-                    console.log('done')
-                })
-                .catch(function (error) {
-                    console.log(error)
-                })
-            ;
-        }
-
         function loadQuestions() {
-            firebase.database()
-                .ref('questions')
-                .orderByChild("user_id")
-                .equalTo(window.stackBusterUser.uid)
-                .on('value', function (snapshot) {
-                    var value = snapshot.val();
-                    StackBusterUI.hide('sb-status-loader-container');
-                    StackBusterUI.show('sb-status-table-container');
-                    StackBusterUI.buildQuestions('sb-status-table-container', value)
-                })
-            ;
+            StackBusterAPI.loadQuestions(function (questionsObject) {
+                StackBusterUI.hide('sb-status-loader-container');
+                StackBusterUI.show('sb-status-table-container');
+                StackBusterUI.buildQuestions('sb-status-table-container', questionsObject)
+            })
         }
 
         function enqueue() {
             var questionLink = document.getElementById('sb-input-text').value,
                 badgeType = document.getElementById('sb-badge-select').value;
 
-            StackBusterUtil.check(questionLink, badgeType, function (error, result) {
-                // TODO finish
-                if (error) console.warn(error);
-                else console.info(result)
-            });
+            StackBusterUtil.check(questionLink, badgeType, window.stackBusterUser,
+                function (error, question) {
+                    if (error) StackBusterUI.buildMessage(error);
+                    else StackBusterAPI.enqueue(question,
+                        function (error, info) {
+                            StackBusterUI.buildMessage(error || info)
+                        })
+                })
         }
     </script>
 </body>

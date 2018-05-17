@@ -30,6 +30,52 @@ StackBusterAPI.Urls = {
     }
 };
 
-StackBusterAPI.enqueue = function (qid, uid, badgeType) {
+/**
+ * Adds question item to database for batch processing
+ *
+ * @param questionObject valid question object
+ * @param callback Node-style callback(err, data)
+ */
+StackBusterAPI.enqueue = function (questionObject, callback) {
+    firebase.database()
+        .ref('questions/' + questionObject.qid)
+        .set(questionObject.question)
+        .then(function () {
+            callback(null, {
+                name: 'Info',
+                message: 'Question with id ' + questionObject.qid + ' has been added for processing.'
+            })
+        })
+        .catch(function (error) {
+            callback(error)
+        })
+    ;
+};
 
+/**
+ * Removes question item from database
+ *
+ * @param questionId question id
+ */
+StackBusterAPI.remove = function (questionId) {
+    firebase.database()
+        .ref('questions/' + questionId)
+        .remove()
+    ;
+};
+
+/**
+ * Loads queued questions for current user
+ *
+ * @param callback with questions object
+ */
+StackBusterAPI.loadQuestions = function (callback) {
+    firebase.database()
+        .ref('questions')
+        .orderByChild("user_id")
+        .equalTo(window.stackBusterUser.uid)
+        .on('value', function (snapshot) {
+            callback(snapshot.val())
+        })
+    ;
 };
