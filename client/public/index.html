@@ -6,11 +6,11 @@
     <link href="//fonts.googleapis.com/css?family=Roboto" rel='stylesheet' type='text/css'>
     <link type="text/css" rel="stylesheet" href="//cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
     <link type="text/css" rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="icon.ico" type="image/x-icon" />
+    <link rel="icon" href="resources/icon.ico" type="image/x-icon" />
 </head>
 <body>
     <div id="firebaseui-header-container" class="sb-header">
-        <img class="sb-logo" src="sb_logo.PNG"><br />
+        <img class="sb-logo" src="resources/sb_logo.PNG"><br />
     </div>
     <div id="firebaseui-auth-container"></div>
     <div id="sb-auth-loader-container">
@@ -33,7 +33,7 @@
         <section id="content1">
             <input id="sb-input-text" placeholder="Enter question link..." class="w3-input w3-animate-input" type="text">
             <div class="sb-select-badge-container">
-                <label>Badge type</label>
+                <label for="sb-badge-select">Badge type</label>
                 <select id="sb-badge-select" class="sb-select-badge">
                     <option value="POPULAR_QUESTION" selected>popular question</option>
                     <option value="NOTABLE_QUESTION">notable question</option>
@@ -93,32 +93,26 @@
     <script src="//gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
     <script src="//cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
     <script src="//unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="firebase-config.js"></script>
+    <script src="scripts/firebase-config.js"></script>
+    <script src="scripts/sb-util.js"></script>
+    <script src="scripts/sb-api.js"></script>
+    <script src="scripts/sb-ui.js"></script>
     <script>
         var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
         ui.start('#firebaseui-auth-container', {
             callbacks: {
                 signInSuccess: function(currentUser, credential, redirectUrl) {
-                    document.getElementById('sb-input-container').style.display = 'block';
-                    window.stackBusterUser = {
+                    var stackBusterUser = {
                         uid: currentUser.uid,
                         displayName: currentUser.displayName,
                         email: currentUser.email,
                         photoURL: currentUser.photoURL,
                         signInMethod: credential.signInMethod
                     };
-
-                    var header = document.getElementById('firebaseui-header-container'),
-                        avatar = document.createElement('img'),
-                        welcome = document.createElement('H3'),
-                        welcomeText = document.createTextNode('Welcome, ' + window.stackBusterUser.displayName + '!');
-
-                    avatar.src = window.stackBusterUser.photoURL;
-                    avatar.classList.add('sb-avatar');
-                    header.appendChild(avatar);
-                    welcome.appendChild(welcomeText);
-                    header.appendChild(welcome);
+                    window.stackBusterUser = stackBusterUser;
+                    StackBusterUI.show('sb-input-container');
+                    StackBusterUI.buildLogo('firebaseui-header-container', stackBusterUser);
                     return false
                 },
                 signInSuccessWithAuthResult: function(authResult, redirectUrl) {
@@ -128,7 +122,7 @@
                 uiShown: function() {
                     // The widget is rendered.
                     // Hide the loader.
-                    hide('sb-auth-loader-container');
+                    StackBusterUI.hide('sb-auth-loader-container');
                 }
             },
             // signInSuccessUrl: '',
@@ -137,14 +131,6 @@
                 firebase.auth.GoogleAuthProvider.PROVIDER_ID
             ]
         });
-
-        function hide(id) {
-            document.getElementById(id).style.display = 'none';
-        }
-
-        function show(id) {
-            document.getElementById(id).style.display = 'block';
-        }
 
         function enqueueQuestion(qid, uid, badgeType) {
             var question = {};
@@ -170,97 +156,22 @@
                 .equalTo(window.stackBusterUser.uid)
                 .on('value', function (snapshot) {
                     var value = snapshot.val();
-                    hide('sb-status-loader-container');
-                    show('sb-status-table-container');
-                    appendQuestions(value)
+                    StackBusterUI.hide('sb-status-loader-container');
+                    StackBusterUI.show('sb-status-table-container');
+                    StackBusterUI.buildQuestions('sb-status-table-container', value)
                 })
             ;
-        }
-
-        function appendQuestions(questionObject) {
-            var table = document.getElementById('sb-status-table-container').getElementsByTagName('tbody')[0];
-            if (questionObject) {
-                table.innerHtml = null;
-            }
-            for (var i = 0; i < 10; i++) {
-                for (var key in questionObject) {
-                    if (questionObject.hasOwnProperty(key)) {
-                        var question = Object.assign({}, questionObject[key], {id: key});
-                        appendQuestion(table, question)
-                    }
-                }
-            }
-        }
-
-        function appendQuestion(table, question) {
-            var tr = document.createElement('tr'),
-                tdq = document.createElement('td'),
-                tdc = document.createElement('td'),
-                tdi = document.createElement('td');
-            tdq.classList.add('sb-status-table-cell-question');
-            tdq.appendChild(document.createTextNode(question.id));
-
-            var thcc = document.createElement('div'),
-                thccc = document.createElement('div'),
-                thccp = document.createElement('div');
-
-            thcc.classList.add('sb-status-table-cell-completed-progress-container');
-            // FIXME ugly
-            question.completed = question.completed || "0%";
-            var progress = parseInt(question.completed);
-            if (progress < 10) {
-                var thccpt = document.createElement('span');
-                thccc.style.width = '7%';
-                thccpt.classList.add('sb-status-table-cell-completed-progress-text');
-                thccpt.appendChild(document.createTextNode(question.completed));
-                thccp.appendChild(thccpt)
-            } else {
-                thccc.style.width = question.completed;
-                thccp.appendChild(document.createTextNode(question.completed));
-            }
-            thccp.classList.add('sb-status-table-cell-completed-progress');
-            thccc.appendChild(thccp);
-            thcc.appendChild(thccc);
-            tdc.classList.add('sb-status-table-cell-completed');
-            tdc.appendChild(thcc);
-
-            var img = document.createElement('img');
-            img.src = 'trash.png';
-            img.addEventListener('click', function (e) {
-                // TODO bind firebase remove
-                console.log('Removing qid', question.id)
-            });
-            img.classList.add('sb-status-table-delete');
-            tdi.appendChild(img);
-
-            tr.appendChild(tdq);
-            tr.appendChild(tdc);
-            tr.appendChild(tdi);
-
-            table.appendChild(tr);
         }
 
         function enqueue() {
             var questionLink = document.getElementById('sb-input-text').value,
                 badgeType = document.getElementById('sb-badge-select').value;
 
-            if (questionLink) {
-                var m, qid, uid;
-                var qRegex = /questions\/(\d+)/,
-                    qLinkRegex = /q\/(\d+)\/(\d+)/,
-                    qLinkRegexShort = /q\/(\d+)/;
-
-                if ((m = questionLink.match(qRegex)) && m.length === 2) {
-                    qid = m[1]
-                } else if ((m = questionLink.match(qLinkRegex)) && m.length === 3) {
-                    qid = m[1];
-                    uid = m[2]
-                } else if ((m = questionLink.match(qLinkRegexShort)) && m.length === 2) {
-                    qid = m[1]
-                }
-
-                enqueueQuestion(qid, uid, badgeType)
-            }
+            StackBusterUtil.check(questionLink, badgeType, function (error, result) {
+                // TODO finish
+                if (error) console.warn(error);
+                else console.info(result)
+            });
         }
     </script>
 </body>

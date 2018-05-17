@@ -1,6 +1,6 @@
 # StackBuster web client
 
-TODO
+Deployed by running `firebase deploy` in terminal.
 
 ## Useful links:
 1) [firebase website deployment](https://firebase.google.com/docs/hosting/deploying)
