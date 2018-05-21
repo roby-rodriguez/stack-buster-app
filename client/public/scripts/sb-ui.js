@@ -90,9 +90,9 @@ var StackBusterUI = (new function () {
         thcc.classList.add('sb-status-table-cell-completed-progress-container');
 
         var progress = parseInt(question.completed);
-        if (progress < 10) {
+        if (progress < 15) {
             var thccpt = document.createElement('span');
-            thccc.style.width = '7%';
+            thccc.style.width = '15%';
             thccpt.classList.add('sb-status-table-cell-completed-progress-text');
             thccpt.appendChild(document.createTextNode(question.completed));
             thccp.appendChild(thccpt)
