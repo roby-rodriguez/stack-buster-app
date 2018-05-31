@@ -5,6 +5,8 @@ public enum ProgressType {
     COMPLETED,
     /** scheduler task still in progress for this question */
     IN_PROGRESS,
+    /** question question by user */
+    DELETED,
     /** scheduler task aborted for this question */
     ABORTED;
 }

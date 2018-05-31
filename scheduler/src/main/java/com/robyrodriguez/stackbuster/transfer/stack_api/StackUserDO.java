@@ -1,4 +1,4 @@
-package com.robyrodriguez.stackbuster.transfer;
+package com.robyrodriguez.stackbuster.transfer.stack_api;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

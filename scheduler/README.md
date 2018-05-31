@@ -11,3 +11,7 @@ A Java tool for busting the Stack
 3. [Upgrade to Maven 3.x](https://askubuntu.com/a/707725)
 4. Go to 'stack-buster-app' dir & execute `mvn clean install`
 5. Then `mvn java:exec`
+
+### References
+1) [Firebase Jackson config](https://stackoverflow.com/questions/18125697/how-to-ignore-new-fields-for-an-object-model-with-firebase-1-0-2)
+2) [Firebase Async operations](https://medium.com/google-cloud/firebase-asynchronous-operations-with-admin-java-sdk-82ca9b4f6022)

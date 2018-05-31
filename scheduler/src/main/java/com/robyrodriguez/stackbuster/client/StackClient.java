@@ -3,6 +3,7 @@ package com.robyrodriguez.stackbuster.client;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.robyrodriguez.stackbuster.api.StackApi;
 import com.robyrodriguez.stackbuster.constants.Agent;
+import com.robyrodriguez.stackbuster.exception.StackResourceNotFoundException;
 import com.robyrodriguez.stackbuster.transfer.RequestAnalyzerDO;
 import com.robyrodriguez.stackbuster.utils.StringUtil;
 import org.eclipse.jetty.client.HttpClient;
@@ -51,14 +52,22 @@ public class StackClient extends AbstractHttpClient {
     }
 
     /**
+     *
+     * @param qid question id
+     * @throws Exception otherwise
+     */
+    public void incrementCounter(String qid) throws Exception {
+        incrementCounter(qid, null);
+    }
+
+    /**
      * Increments question page views counter
      *
      * @param qid question id
      * @param uid stack user id
-     * @return true if success
      * @throws Exception otherwise
      */
-    public boolean incrementCounter(String qid, String uid) throws Exception {
+    public void incrementCounter(String qid, String uid) throws Exception {
         String agent = Agent.randomAgent(),
                questionUrl = StackApi.QUESTION_LINK(qid, uid);
         LOGGER.info("stack client increment counter for {}", questionUrl);
@@ -89,9 +98,9 @@ public class StackClient extends AbstractHttpClient {
                     .header(HttpHeader.REFERER, "https://stackoverflow.com/")
                     .send()
             ;
-            return isSuccess(response);
         }
-        return false;
+
+        resolution(response);
     }
 
     public RequestAnalyzerDO ping() throws Exception {
@@ -107,6 +116,7 @@ public class StackClient extends AbstractHttpClient {
         return null;
     }
 
+    //TODO mix this wth resolution()
     public <T> T get(String url, Class<? extends T> clazz) throws Exception {
         LOGGER.info("stack client lookup: {}", url);
         ContentResponse response = httpClient
@@ -116,8 +126,25 @@ public class StackClient extends AbstractHttpClient {
             ObjectMapper objectMapper = new ObjectMapper();
             T t = objectMapper.readValue(response.getContent(), clazz);
             return t;
-        }
-        return null;
+        } else if (response.getStatus() == 404)
+            throw new StackResourceNotFoundException();
+        throw new Exception(String.format("Stack API/client problem. Reason '%s' status '%d'",
+            response.getReason(), response.getStatus()));
+    }
+
+    /**
+     * Checks if response is success, throws exception otherwise
+     *
+     * @param response the response
+     * @throws Exception if response not success
+     */
+    private void resolution(ContentResponse response) throws Exception {
+        if (isSuccess(response))
+            return;
+        if (response.getStatus() == 404)
+            throw new StackResourceNotFoundException();
+        throw new Exception(String.format("Stack API/client exception. Reason '%s' status '%d'",
+                response.getReason(), response.getStatus()));
     }
 
     /**

@@ -1,5 +1,6 @@
 package com.robyrodriguez.stackbuster;
 
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -10,6 +11,7 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
  * Application configuration
  */
 @Configuration
+@EnableCaching
 @PropertySource("classpath:config.properties")
 public class AppConfig {
 
