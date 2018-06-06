@@ -13,3 +13,6 @@ Functions | Rules | Description
 index.js | - | validations covered entirely by functions
 index.lite.js | rules.lite.json | validations split between functions and rules (and maybe additional backend -> see scheduler)
 index.ultra.lite.js | rules.json | validations covered by rules (extras handled by scheduler)
+
+## See also
+1) `null` return value in .transaction() -> [how firebase transactions work](https://stackoverflow.com/questions/28811037/data-in-transaction-is-null)

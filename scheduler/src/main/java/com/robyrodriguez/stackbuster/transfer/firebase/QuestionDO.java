@@ -1,6 +1,7 @@
 package com.robyrodriguez.stackbuster.transfer.firebase;
 
 import com.google.firebase.database.IgnoreExtraProperties;
+import com.robyrodriguez.stackbuster.types.ProgressType;
 
 /**
  * Question items at `/questions`
@@ -10,12 +11,12 @@ public class QuestionDO extends AbstractQuestionDO {
 
     private String completed;
     private String user_id;
+    private ProgressType progress;
 
     public QuestionDO() {
     }
 
     public QuestionDO(QuestionDO userQuestion, int viewsCreated) {
-
     }
 
     public String getCompleted() {
@@ -34,8 +35,17 @@ public class QuestionDO extends AbstractQuestionDO {
         this.user_id = user_id;
     }
 
+    public ProgressType getProgress() {
+        return progress;
+    }
+
+    public void setProgress(final ProgressType progress) {
+        this.progress = progress;
+    }
+
     @Override
     public String toString() {
-        return "QuestionDO{" + "completed='" + completed + "\' " + super.toString() + "}";
+        return "QuestionDO{" + "completed='" + completed + '\'' + ", user_id='" + user_id + '\'' + ", progress="
+                + progress + "} " + super.toString();
     }
 }

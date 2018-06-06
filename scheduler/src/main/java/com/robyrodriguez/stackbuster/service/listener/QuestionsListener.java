@@ -12,6 +12,8 @@ import com.robyrodriguez.stackbuster.transfer.firebase.WorkingQuestionDO;
 import com.robyrodriguez.stackbuster.transfer.stack_api.AbstractStackItemWrapperDO;
 import com.robyrodriguez.stackbuster.transfer.stack_api.StackQuestionDO;
 import com.robyrodriguez.stackbuster.transfer.stack_api.StackQuestionWrapperDO;
+import com.robyrodriguez.stackbuster.types.ProgressType;
+import com.robyrodriguez.stackbuster.utils.CommonUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,23 +44,34 @@ public class QuestionsListener implements ChildEventListener {
         question.setId(dataSnapshot.getKey());
 
         try {
-            if (cache.get(question.getId()) == null) {
+            if (ProgressType.isPending(question.getProgress()) && cache.get(question) == null) {
                 // lookup original question and in case it does not exist, remove this "question" (garbage)
                 AbstractStackItemWrapperDO<StackQuestionDO> questionWrapper = defaultClient
                         .get(StackApi.QUESTION(question.getId()), StackQuestionWrapperDO.class);
 
                 if (questionWrapper.getItems().size() > 0) {
                     StackQuestionDO stackQuestion = questionWrapper.getItems().get(0);
+                    String completed = CommonUtil.getCompletionPercentage(stackQuestion.getView_count(),
+                            question.getBadgeType().getClicks());
 
-                    database.getReference("/workingQuestions/default/" + question.getId())
-                            .setValueAsync(new WorkingQuestionDO(question, stackQuestion.getView_count()));
+                    if (CommonUtil.COMPLETED.equals(completed)) {
+                        // if question already has required number of views - reject it
+                        database.getReference("/questions/default/" + question.getId()).removeValueAsync();
+                        QuestionsListener.LOGGER.info("Cleanup garbage question {}", question);
+                    } else {
+                        // otherwise add to working questions for processing
+                        database.getReference("/workingQuestions/default/" + question.getId())
+                                .setValueAsync(new WorkingQuestionDO(question, stackQuestion.getView_count()));
+                    }
                 } else {
                     // TODO extract these strings to constant/functions
                     database.getReference("/questions/default/" + question.getId()).removeValueAsync();
+                    QuestionsListener.LOGGER.info("Cleanup garbage question {}", question);
                 }
             }
         } catch (BadRequestException bre) {
             database.getReference("/questions/default/" + question.getId()).removeValueAsync();
+            QuestionsListener.LOGGER.info("Cleanup garbage question {}", question);
         } catch (Exception e) {
             QuestionsListener.LOGGER.error("Encountered error during sanitize {}", e);
         }

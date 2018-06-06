@@ -27,21 +27,11 @@ public class WorkingQuestionsListener<T extends AbstractWorkingQuestionDO> imple
 
     @Override
     public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-        T question = dataSnapshot.getValue(tClass);
-        question.setId(dataSnapshot.getKey());
-        if (ProgressType.IN_PROGRESS.equals(question.getProgress())) {
-            cache.set(question);
-        }
+        updateCache(dataSnapshot);
     }
     @Override
     public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-        T question = dataSnapshot.getValue(tClass);
-        question.setId(dataSnapshot.getKey());
-        if (ProgressType.IN_PROGRESS.equals(question.getProgress())) {
-            cache.set(question);
-        } else {
-            cache.delete(dataSnapshot.getKey());
-        }
+        updateCache(dataSnapshot);
     }
     @Override
     public void onChildRemoved(DataSnapshot dataSnapshot) {
@@ -55,5 +45,10 @@ public class WorkingQuestionsListener<T extends AbstractWorkingQuestionDO> imple
     @Override
     public void onCancelled(DatabaseError databaseError) {
         WorkingQuestionsListener.LOGGER.warn("onCancelled called on '/workingQuestions' with error={}", databaseError);
+    }
+    private void updateCache(DataSnapshot dataSnapshot) {
+        T question = dataSnapshot.getValue(tClass);
+        question.setId(dataSnapshot.getKey());
+        cache.set(question);
     }
 }

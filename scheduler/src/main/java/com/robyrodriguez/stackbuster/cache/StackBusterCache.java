@@ -1,6 +1,8 @@
 package com.robyrodriguez.stackbuster.cache;
 
 import com.robyrodriguez.stackbuster.transfer.firebase.AbstractWorkingQuestionDO;
+import com.robyrodriguez.stackbuster.transfer.firebase.QuestionDO;
+import com.robyrodriguez.stackbuster.transfer.firebase.WorkingQuestionDO;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
@@ -16,11 +18,23 @@ public class StackBusterCache {
         return cache.entrySet();
     }
 
-    public AbstractWorkingQuestionDO get(String id) {
-        return cache.get(id);
+    public AbstractWorkingQuestionDO get(QuestionDO question) {
+        AbstractWorkingQuestionDO existing = cache.get(question.getId());
+        if (existing == null) {
+            existing = new WorkingQuestionDO();
+            existing.setUser_id(question.getUser_id());
+            cache.put(question.getId(), existing);
+            return null;
+        }
+        existing.setUser_id(question.getUser_id());
+        return existing;
     }
 
     public void set(AbstractWorkingQuestionDO question) {
+        AbstractWorkingQuestionDO existing = cache.get(question.getId());
+        if (existing != null) {
+            question.setUser_id(existing.getUser_id());
+        }
         cache.put(question.getId(), question);
     }
 

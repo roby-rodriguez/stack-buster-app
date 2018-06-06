@@ -1,12 +1,13 @@
 {
-    "rules": {
-      "questions": {
+  "rules": {
+    "questions": {
+      "user": {
         ".read": "auth.uid != null && query.orderByChild == 'user_id' && query.equalTo == auth.uid",
         ".indexOn": "user_id",
         "$qid": {
           ".read": "data.child('user_id').val() == auth.uid",
-          ".write": "(data.exists() && auth.uid === data.child('user_id').val()) || (newData.exists() && auth.uid === newData.child('user_id').val())",
-					".validate": "$qid.matches(/^\\d+$/) && newData.hasChildren(['badgeType', 'user_id']) || newData.hasChildren(['completed'])",
+          ".write": "!root.hasChild('questions/default/' + $qid) && ((data.exists() && auth.uid === data.child('user_id').val()) || (newData.exists() && auth.uid === newData.child('user_id').val()))",
+          ".validate": "$qid.matches(/^\\d+$/) && (newData.hasChildren(['badgeType', 'uid', 'user_id']) || newData.hasChildren(['completed']) || newData.hasChildren(['progress']))",
           "completed": {
             ".validate": "!data.exists() && newData.exists() && newData.isString() && newData.val().matches(/^\\d{1,2}[%]$/)"
           },
@@ -14,7 +15,10 @@
             ".validate": "!data.exists() && newData.exists() && newData.isString() && newData.val().matches(/^\\d+$/)"
           },
           "badgeType": {
-            ".validate": "!data.exists() && newData.exists() && ('POPULAR_QUESTION' === newData.val() || 'NOTABLE_QUESTION' === newData.val() || 'FAMOUS_QUESTION' === newData.val() || 'ANNOUNCER' === newData.val() || 'BOOSTER' === newData.val() || 'PUBLICIST' === newData.val())"
+            ".validate": "!data.exists() && newData.exists() && ('ANNOUNCER' === newData.val() || 'BOOSTER' === newData.val() || 'PUBLICIST' === newData.val())"
+          },
+          "progress": {
+            ".validate": "!data.exists() && newData.exists() && ('COMPLETED' === newData.val() || 'IN_PROGRESS' === newData.val() || 'DELETED' === newData.val() || 'ABORTED' === newData.val())"
           },
           "user_id": {
             ".validate": "!data.exists() && newData.exists() && newData.isString()"
@@ -24,9 +28,42 @@
           }
         }
       },
-      "workingQuestions": {
-        ".read": false,
-        ".write": false
+      "default": {
+        ".read": "auth.uid != null && query.orderByChild == 'user_id' && query.equalTo == auth.uid",
+        ".indexOn": "user_id",
+        "$qid": {
+          ".read": "data.child('user_id').val() == auth.uid",
+          ".write": "!root.hasChild('questions/user/' + $qid) && ((data.exists() && auth.uid === data.child('user_id').val()) || (newData.exists() && auth.uid === newData.child('user_id').val()))",
+          ".validate": "$qid.matches(/^\\d+$/) && (newData.hasChildren(['badgeType', 'user_id']) || newData.hasChildren(['completed']) || newData.hasChildren(['progress']))",
+          "completed": {
+            ".validate": "!data.exists() && newData.exists() && newData.isString() && newData.val().matches(/^\\d{1,2}[%]$/)"
+          },
+          "badgeType": {
+            ".validate": "!data.exists() && newData.exists() && ('POPULAR_QUESTION' === newData.val() || 'NOTABLE_QUESTION' === newData.val() || 'FAMOUS_QUESTION' === newData.val())"
+          },
+          "progress": {
+            ".validate": "!data.exists() && newData.exists() && ('COMPLETED' === newData.val() || 'IN_PROGRESS' === newData.val() || 'DELETED' === newData.val() || 'ABORTED' === newData.val())"
+          },
+          "user_id": {
+            ".validate": "!data.exists() && newData.exists() && newData.isString()"
+          },
+          "$others": {
+            ".validate": false
+          }
+        }
       }
+    },
+    "workingQuestions": {
+      ".read": false,
+      ".write": false
+    },
+    "users": {
+      ".read": false,
+      ".write": false
+    },
+    "workingUsers": {
+      ".read": false,
+      ".write": false
     }
+  }
 }

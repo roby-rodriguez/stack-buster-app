@@ -45,6 +45,7 @@ StackBusterUtil.check = function (questionLink, badge, user, callback) {
                                                 if (items[0].user_id === parseInt(uid)) {
                                                     callback(null, {
                                                         qid: qid,
+                                                        type: 'user',
                                                         question: {
                                                             uid: uid,
                                                             user_id: user.uid,
@@ -70,6 +71,7 @@ StackBusterUtil.check = function (questionLink, badge, user, callback) {
                             } else {
                                 callback(null, {
                                     qid: qid,
+                                    type: 'default',
                                     question: {
                                         user_id: user.uid,
                                         badgeType: badge

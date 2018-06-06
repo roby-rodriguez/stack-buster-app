@@ -4,8 +4,9 @@ import com.robyrodriguez.stackbuster.types.BadgeType;
 import com.robyrodriguez.stackbuster.types.ProgressType;
 
 import java.util.Date;
+import javax.validation.constraints.NotNull;
 
-public class BaseWorkingQuestionDO {
+public final class BaseWorkingQuestionDO {
 
     private long created;
     private int viewsCreated;
@@ -19,7 +20,7 @@ public class BaseWorkingQuestionDO {
         progress = ProgressType.IN_PROGRESS;
     }
 
-    public BaseWorkingQuestionDO(BadgeType badgeType, int views) {
+    public BaseWorkingQuestionDO(@NotNull BadgeType badgeType, int views) {
         this();
         t.setBadgeType(badgeType);
         viewsCreated = views;

@@ -13,6 +13,7 @@ import com.robyrodriguez.stackbuster.transfer.stack_api.AbstractStackItemWrapper
 import com.robyrodriguez.stackbuster.transfer.stack_api.StackQuestionDO;
 import com.robyrodriguez.stackbuster.transfer.stack_api.StackQuestionWrapperDO;
 import com.robyrodriguez.stackbuster.transfer.stack_api.StackUserWrapperDO;
+import com.robyrodriguez.stackbuster.types.ProgressType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,7 +44,7 @@ public class UserQuestionsListener implements ChildEventListener {
         question.setId(dataSnapshot.getKey());
 
         try {
-            if (cache.get(question.getId()) == null) {
+            if (ProgressType.isPending(question.getProgress()) && cache.get(question) == null) {
                 // lookup original question and in case it does not exist, remove this "question" (garbage)
                 AbstractStackItemWrapperDO<StackQuestionDO> questionWrapper = defaultClient
                         .get(StackApi.QUESTION(question.getId()), StackQuestionWrapperDO.class);
@@ -63,10 +64,12 @@ public class UserQuestionsListener implements ChildEventListener {
                 } else {
                     // TODO extract these strings to constant/functions
                     database.getReference("/questions/user/" + question.getId()).removeValueAsync();
+                    UserQuestionsListener.LOGGER.info("Cleanup garbage question {}", question);
                 }
             }
         } catch (BadRequestException bre) {
             database.getReference("/questions/user/" + question.getId()).removeValueAsync();
+            UserQuestionsListener.LOGGER.info("Cleanup garbage question {}", question);
         } catch (Exception e) {
             UserQuestionsListener.LOGGER.error("Encountered error during sanitize {}", e);
         }

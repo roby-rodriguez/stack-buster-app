@@ -9,4 +9,8 @@ public enum ProgressType {
     DELETED,
     /** scheduler task aborted for this question */
     ABORTED;
+
+    public static boolean isPending(ProgressType progress) {
+        return progress == null || progress.equals(IN_PROGRESS);
+    }
 }

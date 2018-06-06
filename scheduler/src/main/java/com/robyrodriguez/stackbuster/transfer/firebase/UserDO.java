@@ -1,15 +1,18 @@
 package com.robyrodriguez.stackbuster.transfer.firebase;
 
-import java.io.Serializable;
-import java.util.Date;
+import com.google.firebase.database.IgnoreExtraProperties;
 
+import java.io.Serializable;
+
+@IgnoreExtraProperties
 public class UserDO implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private String id;
-    private Date created;
-    private Date lastActive;
+    private long created;
+    private long lastActive;
     private int activeQuestions;
+    private int totalQuestions;
     private String apiKey;
     // only user has apiKey
     private int credit;
@@ -26,19 +29,19 @@ public class UserDO implements Serializable {
         id = pId;
     }
 
-    public Date getCreated() {
+    public long getCreated() {
         return this.created;
     }
 
-    public void setCreated(final Date pCreated) {
+    public void setCreated(final long pCreated) {
         created = pCreated;
     }
 
-    public Date getLastActive() {
+    public long getLastActive() {
         return this.lastActive;
     }
 
-    public void setLastActive(final Date pLastActive) {
+    public void setLastActive(final long pLastActive) {
         lastActive = pLastActive;
     }
 
@@ -48,6 +51,14 @@ public class UserDO implements Serializable {
 
     public void setActiveQuestions(final int pActiveQuestions) {
         activeQuestions = pActiveQuestions;
+    }
+
+    public int getTotalQuestions() {
+        return totalQuestions;
+    }
+
+    public void setTotalQuestions(final int totalQuestions) {
+        this.totalQuestions = totalQuestions;
     }
 
     public String getApiKey() {
@@ -77,7 +88,7 @@ public class UserDO implements Serializable {
     @Override
     public String toString() {
         return "UserDO{" + "id='" + id + '\'' + ", created=" + created + ", lastActive=" + lastActive
-                + ", activeQuestions=" + activeQuestions + ", apiKey='" + apiKey + '\'' + ", credit=" + credit
-                + ", banned=" + banned + '}';
+                + ", activeQuestions=" + activeQuestions + ", totalQuestions=" + totalQuestions + ", apiKey='" + apiKey
+                + '\'' + ", credit=" + credit + ", banned=" + banned + '}';
     }
 }

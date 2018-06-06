@@ -1,10 +1,14 @@
 package com.robyrodriguez.stackbuster.service.worker.strategy;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.robyrodriguez.stackbuster.api.StackApi;
 import com.robyrodriguez.stackbuster.client.StackClient;
 import com.robyrodriguez.stackbuster.exception.StackResourceNotFoundException;
 import com.robyrodriguez.stackbuster.transfer.firebase.HistoryEntryDO;
+import com.robyrodriguez.stackbuster.transfer.firebase.UserDO;
 import com.robyrodriguez.stackbuster.transfer.firebase.WorkingQuestionDO;
 import com.robyrodriguez.stackbuster.transfer.stack_api.AbstractStackItemWrapperDO;
 import com.robyrodriguez.stackbuster.transfer.stack_api.StackQuestionDO;
@@ -12,6 +16,7 @@ import com.robyrodriguez.stackbuster.transfer.stack_api.StackQuestionWrapperDO;
 import com.robyrodriguez.stackbuster.types.BadgeType;
 import com.robyrodriguez.stackbuster.types.ProgressType;
 import com.robyrodriguez.stackbuster.utils.CommonUtil;
+import com.robyrodriguez.stackbuster.utils.MapBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,9 +45,7 @@ public class QuestionStrategy implements IncrementStrategy<WorkingQuestionDO> {
 
     @Override
     public void execute(WorkingQuestionDO question) throws Exception {
-        Map<String, Object> updates = new HashMap<>();
         BadgeType badge = question.getBadgeType();
-        int clicks = question.getClicks();
 
         try {
             stackClient.incrementCounter(question.getId());
@@ -55,9 +58,7 @@ public class QuestionStrategy implements IncrementStrategy<WorkingQuestionDO> {
                 StackQuestionDO stackQuestion = questionWrapper.getItems().get(0);
                 int currentViews = stackQuestion.getView_count();
                 String completed = CommonUtil.getCompletionPercentage(currentViews, badge.getClicks());
-
-                updates.put("currentViews", currentViews);
-                updates.put("clicks", clicks + 1);
+                Map<String, Object> updates = updateQuestion(question, currentViews);
 
                 database.getReference("/questions/default/" + question.getId() + "/completed")
                         .setValueAsync(completed);
@@ -67,14 +68,12 @@ public class QuestionStrategy implements IncrementStrategy<WorkingQuestionDO> {
                                 QuestionStrategy.LOGGER.warn("Could not update question progress for working question id {}",
                                         question.getId());
                             } else if (CommonUtil.COMPLETED.equals(completed)) {
-                                database.getReference("/history/" + question.getId())
-                                        .setValueAsync(new HistoryEntryDO<>(question, ProgressType.COMPLETED));
-                                database.getReference("/workingQuestions/default/" + question.getId())
-                                        .removeValueAsync();
+                                complete(question);
                             }
                         });
             } else {
                 //FIXME maybe remove method and move this to catch -> see refactoring resolution() in StackClient
+                QuestionStrategy.LOGGER.warn("Working question {} has been aborted because the original question was deleted", question);
                 abort(question);
             }
         } catch (StackResourceNotFoundException e) {
@@ -84,14 +83,56 @@ public class QuestionStrategy implements IncrementStrategy<WorkingQuestionDO> {
     }
 
     /**
+     * Actions taken when question completed:
+     * - add new history entry
+     * - remove working question entry
+     * - update user data (active questions counter)
+     *
+     * @param question current question
+     */
+    private void complete(WorkingQuestionDO question) {
+        // remove from `/workingQuestions` and add to history
+        database.getReference("/history/" + question.getId())
+                .setValueAsync(new HistoryEntryDO<>(question, ProgressType.COMPLETED));
+        database.getReference("/workingQuestions/default/" + question.getId())
+                .removeValueAsync();
+        // update user data
+        database.getReference("/users/" + question.getUser_id())
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot snapshot) {
+                        UserDO user = snapshot.getValue(UserDO.class);
+                        int activeQuestions = user.getActiveQuestions();
+                        database.getReference("/users/" + question.getUser_id() + "/activeQuestions")
+                                .setValueAsync(activeQuestions - 1);
+                    }
+                    @Override
+                    public void onCancelled(DatabaseError error) {
+                        QuestionStrategy.LOGGER.warn("Could not update activeQuestions user data for working"
+                                + " question id {} error {}", question.getId(), error);
+                    }
+                });
+    }
+
+    /**
      * Question probably meanwhile deleted -> abort & move to history
      *
      * @param question current question
      */
     private void abort(WorkingQuestionDO question) {
+        database.getReference("/questions/default/" + question.getId() + "/progress")
+                .setValueAsync(ProgressType.ABORTED);
         database.getReference("/history/" + question.getId())
                 .setValueAsync(new HistoryEntryDO<>(question, ProgressType.ABORTED));
         database.getReference("/workingQuestions/default/" + question.getId())
                 .removeValueAsync();
+    }
+
+    private Map<String, Object> updateQuestion(WorkingQuestionDO question, int currentViews) {
+        question.setCurrentViews(currentViews);
+        return new MapBuilder()
+                .add("clicks", question.incrementClicks())
+                .add("addresses", question.getCurrentViews())
+                .build();
     }
 }

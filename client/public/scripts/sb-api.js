@@ -21,6 +21,13 @@ StackBusterAPI.BadgeType.isValid = function (type) {
     }
 };
 
+StackBusterAPI.ProgressType = {
+    COMPLETED: 'COMPLETED',
+    IN_PROGRESS: 'IN_PROGRESS',
+    ABORTED: 'ABORTED',
+    DELETED: 'DELETED',
+};
+
 StackBusterAPI.Urls = {
     QUESTION: function (qid) {
         return 'https://api.stackexchange.com/2.2/questions/' + qid + '?order=desc&sort=activity&site=stackoverflow'
@@ -38,7 +45,7 @@ StackBusterAPI.Urls = {
  */
 StackBusterAPI.enqueue = function (questionObject, callback) {
     firebase.database()
-        .ref('questions/' + questionObject.qid)
+        .ref('questions/' + questionObject.type + '/' + questionObject.qid)
         .set(questionObject.question)
         .then(function () {
             callback(null, {
@@ -59,8 +66,17 @@ StackBusterAPI.enqueue = function (questionObject, callback) {
  */
 StackBusterAPI.remove = function (questionId) {
     firebase.database()
-        .ref('questions/' + questionId)
-        .remove()
+        .ref('questions/' + questionId + '/progress')
+        .set(StackBusterAPI.ProgressType.DELETED)
+        .then(function () {
+            callback(null, {
+                name: 'Info',
+                message: 'Question with id ' + questionObject.qid + ' has been removed for processing.'
+            })
+        })
+        .catch(function (error) {
+            callback(error)
+        })
     ;
 };
 
@@ -71,11 +87,18 @@ StackBusterAPI.remove = function (questionId) {
  */
 StackBusterAPI.loadQuestions = function (callback) {
     firebase.database()
-        .ref('questions')
+        .ref('questions/user')
         .orderByChild("user_id")
         .equalTo(window.stackBusterUser.uid)
         .on('value', function (snapshot) {
             callback(snapshot.val())
         })
     ;
+    firebase.database()
+        .ref('questions/default')
+        .orderByChild("user_id")
+        .equalTo(window.stackBusterUser.uid)
+        .on('value', function (snapshot) {
+            callback(snapshot.val())
+        })
 };

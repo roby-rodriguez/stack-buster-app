@@ -2,7 +2,6 @@ package com.robyrodriguez.stackbuster.transfer.firebase;
 
 import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;
-import com.robyrodriguez.stackbuster.types.ProgressType;
 
 import java.util.Date;
 
@@ -15,7 +14,6 @@ public abstract class AbstractWorkingQuestionDO extends AbstractQuestionDO {
     private long created;
     private int viewsCreated;
     private int clicks;
-    private ProgressType progress;
     private String user_id;
 
     public AbstractWorkingQuestionDO() {
@@ -25,7 +23,6 @@ public abstract class AbstractWorkingQuestionDO extends AbstractQuestionDO {
         this.setId(question.getId());
         this.setBadgeType(question.getBadgeType());
         this.setUser_id(question.getUser_id());
-        this.setProgress(ProgressType.IN_PROGRESS);
         this.created = new Date().getTime();
         this.clicks = 0;
         this.viewsCreated = viewsCreated;
@@ -47,12 +44,8 @@ public abstract class AbstractWorkingQuestionDO extends AbstractQuestionDO {
         this.clicks = clicks;
     }
 
-    public ProgressType getProgress() {
-        return progress;
-    }
-
-    public void setProgress(final ProgressType progress) {
-        this.progress = progress;
+    public int incrementClicks() {
+        return ++clicks;
     }
 
     public int getViewsCreated() {
@@ -76,6 +69,6 @@ public abstract class AbstractWorkingQuestionDO extends AbstractQuestionDO {
     @Override
     public String toString() {
         return "{" + "created=" + created + ", viewsCreated=" + viewsCreated + ", clicks="
-                + clicks + ", progress=" + progress + ", " + super.toString() + "} ";
+                + clicks + ", " + super.toString() + "} ";
     }
 }
