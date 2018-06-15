@@ -1,10 +1,11 @@
-package com.robyrodriguez.stackbuster.transfer.firebase;
+package com.robyrodriguez.stackbuster.transfer.firebase.others;
 
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.structure.BaseWorkingQuestion;
 import com.robyrodriguez.stackbuster.types.ProgressType;
 
 import java.util.Date;
 
-public class HistoryEntryDO<T extends AbstractWorkingQuestionDO> {
+public class HistoryEntryDO<T extends BaseWorkingQuestion> {
     private T data;
     private long ended;
     private ProgressType progress;

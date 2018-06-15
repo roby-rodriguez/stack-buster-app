@@ -1,12 +1,15 @@
-package com.robyrodriguez.stackbuster.transfer.firebase;
+package com.robyrodriguez.stackbuster.transfer.firebase.questions.inheritance;
 
 import com.google.firebase.database.IgnoreExtraProperties;
+import com.robyrodriguez.stackbuster.service.worker.visitor.IncrementStrategyVisitor;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.WorkingQuestion;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.structure.BaseWorkingQuestion;
 
 /**
  * Question items at `/workingQuestions`
  */
 @IgnoreExtraProperties
-public class WorkingQuestionDO extends AbstractWorkingQuestionDO {
+public class WorkingQuestionDO extends AbstractWorkingQuestionDO implements WorkingQuestion {
 
     private int currentViews;
 
@@ -22,8 +25,13 @@ public class WorkingQuestionDO extends AbstractWorkingQuestionDO {
         return currentViews;
     }
 
-    public void setCurrentViews(final int currentViews) {
+    public void setCurrentViews(int currentViews) {
         this.currentViews = currentViews;
+    }
+
+    @Override
+    public void accept(final IncrementStrategyVisitor visitor) throws Exception {
+        visitor.visit(this);
     }
 
     @Override

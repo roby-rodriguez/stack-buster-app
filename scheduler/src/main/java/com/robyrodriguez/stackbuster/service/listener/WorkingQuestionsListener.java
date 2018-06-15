@@ -4,25 +4,27 @@ import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.robyrodriguez.stackbuster.cache.StackBusterCache;
-import com.robyrodriguez.stackbuster.transfer.firebase.AbstractWorkingQuestionDO;
-import com.robyrodriguez.stackbuster.types.ProgressType;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.WorkingQuestion;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Configurable;
 
 /**
  * Reads out data from `/workingQuestions` node and stores them in cache
  */
-public class WorkingQuestionsListener<T extends AbstractWorkingQuestionDO> implements ChildEventListener {
+@Configurable
+public class WorkingQuestionsListener<W extends WorkingQuestion> implements ChildEventListener {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(WorkingQuestionsListener.class);
 
+    @Autowired
     private StackBusterCache cache;
 
-    private Class<T> tClass;
+    private Class<W> wClass;
 
-    public WorkingQuestionsListener(StackBusterCache cache, Class<T> tClass) {
-        this.cache = cache;
-        this.tClass = tClass;
+    public WorkingQuestionsListener(Class<W> wClass) {
+        this.wClass = wClass;
     }
 
     @Override
@@ -47,7 +49,7 @@ public class WorkingQuestionsListener<T extends AbstractWorkingQuestionDO> imple
         WorkingQuestionsListener.LOGGER.warn("onCancelled called on '/workingQuestions' with error={}", databaseError);
     }
     private void updateCache(DataSnapshot dataSnapshot) {
-        T question = dataSnapshot.getValue(tClass);
+        W question = dataSnapshot.getValue(wClass);
         question.setId(dataSnapshot.getKey());
         cache.set(question);
     }

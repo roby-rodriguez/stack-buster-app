@@ -7,8 +7,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.robyrodriguez.stackbuster.api.StackApi;
 import com.robyrodriguez.stackbuster.cache.StackBusterCache;
 import com.robyrodriguez.stackbuster.client.DefaultClient;
-import com.robyrodriguez.stackbuster.transfer.firebase.QuestionDO;
-import com.robyrodriguez.stackbuster.transfer.firebase.WorkingQuestionDO;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.Question;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.WorkingQuestion;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.factory.WorkingQuestionFactory;
 import com.robyrodriguez.stackbuster.transfer.stack_api.AbstractStackItemWrapperDO;
 import com.robyrodriguez.stackbuster.transfer.stack_api.StackQuestionDO;
 import com.robyrodriguez.stackbuster.transfer.stack_api.StackQuestionWrapperDO;
@@ -17,15 +18,15 @@ import com.robyrodriguez.stackbuster.utils.CommonUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Configurable;
 
 import javax.ws.rs.BadRequestException;
 
 /**
  * Checks if new items added at `/questions/default` are valid and manages corresponding `/workingQuestions/default`
  */
-@Component
-public class QuestionsListener implements ChildEventListener {
+@Configurable
+public class QuestionsListener<Q extends Question, W extends WorkingQuestion> implements ChildEventListener {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(QuestionsListener.class);
 
@@ -38,9 +39,17 @@ public class QuestionsListener implements ChildEventListener {
     @Autowired
     private StackBusterCache cache;
 
+    private Class<Q> qClass;
+    private WorkingQuestionFactory<Q, W> workingQuestionFactory;
+
+    public QuestionsListener(Class<Q> qClass, WorkingQuestionFactory<Q, W> workingQuestionFactory) {
+        this.qClass = qClass;
+        this.workingQuestionFactory = workingQuestionFactory;
+    }
+
     @Override
     public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-        QuestionDO question = dataSnapshot.getValue(QuestionDO.class);
+        Q question = dataSnapshot.getValue(qClass);
         question.setId(dataSnapshot.getKey());
 
         try {
@@ -61,7 +70,7 @@ public class QuestionsListener implements ChildEventListener {
                     } else {
                         // otherwise add to working questions for processing
                         database.getReference("/workingQuestions/default/" + question.getId())
-                                .setValueAsync(new WorkingQuestionDO(question, stackQuestion.getView_count()));
+                                .setValueAsync(workingQuestionFactory.fromQuestion(question, stackQuestion.getView_count()));
                     }
                 } else {
                     // TODO extract these strings to constant/functions

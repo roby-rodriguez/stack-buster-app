@@ -1,8 +1,9 @@
-package com.robyrodriguez.stackbuster.transfer.firebase_new.structure;
+package com.robyrodriguez.stackbuster.transfer.firebase.questions.composition.structure;
 
 import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;
 import com.robyrodriguez.stackbuster.types.BadgeType;
+import com.robyrodriguez.stackbuster.types.ProgressType;
 
 @IgnoreExtraProperties
 public final class BaseQuestionDO {
@@ -10,6 +11,7 @@ public final class BaseQuestionDO {
     private String id;
     private BadgeType badgeType;
     private String user_id;
+    private ProgressType progress;
 
     public BaseQuestionDO() {
     }
@@ -40,6 +42,14 @@ public final class BaseQuestionDO {
     @Exclude
     public void setUser_id(final String user_id) {
         this.user_id = user_id;
+    }
+
+    public ProgressType getProgress() {
+        return progress;
+    }
+
+    public void setProgress(final ProgressType progress) {
+        this.progress = progress;
     }
 
     @Override

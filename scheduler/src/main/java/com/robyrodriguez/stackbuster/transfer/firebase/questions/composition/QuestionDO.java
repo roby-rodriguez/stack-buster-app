@@ -1,47 +1,50 @@
-package com.robyrodriguez.stackbuster.transfer.firebase_new;
+package com.robyrodriguez.stackbuster.transfer.firebase.questions.composition;
 
 import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;
-import com.robyrodriguez.stackbuster.transfer.firebase_new.structure.BaseQuestionDO;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.composition.structure.BaseQuestionDO;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.structure.BaseQuestion;
 import com.robyrodriguez.stackbuster.types.BadgeType;
+import com.robyrodriguez.stackbuster.types.ProgressType;
 
 /**
  * Question items at `/questions/default`
  */
 @IgnoreExtraProperties
-public class QuestionDO {
+public class QuestionDO implements BaseQuestion {
 
-    private BaseQuestionDO base;
+    private BaseQuestionDO t;
     private String completed;
 
     public QuestionDO() {
-        base = new BaseQuestionDO();
+        t = new BaseQuestionDO();
     }
 
     @Exclude
+    @Override
     public String getId() {
-        return base.getId();
+        return t.getId();
     }
 
     @Exclude
+    @Override
     public void setId(final String pId) {
-        base.setId(pId);
+        t.setId(pId);
     }
 
+    @Override
     public BadgeType getBadgeType() {
-        return base.getBadgeType();
+        return t.getBadgeType();
     }
 
-    public void setBadgeType(final BadgeType pBadgeType) {
-        base.setBadgeType(pBadgeType);
-    }
-
+    @Override
     public String getUser_id() {
-        return base.getUser_id();
+        return t.getUser_id();
     }
 
+    @Override
     public void setUser_id(final String user_id) {
-        base.setUser_id(user_id);
+        t.setUser_id(user_id);
     }
 
     public String getCompleted() {
@@ -54,6 +57,6 @@ public class QuestionDO {
 
     @Override
     public String toString() {
-        return "QuestionDO{" + "completed='" + completed + "\' " + base + "}";
+        return "QuestionDO{" + "completed='" + completed + "\' " + t + "}";
     }
 }

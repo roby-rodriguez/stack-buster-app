@@ -1,4 +1,4 @@
-package com.robyrodriguez.stackbuster.transfer.firebase;
+package com.robyrodriguez.stackbuster.transfer.firebase.others;
 
 import com.google.firebase.database.IgnoreExtraProperties;
 

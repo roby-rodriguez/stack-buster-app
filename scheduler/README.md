@@ -15,3 +15,7 @@ A Java tool for busting the Stack
 ### References
 1) [Firebase Jackson config](https://stackoverflow.com/questions/18125697/how-to-ignore-new-fields-for-an-object-model-with-firebase-1-0-2)
 2) [Firebase Async operations](https://medium.com/google-cloud/firebase-asynchronous-operations-with-admin-java-sdk-82ca9b4f6022)
+3) [Spring custom annotations processing](http://www.baeldung.com/spring-annotation-bean-pre-processor)
+4) [Spring beans manual autowiring](https://stackoverflow.com/questions/11965600/how-do-i-manually-autowire-a-bean-with-spring)
+5) [Using lambdas for shorter enums](https://stackoverflow.com/questions/23361418/lambdas-in-the-classical-operation-enum-example)
+6) [Avoiding `instanceof` by using visitor DP](https://stackoverflow.com/questions/3930808/how-to-avoid-large-if-statements-and-instanceof)

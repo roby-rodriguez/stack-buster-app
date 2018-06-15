@@ -1,4 +1,4 @@
-package com.robyrodriguez.stackbuster.transfer.firebase_new;
+package com.robyrodriguez.stackbuster.transfer.firebase.questions.composition;
 
 /**
  * Question items at `/questions/user`

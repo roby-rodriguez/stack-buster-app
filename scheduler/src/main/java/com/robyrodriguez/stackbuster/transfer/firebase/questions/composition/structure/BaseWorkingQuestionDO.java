@@ -1,7 +1,6 @@
-package com.robyrodriguez.stackbuster.transfer.firebase_new.structure;
+package com.robyrodriguez.stackbuster.transfer.firebase.questions.composition.structure;
 
 import com.robyrodriguez.stackbuster.types.BadgeType;
-import com.robyrodriguez.stackbuster.types.ProgressType;
 
 import java.util.Date;
 import javax.validation.constraints.NotNull;
@@ -11,13 +10,11 @@ public final class BaseWorkingQuestionDO {
     private long created;
     private int viewsCreated;
     private int clicks;
-    private ProgressType progress;
     private BaseQuestionDO t;
 
     public BaseWorkingQuestionDO() {
         t = new BaseQuestionDO();
         created = new Date().getTime();
-        progress = ProgressType.IN_PROGRESS;
     }
 
     public BaseWorkingQuestionDO(@NotNull BadgeType badgeType, int views) {
@@ -58,12 +55,8 @@ public final class BaseWorkingQuestionDO {
         this.clicks = clicks;
     }
 
-    public ProgressType getProgress() {
-        return progress;
-    }
-
-    public void setProgress(ProgressType progress) {
-        this.progress = progress;
+    public int incrementClicks() {
+        return ++clicks;
     }
 
     @Override
@@ -72,7 +65,6 @@ public final class BaseWorkingQuestionDO {
                 "created=" + created +
                 ", viewsCreated=" + viewsCreated +
                 ", clicks=" + clicks +
-                ", progress=" + progress +
                 ", " + t +
                 '}';
     }

@@ -7,8 +7,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.robyrodriguez.stackbuster.api.StackApi;
 import com.robyrodriguez.stackbuster.cache.StackBusterCache;
 import com.robyrodriguez.stackbuster.client.DefaultClient;
-import com.robyrodriguez.stackbuster.transfer.firebase.UserQuestionDO;
-import com.robyrodriguez.stackbuster.transfer.firebase.UserWorkingQuestionDO;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.UserQuestion;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.UserWorkingQuestion;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.factory.WorkingQuestionFactory;
 import com.robyrodriguez.stackbuster.transfer.stack_api.AbstractStackItemWrapperDO;
 import com.robyrodriguez.stackbuster.transfer.stack_api.StackQuestionDO;
 import com.robyrodriguez.stackbuster.transfer.stack_api.StackQuestionWrapperDO;
@@ -17,15 +18,15 @@ import com.robyrodriguez.stackbuster.types.ProgressType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Configurable;
 
 import javax.ws.rs.BadRequestException;
 
 /**
  * Checks if new items added at `/questions/user` are valid and manages corresponding `/workingQuestions/user`
  */
-@Component
-public class UserQuestionsListener implements ChildEventListener {
+@Configurable
+public class UserQuestionsListener<Q extends UserQuestion, U extends UserWorkingQuestion> implements ChildEventListener {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UserQuestionsListener.class);
 
@@ -38,9 +39,17 @@ public class UserQuestionsListener implements ChildEventListener {
     @Autowired
     private StackBusterCache cache;
 
+    private Class<Q> qClass;
+    private WorkingQuestionFactory<Q, U> workingQuestionFactory;
+
+    public UserQuestionsListener(Class<Q> qClass, WorkingQuestionFactory<Q, U> workingQuestionFactory) {
+        this.qClass = qClass;
+        this.workingQuestionFactory = workingQuestionFactory;
+    }
+
     @Override
     public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-        UserQuestionDO question = dataSnapshot.getValue(UserQuestionDO.class);
+        Q question = dataSnapshot.getValue(qClass);
         question.setId(dataSnapshot.getKey());
 
         try {
@@ -56,7 +65,7 @@ public class UserQuestionsListener implements ChildEventListener {
 
                     if (userWrapper.getItems().size() > 0) {
                         database.getReference("/workingQuestions/user/" + question.getId())
-                                .setValueAsync(new UserWorkingQuestionDO(question, stackQuestion.getView_count()));
+                                .setValueAsync(workingQuestionFactory.fromQuestion(question, stackQuestion.getView_count()));
                     } else {
                         database.getReference("/questions/user/" + question.getId()).removeValueAsync();
                     }

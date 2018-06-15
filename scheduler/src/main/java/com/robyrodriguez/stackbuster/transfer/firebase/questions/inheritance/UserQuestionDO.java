@@ -1,20 +1,17 @@
-package com.robyrodriguez.stackbuster.transfer.firebase;
+package com.robyrodriguez.stackbuster.transfer.firebase.questions.inheritance;
 
 import com.google.firebase.database.IgnoreExtraProperties;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.structure.BaseQuestion;
 
 /**
  * Question items at `/questions`
  */
 @IgnoreExtraProperties
-public class UserQuestionDO extends QuestionDO {
+public class UserQuestionDO extends QuestionDO implements BaseQuestion {
 
     private String uid;
 
     public UserQuestionDO() {
-    }
-
-    public UserQuestionDO(UserQuestionDO userQuestion, int viewsCreated) {
-
     }
 
     public String getUid() {

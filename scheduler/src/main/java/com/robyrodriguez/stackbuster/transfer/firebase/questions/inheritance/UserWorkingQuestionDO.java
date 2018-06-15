@@ -1,6 +1,9 @@
-package com.robyrodriguez.stackbuster.transfer.firebase;
+package com.robyrodriguez.stackbuster.transfer.firebase.questions.inheritance;
 
 import com.google.firebase.database.IgnoreExtraProperties;
+import com.robyrodriguez.stackbuster.service.worker.visitor.IncrementStrategyVisitor;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.UserWorkingQuestion;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.structure.BaseWorkingQuestion;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +12,7 @@ import java.util.List;
  * User-question items at `/workingQuestions`
  */
 @IgnoreExtraProperties
-public class UserWorkingQuestionDO extends AbstractWorkingQuestionDO {
+public class UserWorkingQuestionDO extends AbstractWorkingQuestionDO implements UserWorkingQuestion {
 
     private String uid;
     private List<String> addresses = new ArrayList<>();
@@ -37,6 +40,11 @@ public class UserWorkingQuestionDO extends AbstractWorkingQuestionDO {
 
     public void setAddresses(final List<String> addresses) {
         this.addresses = addresses;
+    }
+
+    @Override
+    public void accept(final IncrementStrategyVisitor visitor) throws Exception {
+        visitor.visit(this);
     }
 
     @Override

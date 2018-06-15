@@ -7,9 +7,9 @@ import com.google.firebase.database.ValueEventListener;
 import com.robyrodriguez.stackbuster.api.StackApi;
 import com.robyrodriguez.stackbuster.client.StackClient;
 import com.robyrodriguez.stackbuster.exception.StackResourceNotFoundException;
-import com.robyrodriguez.stackbuster.transfer.firebase.HistoryEntryDO;
-import com.robyrodriguez.stackbuster.transfer.firebase.UserDO;
-import com.robyrodriguez.stackbuster.transfer.firebase.WorkingQuestionDO;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.WorkingQuestion;
+import com.robyrodriguez.stackbuster.transfer.firebase.others.HistoryEntryDO;
+import com.robyrodriguez.stackbuster.transfer.firebase.others.UserDO;
 import com.robyrodriguez.stackbuster.transfer.stack_api.AbstractStackItemWrapperDO;
 import com.robyrodriguez.stackbuster.transfer.stack_api.StackQuestionDO;
 import com.robyrodriguez.stackbuster.transfer.stack_api.StackQuestionWrapperDO;
@@ -22,7 +22,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -33,7 +32,7 @@ import java.util.Map;
  * - if question meanwhile deleted by original SO owner, process is aborted
  */
 @Component
-public class QuestionStrategy implements IncrementStrategy<WorkingQuestionDO> {
+public class QuestionStrategy implements IncrementStrategy<WorkingQuestion> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(QuestionStrategy.class);
 
@@ -44,7 +43,7 @@ public class QuestionStrategy implements IncrementStrategy<WorkingQuestionDO> {
     private FirebaseDatabase database;
 
     @Override
-    public void execute(WorkingQuestionDO question) throws Exception {
+    public void execute(WorkingQuestion question) throws Exception {
         BadgeType badge = question.getBadgeType();
 
         try {
@@ -90,7 +89,7 @@ public class QuestionStrategy implements IncrementStrategy<WorkingQuestionDO> {
      *
      * @param question current question
      */
-    private void complete(WorkingQuestionDO question) {
+    private void complete(WorkingQuestion question) {
         // remove from `/workingQuestions` and add to history
         database.getReference("/history/" + question.getId())
                 .setValueAsync(new HistoryEntryDO<>(question, ProgressType.COMPLETED));
@@ -119,7 +118,7 @@ public class QuestionStrategy implements IncrementStrategy<WorkingQuestionDO> {
      *
      * @param question current question
      */
-    private void abort(WorkingQuestionDO question) {
+    private void abort(WorkingQuestion question) {
         database.getReference("/questions/default/" + question.getId() + "/progress")
                 .setValueAsync(ProgressType.ABORTED);
         database.getReference("/history/" + question.getId())
@@ -128,7 +127,7 @@ public class QuestionStrategy implements IncrementStrategy<WorkingQuestionDO> {
                 .removeValueAsync();
     }
 
-    private Map<String, Object> updateQuestion(WorkingQuestionDO question, int currentViews) {
+    private Map<String, Object> updateQuestion(WorkingQuestion question, int currentViews) {
         question.setCurrentViews(currentViews);
         return new MapBuilder()
                 .add("clicks", question.incrementClicks())

@@ -8,9 +8,9 @@ import com.robyrodriguez.stackbuster.client.StackClient;
 import com.robyrodriguez.stackbuster.exception.StackResourceNotFoundException;
 import com.robyrodriguez.stackbuster.service.RequestAnalyzerService;
 import com.robyrodriguez.stackbuster.transfer.RequestAnalyzerDO;
-import com.robyrodriguez.stackbuster.transfer.firebase.HistoryEntryDO;
-import com.robyrodriguez.stackbuster.transfer.firebase.UserDO;
-import com.robyrodriguez.stackbuster.transfer.firebase.UserWorkingQuestionDO;
+import com.robyrodriguez.stackbuster.transfer.firebase.others.HistoryEntryDO;
+import com.robyrodriguez.stackbuster.transfer.firebase.others.UserDO;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.UserWorkingQuestion;
 import com.robyrodriguez.stackbuster.types.BadgeType;
 import com.robyrodriguez.stackbuster.types.ProgressType;
 import com.robyrodriguez.stackbuster.utils.CommonUtil;
@@ -31,7 +31,7 @@ import java.util.Map;
  * - if question meanwhile deleted by original SO owner, process is aborted
  */
 @Component
-public class UserQuestionStrategy implements IncrementStrategy<UserWorkingQuestionDO> {
+public class UserQuestionStrategy implements IncrementStrategy<UserWorkingQuestion> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UserQuestionStrategy.class);
 
@@ -45,7 +45,7 @@ public class UserQuestionStrategy implements IncrementStrategy<UserWorkingQuesti
     private FirebaseDatabase database;
 
     @Override
-    public void execute(UserWorkingQuestionDO question) throws Exception {
+    public void execute(UserWorkingQuestion question) throws Exception {
         BadgeType badge = question.getBadgeType();
         RequestAnalyzerDO address = requestAnalyzerService.update();
         List<String> addresses = question.getAddresses();
@@ -84,7 +84,7 @@ public class UserQuestionStrategy implements IncrementStrategy<UserWorkingQuesti
      *
      * @param question current question
      */
-    private void complete(UserWorkingQuestionDO question) {
+    private void complete(UserWorkingQuestion question) {
         // remove from `/workingQuestions` and add to history
         database.getReference("/questions/user/" + question.getId() + "/progress")
                 .setValueAsync(ProgressType.COMPLETED);
@@ -115,7 +115,7 @@ public class UserQuestionStrategy implements IncrementStrategy<UserWorkingQuesti
      *
      * @param question current question
      */
-    private void abort(UserWorkingQuestionDO question) {
+    private void abort(UserWorkingQuestion question) {
         database.getReference("/history/" + question.getId())
                 .setValueAsync(new HistoryEntryDO<>(question, ProgressType.ABORTED));
         database.getReference("/questions/user/" + question.getId() + "/progress")
@@ -124,7 +124,7 @@ public class UserQuestionStrategy implements IncrementStrategy<UserWorkingQuesti
                 .removeValueAsync();
     }
 
-    private Map<String, Object> updateQuestion(UserWorkingQuestionDO question, String ip) {
+    private Map<String, Object> updateQuestion(UserWorkingQuestion question, String ip) {
         question.getAddresses().add(ip);
         return new MapBuilder()
                 .add("clicks", question.incrementClicks())

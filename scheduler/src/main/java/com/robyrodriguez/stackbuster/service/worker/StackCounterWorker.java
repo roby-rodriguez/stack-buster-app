@@ -3,7 +3,7 @@ package com.robyrodriguez.stackbuster.service.worker;
 import com.robyrodriguez.stackbuster.cache.StackBusterCache;
 import com.robyrodriguez.stackbuster.service.RequestAnalyzerService;
 import com.robyrodriguez.stackbuster.service.worker.dispatcher.IncrementDispatcher;
-import com.robyrodriguez.stackbuster.transfer.firebase.AbstractWorkingQuestionDO;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.structure.BaseWorkingQuestion;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,8 +31,8 @@ public class StackCounterWorker implements Runnable {
     @Override
     public void run() {
         StackCounterWorker.LOGGER.info("started scheduled conter-incrementer process");
-        for (Entry<String, AbstractWorkingQuestionDO> entry : cache.entries()) {
-            AbstractWorkingQuestionDO question = entry.getValue();
+        for (Entry<String, BaseWorkingQuestion> entry : cache.entries()) {
+            BaseWorkingQuestion question = entry.getValue();
 
             try {
                 incrementDispatcher.dispatch(question);
