@@ -4,7 +4,6 @@ import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;
 import com.robyrodriguez.stackbuster.transfer.firebase.questions.composition.structure.BaseQuestionDO;
 import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.Question;
-import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.structure.BaseQuestion;
 import com.robyrodriguez.stackbuster.types.BadgeType;
 import com.robyrodriguez.stackbuster.types.ProgressType;
 

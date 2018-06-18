@@ -2,10 +2,8 @@ package com.robyrodriguez.stackbuster.transfer.firebase.questions.composition;
 
 import com.google.firebase.database.IgnoreExtraProperties;
 import com.robyrodriguez.stackbuster.service.worker.visitor.IncrementStrategyVisitor;
-import com.robyrodriguez.stackbuster.transfer.firebase.questions.composition.contract.QuestionWrapper;
 import com.robyrodriguez.stackbuster.transfer.firebase.questions.composition.structure.BaseWorkingQuestionDO;
 import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.UserWorkingQuestion;
-import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.structure.BaseWorkingQuestion;
 import com.robyrodriguez.stackbuster.types.BadgeType;
 
 import javax.validation.constraints.NotNull;
@@ -16,7 +14,7 @@ import java.util.List;
  * User working question items at `/workingQuestions/user`
  */
 @IgnoreExtraProperties
-public class UserWorkingQuestionDO implements UserWorkingQuestion, QuestionWrapper<BaseWorkingQuestionDO> {
+public class UserWorkingQuestionDO implements UserWorkingQuestion {
 
     private BaseWorkingQuestionDO t;
     private String uid;
@@ -30,12 +28,10 @@ public class UserWorkingQuestionDO implements UserWorkingQuestion, QuestionWrapp
         uid = userQuestion.getUid();
     }
 
-    @Override
     public BaseWorkingQuestionDO getT() {
         return t;
     }
 
-    @Override
     public void setT(BaseWorkingQuestionDO t) {
         this.t = t;
     }

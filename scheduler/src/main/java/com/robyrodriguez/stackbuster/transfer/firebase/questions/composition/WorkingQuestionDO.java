@@ -2,10 +2,8 @@ package com.robyrodriguez.stackbuster.transfer.firebase.questions.composition;
 
 import com.google.firebase.database.IgnoreExtraProperties;
 import com.robyrodriguez.stackbuster.service.worker.visitor.IncrementStrategyVisitor;
-import com.robyrodriguez.stackbuster.transfer.firebase.questions.composition.contract.QuestionWrapper;
 import com.robyrodriguez.stackbuster.transfer.firebase.questions.composition.structure.BaseWorkingQuestionDO;
 import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.WorkingQuestion;
-import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.structure.BaseWorkingQuestion;
 import com.robyrodriguez.stackbuster.types.BadgeType;
 
 import javax.validation.constraints.NotNull;
@@ -14,7 +12,7 @@ import javax.validation.constraints.NotNull;
  * Working question items at `/workingQuestions/default`
  */
 @IgnoreExtraProperties
-public class WorkingQuestionDO implements WorkingQuestion, QuestionWrapper<BaseWorkingQuestionDO> {
+public class WorkingQuestionDO implements WorkingQuestion {
 
     private BaseWorkingQuestionDO t;
     private int currentViews;
@@ -27,12 +25,10 @@ public class WorkingQuestionDO implements WorkingQuestion, QuestionWrapper<BaseW
         currentViews = viewsCreated;
     }
 
-    @Override
     public BaseWorkingQuestionDO getT() {
         return t;
     }
 
-    @Override
     public void setT(BaseWorkingQuestionDO t) {
         this.t = t;
     }

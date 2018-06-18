@@ -4,14 +4,11 @@ import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;
 import com.robyrodriguez.stackbuster.types.BadgeType;
 
-import java.io.Serializable;
-
 /**
  * Root DO class for all question types
  */
 @IgnoreExtraProperties
-public abstract class AbstractQuestionDO implements Serializable {
-    private static final long serialVersionUID = 1L;
+public abstract class AbstractQuestionDO {
 
     private String id;
     private BadgeType badgeType;

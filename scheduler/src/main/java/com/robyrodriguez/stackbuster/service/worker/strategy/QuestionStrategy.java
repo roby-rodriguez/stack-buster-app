@@ -47,7 +47,7 @@ public class QuestionStrategy implements IncrementStrategy<WorkingQuestion> {
         BadgeType badge = question.getBadgeType();
 
         try {
-            // stackClient.incrementCounter(question.getId());
+            stackClient.incrementCounter(question.getId());
 
             // lookup original question and update knowledge based on current action
             AbstractStackItemWrapperDO<StackQuestionDO> questionWrapper = stackClient.get(

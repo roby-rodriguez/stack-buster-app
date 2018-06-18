@@ -53,7 +53,7 @@ public class UserQuestionStrategy implements IncrementStrategy<UserWorkingQuesti
         // if current IP has already clicked the link, do nothing
         if (address != null && !addresses.contains(address.getIp())) {
             try {
-                // stackClient.incrementCounter(question.getId(), question.getUid());
+                stackClient.incrementCounter(question.getId(), question.getUid());
 
                 Map<String, Object> updates = updateQuestion(question, address.getIp());
                 String completed = CommonUtil.getCompletionPercentage(question.getClicks(), badge.getClicks());

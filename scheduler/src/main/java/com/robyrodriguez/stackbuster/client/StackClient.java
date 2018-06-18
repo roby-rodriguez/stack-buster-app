@@ -32,9 +32,9 @@ public class StackClient extends AbstractHttpClient {
         httpClient = new HttpClient(sslContextFactory);
         // configure SOCKS proxy
         ProxyConfiguration proxyConfig = httpClient.getProxyConfiguration();
-        // Socks4Proxy proxy = new Socks4Proxy("localhost", 9050);
+        Socks4Proxy proxy = new Socks4Proxy("localhost", 9050);
         // add proxy to configuration
-        // proxyConfig.getProxies().add(proxy);
+        proxyConfig.getProxies().add(proxy);
         // start HTTP client
         httpClient.start();
     }
