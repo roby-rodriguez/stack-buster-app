@@ -67,18 +67,15 @@ public class UserQuestionsListener<Q extends UserQuestion, U extends UserWorking
                         database.getReference("/workingQuestions/user/" + question.getId())
                                 .setValueAsync(workingQuestionFactory.fromQuestion(question, stackQuestion.getView_count()));
                     } else {
-                        database.getReference("/questions/user/" + question.getId()).removeValueAsync();
+                        cleanup(question);
                     }
-
                 } else {
                     // TODO extract these strings to constant/functions
-                    database.getReference("/questions/user/" + question.getId()).removeValueAsync();
-                    UserQuestionsListener.LOGGER.info("Cleanup garbage question {}", question);
+                    cleanup(question);
                 }
             }
         } catch (BadRequestException bre) {
-            database.getReference("/questions/user/" + question.getId()).removeValueAsync();
-            UserQuestionsListener.LOGGER.info("Cleanup garbage question {}", question);
+            cleanup(question);
         } catch (Exception e) {
             UserQuestionsListener.LOGGER.error("Encountered error during sanitize {}", e);
         }
@@ -101,5 +98,10 @@ public class UserQuestionsListener<Q extends UserQuestion, U extends UserWorking
     @Override
     public void onCancelled(DatabaseError databaseError) {
         UserQuestionsListener.LOGGER.warn("onCancelled called on '/questions/user' with error={}", databaseError);
+    }
+    private void cleanup(Q question) {
+        database.getReference("/questions/user/" + question.getId()).removeValueAsync();
+        cache.delete(question.getId());
+        UserQuestionsListener.LOGGER.info("Cleanup garbage question {}", question);
     }
 }

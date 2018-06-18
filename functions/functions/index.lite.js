@@ -123,6 +123,7 @@ const trackHistory = (qid, type) => admin.database()
     .once('value', wq => {
         const wqRef = wq.ref,
             workingQuestion = wq.val()
+        if (!workingQuestion) return null
         return admin.database()
             .ref(`history/${qid}`)
             .set(Object.assign({}, workingQuestion, {

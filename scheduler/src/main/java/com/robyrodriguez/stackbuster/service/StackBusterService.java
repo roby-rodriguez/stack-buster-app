@@ -21,7 +21,7 @@ import javax.annotation.PostConstruct;
  * Main service
  */
 @Service
-@StackBusterData(structureType = StructureType.INHERITANCE)
+@StackBusterData(structureType = StructureType.COMPOSITION)
 public class StackBusterService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(StackBusterService.class);

@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Question items at `/workingQuestions/user`
+ * User working question items at `/workingQuestions/user`
  */
 @IgnoreExtraProperties
 public class UserWorkingQuestionDO implements UserWorkingQuestion, QuestionWrapper<BaseWorkingQuestionDO> {

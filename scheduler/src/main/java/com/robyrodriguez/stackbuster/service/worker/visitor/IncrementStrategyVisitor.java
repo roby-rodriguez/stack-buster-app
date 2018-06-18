@@ -7,6 +7,9 @@ import com.robyrodriguez.stackbuster.transfer.firebase.questions.composition.Wor
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ * Delegates calls to increment strategy execution to specific implementation (avoiding unnecessary use of instanceof)
+ */
 @Component
 public class IncrementStrategyVisitor {
 
@@ -36,7 +39,10 @@ public class IncrementStrategyVisitor {
 
     public void visit(com.robyrodriguez.stackbuster.transfer.firebase.questions.flat.WorkingQuestionDO workingQuestion)
             throws Exception {
-        // TODO aici e un pic mai dubash - de verificat daca are uid - daca da atunci assume user question, alfel
-        // default
+        if (workingQuestion.getUid() == null) {
+            questionStrategy.execute(workingQuestion);
+        } else {
+            userQuestionStrategy.execute(workingQuestion);
+        }
     }
 }

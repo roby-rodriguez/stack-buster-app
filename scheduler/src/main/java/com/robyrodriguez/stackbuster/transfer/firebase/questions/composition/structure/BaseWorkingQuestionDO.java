@@ -5,6 +5,9 @@ import com.robyrodriguez.stackbuster.types.BadgeType;
 import java.util.Date;
 import javax.validation.constraints.NotNull;
 
+/**
+ * Root DO class for all working question types
+ */
 public final class BaseWorkingQuestionDO {
 
     private long created;

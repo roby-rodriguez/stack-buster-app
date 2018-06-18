@@ -5,6 +5,9 @@ import com.google.firebase.database.IgnoreExtraProperties;
 import com.robyrodriguez.stackbuster.types.BadgeType;
 import com.robyrodriguez.stackbuster.types.ProgressType;
 
+/**
+ * Root DO class for all question types
+ */
 @IgnoreExtraProperties
 public final class BaseQuestionDO {
 

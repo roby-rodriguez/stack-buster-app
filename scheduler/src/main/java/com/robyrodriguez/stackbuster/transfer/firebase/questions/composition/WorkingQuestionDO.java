@@ -11,7 +11,7 @@ import com.robyrodriguez.stackbuster.types.BadgeType;
 import javax.validation.constraints.NotNull;
 
 /**
- * Question items at `/workingQuestions/default`
+ * Working question items at `/workingQuestions/default`
  */
 @IgnoreExtraProperties
 public class WorkingQuestionDO implements WorkingQuestion, QuestionWrapper<BaseWorkingQuestionDO> {

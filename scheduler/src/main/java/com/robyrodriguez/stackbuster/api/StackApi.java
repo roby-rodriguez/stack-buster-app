@@ -1,5 +1,8 @@
 package com.robyrodriguez.stackbuster.api;
 
+/**
+ * StackOverflow API URLs
+ */
 public final class StackApi {
     public static String QUESTION(String id) {
         return String.format("https://api.stackexchange"

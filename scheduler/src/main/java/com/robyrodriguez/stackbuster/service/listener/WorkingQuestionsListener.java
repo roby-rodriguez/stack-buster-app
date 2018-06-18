@@ -5,6 +5,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.robyrodriguez.stackbuster.cache.StackBusterCache;
 import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.WorkingQuestion;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.structure.BaseWorkingQuestion;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ import org.springframework.beans.factory.annotation.Configurable;
  * Reads out data from `/workingQuestions` node and stores them in cache
  */
 @Configurable
-public class WorkingQuestionsListener<W extends WorkingQuestion> implements ChildEventListener {
+public class WorkingQuestionsListener<W extends BaseWorkingQuestion> implements ChildEventListener {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(WorkingQuestionsListener.class);
 

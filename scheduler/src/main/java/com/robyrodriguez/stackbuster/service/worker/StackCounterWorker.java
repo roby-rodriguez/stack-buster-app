@@ -41,7 +41,7 @@ public class StackCounterWorker implements Runnable {
             }
         }
 
-        // allow reset of current address in use - TODO check if you annotate run with evict also works
+        // allow reset of current address in use
         requestAnalyzerService.reset();
     }
 }

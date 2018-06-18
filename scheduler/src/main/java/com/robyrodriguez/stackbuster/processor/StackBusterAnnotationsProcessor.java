@@ -17,6 +17,11 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ReflectionUtils;
 
+/**
+ * Project specific annotations processor:
+ *
+ * - auto-wires listener beans from the '@StackBusterData' component/service
+ */
 @Component
 public class StackBusterAnnotationsProcessor implements BeanPostProcessor {
 

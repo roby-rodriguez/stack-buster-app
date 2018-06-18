@@ -2,63 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68873bd7-7968-4820-8b03-97c5bfc3f3b0" name="Default" comment="changes:&#10;- update (merge) existing cache question items for better performance&#10;- bugfixing/refactoring question listeners&#10;- bugfixing/refactoring incrementer strategies&#10;- move progress from working question to question&#10;- user DO corrections">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/processor/StackBusterAnnotationsProcessor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/visitor/IncrementStrategyVisitable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/visitor/IncrementStrategyVisitor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/UserQuestionDO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/UserWorkingQuestionDO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/WorkingQuestionDO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/contract/QuestionWrapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/structure/BaseQuestionDO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/Question.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/UserQuestion.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/UserWorkingQuestion.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/WorkingQuestion.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/structure/BaseQuestion.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/structure/BaseWorkingQuestion.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/CompositeUserWorkingQuestionFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/CompositeWorkingQuestionFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/FlatWorkingQuestionFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/InheritedUserWorkingQuestionFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/InheritedWorkingQuestionFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/WorkingQuestionFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/flat/QuestionDO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/flat/WorkingQuestionDO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/types/IncrementStrategyType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/utils/ReflectionUtil.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/listener/ListenerConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase_new/UserQuestionDO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase_new/UserWorkingQuestionDO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase_new/WorkingQuestionDO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase_new/structure/BaseQuestionDO.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/AbstractQuestionDO.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/AbstractQuestionDO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/AbstractWorkingQuestionDO.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/AbstractWorkingQuestionDO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/HistoryEntryDO.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/others/HistoryEntryDO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/QuestionDO.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/QuestionDO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/UserDO.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/others/UserDO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/UserQuestionDO.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/UserQuestionDO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/UserWorkingQuestionDO.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/UserWorkingQuestionDO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/WorkingQuestionDO.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/WorkingQuestionDO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase_new/QuestionDO.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/QuestionDO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase_new/structure/BaseWorkingQuestionDO.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/structure/BaseWorkingQuestionDO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../client/public/scripts/firebase-config.js" afterPath="$PROJECT_DIR$/../client/public/scripts/firebase-config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../functions/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../functions/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../functions/functions/index.js" afterPath="$PROJECT_DIR$/../functions/functions/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../functions/functions/index.lite.js" afterPath="$PROJECT_DIR$/../functions/functions/index.lite.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterData.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterListener.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/api/StackApi.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/api/StackApi.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/cache/StackBusterCache.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/cache/StackBusterCache.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/client/StackClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/client/StackClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/controller/StackBusterController.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/controller/StackBusterController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/processor/StackBusterAnnotationsProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/processor/StackBusterAnnotationsProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/RequestAnalyzerService.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/RequestAnalyzerService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/StackBusterService.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/StackBusterService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/listener/QuestionsListener.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/listener/QuestionsListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/listener/UserQuestionsListener.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/listener/UserQuestionsListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/listener/WorkingQuestionsListener.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/listener/WorkingQuestionsListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/StackCounterWorker.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/StackCounterWorker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/dispatcher/IncrementDispatcher.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/dispatcher/IncrementDispatcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/IncrementStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/IncrementStrategy.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/QuestionStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/QuestionStrategy.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/UserQuestionStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/UserQuestionStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/visitor/IncrementStrategyVisitable.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/visitor/IncrementStrategyVisitable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/visitor/IncrementStrategyVisitor.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/visitor/IncrementStrategyVisitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/QuestionDO.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/QuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/UserQuestionDO.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/UserQuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/UserWorkingQuestionDO.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/UserWorkingQuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/WorkingQuestionDO.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/WorkingQuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/structure/BaseQuestionDO.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/structure/BaseQuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/structure/BaseWorkingQuestionDO.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/structure/BaseWorkingQuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/flat/QuestionDO.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/flat/QuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/flat/WorkingQuestionDO.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/flat/WorkingQuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/QuestionDO.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/QuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/UserQuestionDO.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/UserQuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/UserWorkingQuestionDO.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/UserWorkingQuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/WorkingQuestionDO.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/WorkingQuestionDO.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,48 +48,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="StackCounterWorker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/StackCounterWorker.java">
+      <file leaf-file-name="UserQuestionsListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/listener/UserQuestionsListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IncrementDispatcher.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/dispatcher/IncrementDispatcher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WorkingQuestionDO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/WorkingQuestionDO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+            <state relative-caret-position="777">
+              <caret line="57" column="32" lean-forward="false" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IncrementStrategyVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/visitor/IncrementStrategyVisitor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="31" column="113" lean-forward="false" selection-start-line="31" selection-start-column="92" selection-end-line="31" selection-end-column="113" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -119,67 +61,88 @@
       <file leaf-file-name="UserWorkingQuestionDO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/UserWorkingQuestionDO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="85" column="8" lean-forward="true" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="8" />
+            <state relative-caret-position="168">
+              <caret line="18" column="67" lean-forward="false" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorkingQuestionDO.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserQuestionDO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/UserQuestionDO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="7" column="46" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuestionDO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/QuestionDO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseQuestionDO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/structure/BaseQuestionDO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuestionWrapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/contract/QuestionWrapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseQuestion.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/structure/BaseQuestion.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuestionsListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/listener/QuestionsListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-357">
+              <caret line="39" column="35" lean-forward="true" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorkingQuestionsListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/listener/WorkingQuestionsListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-90">
+              <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorkingQuestionDO.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/WorkingQuestionDO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-              <folding>
-                <element signature="e#2009#2010#0" expanded="true" />
-                <element signature="e#2044#2045#0" expanded="true" />
-                <element signature="e#2111#2112#0" expanded="true" />
-                <element signature="e#2159#2160#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserWorkingQuestionDO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/UserWorkingQuestionDO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="47" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StackBusterService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/StackBusterService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StackBusterCache.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/cache/StackBusterCache.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="677">
-              <caret line="81" column="91" lean-forward="false" selection-start-line="81" selection-start-column="91" selection-end-line="81" selection-end-column="91" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WorkingQuestionDO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/flat/WorkingQuestionDO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="50" column="26" lean-forward="false" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+            <state relative-caret-position="231">
+              <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -199,9 +162,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ObjectMapper</find>
-      <find>ended</find>
-      <find>id</find>
       <find>remove</find>
       <find>snapshot</find>
       <find>default client lookup</find>
@@ -224,11 +184,14 @@
       <find>WorkingQuestion</find>
       <find>setId</find>
       <find>getProgress</find>
-      <find>incrementClicks</find>
       <find>completed</find>
       <find>getUid</find>
       <find>StackBusterData</find>
       <find>jett</find>
+      <find>incrementClicks</find>
+      <find>TODO</find>
+      <find>Cleanup garbage question</find>
+      <find>QuestionWrapper</find>
     </findStrings>
     <replaceStrings>
       <replace>WorkingQuestion</replace>
@@ -252,57 +215,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/contract/structure/BaseQuestion.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/QuestionStrategy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/contract/structure/BaseWorkingQuestion.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/contract/WorkingQuestion.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/inheritance/HistoryEntryDO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/others/HistoryEntryDO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/UserQuestionStrategy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/structure/BaseQuestion.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterStructure.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/processor/StackBusterDataProcessor2.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/flat/QuestionDO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/Question.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/AbstractWorkingQuestionFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/FlatWorkingQuestionFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/structure/BaseQuestionDO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/structure/BaseWorkingQuestionDO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/CompositeWorkingQuestionFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/CompositeUserWorkingQuestionFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/WorkingQuestionFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/InheritedUserWorkingQuestionFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/UserQuestionDO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/InheritedWorkingQuestionFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/QuestionDO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/StackCounterWorker.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/UserWorkingQuestion.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/UserQuestion.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/processor/StackBusterDataProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/listener/UserQuestionsListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/utils/CommonUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/listener/WorkingQuestionsListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/StackBusterService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/FirebaseConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/QuestionDO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/utils/ReflectionUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/processor/StackBusterAnnotationsProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/listener/QuestionsListener.java" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/types/IncrementStrategyType.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/dispatcher/IncrementStrategyVisitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/structure/BaseWorkingQuestion.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/visitor/IncrementStrategyVisitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/visitor/IncrementStrategyVisitable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/dispatcher/IncrementDispatcher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/flat/QuestionDO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/UserWorkingQuestionDO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/WorkingQuestionDO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/structure/BaseQuestionDO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/structure/BaseWorkingQuestionDO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/UserWorkingQuestionDO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/WorkingQuestionDO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/dispatcher/IncrementDispatcher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/cache/StackBusterCache.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/flat/WorkingQuestionDO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/StackCounterWorker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/RequestAnalyzerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/api/StackApi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/cache/StackBusterCache.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/controller/StackBusterController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/processor/StackBusterAnnotationsProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/visitor/IncrementStrategyVisitor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/visitor/IncrementStrategyVisitable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/QuestionDO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/UserQuestionDO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/UserQuestionDO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/QuestionStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/UserQuestionStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/listener/QuestionsListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/listener/WorkingQuestionsListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/client/StackClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/StackBusterService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/QuestionDO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/listener/UserQuestionsListener.java" />
       </list>
     </option>
   </component>
@@ -336,11 +299,6 @@
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="Stack Buster App by RobyRodriguez" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="Stack Buster App by RobyRodriguez" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
       </expand>
       <select />
@@ -515,15 +473,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="stackbuster" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scheduler" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="stackbuster" type="462c0819:PsiDirectoryNode" />
               <item name="cache" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -658,7 +607,8 @@
               <item name="transfer" type="462c0819:PsiDirectoryNode" />
               <item name="firebase" type="462c0819:PsiDirectoryNode" />
               <item name="questions" type="462c0819:PsiDirectoryNode" />
-              <item name="flat" type="462c0819:PsiDirectoryNode" />
+              <item name="composition" type="462c0819:PsiDirectoryNode" />
+              <item name="contract" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
@@ -670,7 +620,45 @@
               <item name="transfer" type="462c0819:PsiDirectoryNode" />
               <item name="firebase" type="462c0819:PsiDirectoryNode" />
               <item name="questions" type="462c0819:PsiDirectoryNode" />
-              <item name="inheritance" type="462c0819:PsiDirectoryNode" />
+              <item name="composition" type="462c0819:PsiDirectoryNode" />
+              <item name="structure" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scheduler" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="stackbuster" type="462c0819:PsiDirectoryNode" />
+              <item name="transfer" type="462c0819:PsiDirectoryNode" />
+              <item name="firebase" type="462c0819:PsiDirectoryNode" />
+              <item name="questions" type="462c0819:PsiDirectoryNode" />
+              <item name="contract" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scheduler" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="stackbuster" type="462c0819:PsiDirectoryNode" />
+              <item name="transfer" type="462c0819:PsiDirectoryNode" />
+              <item name="firebase" type="462c0819:PsiDirectoryNode" />
+              <item name="questions" type="462c0819:PsiDirectoryNode" />
+              <item name="contract" type="462c0819:PsiDirectoryNode" />
+              <item name="structure" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scheduler" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="stackbuster" type="462c0819:PsiDirectoryNode" />
+              <item name="transfer" type="462c0819:PsiDirectoryNode" />
+              <item name="firebase" type="462c0819:PsiDirectoryNode" />
+              <item name="questions" type="462c0819:PsiDirectoryNode" />
+              <item name="factory" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
@@ -692,6 +680,13 @@
             </path>
             <path>
               <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scheduler" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
@@ -718,101 +713,33 @@
               <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
               <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
-              <item name="reflect" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="sun" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="sun" type="462c0819:PsiDirectoryNode" />
-              <item name="reflect" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-beans:4.3.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-beans:4.3.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-beans-4.3.14.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-beans:4.3.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-beans-4.3.14.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="beans" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-beans:4.3.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-beans-4.3.14.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="beans" type="462c0819:PsiDirectoryNode" />
-              <item name="factory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-beans:4.3.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-beans-4.3.14.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="beans" type="462c0819:PsiDirectoryNode" />
-              <item name="factory" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-beans:4.3.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-beans-4.3.14.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="beans" type="462c0819:PsiDirectoryNode" />
-              <item name="factory" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-core:4.3.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-core:4.3.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-core-4.3.14.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-core:4.3.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-core-4.3.14.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-core:4.3.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-core-4.3.14.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.google.firebase:firebase-admin:5.11.0" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.google.firebase:firebase-admin:5.11.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="firebase-admin-5.11.0.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.google.firebase:firebase-admin:5.11.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="firebase-admin-5.11.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="firebase" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.google.firebase:firebase-admin:5.11.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="firebase-admin-5.11.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="firebase" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1012,7 +939,7 @@
       <workItem from="1525864094942" duration="126429000" />
       <workItem from="1527768473744" duration="347000" />
       <workItem from="1527768829484" duration="681000" />
-      <workItem from="1527769525974" duration="168501000" />
+      <workItem from="1527769525974" duration="186753000" />
     </task>
     <task id="LOCAL-00001" summary="Add IDEA vcs">
       <created>1517234286011</created>
@@ -1098,11 +1025,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527783040906</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="changes:&#10;- refactoring DOs - flat/composition/inheritance - switching by new annotations&#10;- add new @StackBusterData and @StackBusterListener annotations + processing&#10;- refactoring dispatcher - use visitor dp&#10;&#10;todos:&#10;- testing&#10;- fill in flat DOs">
+      <created>1529077295852</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1529077295852</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="460392000" />
+    <option name="totallyTimeSpent" value="478644000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1115,6 +1049,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-15" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32747254" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1129,15 +1064,15 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31318682" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22019334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22878624" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33296704" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33296704" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23039742" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26373628" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36263737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1177,315 +1112,113 @@
     <MESSAGE value="refactoring &amp; add stubs for batch processing" />
     <MESSAGE value="add base implementation for firebase I/O &amp; task scheduler" />
     <MESSAGE value="refactoring changes:&#10;- new cache component&#10;- stack client (TODO needs improvement)&#10;- DO hierarchy (TODO rewrite with mixins)&#10;- add listener classes&#10;- add worker + increment strategy + dispatcher&#10;- refine exception handling (question/user not found)&#10;- rest controller -&gt; is-alive service" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring changes:&#10;- new cache component&#10;- stack client (TODO needs improvement)&#10;- DO hierarchy (TODO rewrite with mixins)&#10;- add listener classes&#10;- add worker + increment strategy + dispatcher&#10;- refine exception handling (question/user not found)&#10;- rest controller -&gt; is-alive service" />
+    <MESSAGE value="changes:&#10;- refactoring DOs - flat/composition/inheritance - switching by new annotations&#10;- add new @StackBusterData and @StackBusterListener annotations + processing&#10;- refactoring dispatcher - use visitor dp&#10;&#10;todos:&#10;- testing&#10;- fill in flat DOs" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes:&#10;- refactoring DOs - flat/composition/inheritance - switching by new annotations&#10;- add new @StackBusterData and @StackBusterListener annotations + processing&#10;- refactoring dispatcher - use visitor dp&#10;&#10;todos:&#10;- testing&#10;- fill in flat DOs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/StackBusterService.java</url>
-          <line>83</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/QuestionStrategy.java</url>
+          <line>93</line>
           <properties />
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/utils/ReflectionUtil.java</url>
-          <line>21</line>
-          <properties />
-          <option name="timeStamp" value="82" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/utils/ReflectionUtil.java</url>
-          <line>29</line>
-          <properties />
-          <option name="timeStamp" value="83" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/processor/StackBusterAnnotationsProcessor.java</url>
-          <line>41</line>
-          <properties />
-          <option name="timeStamp" value="85" />
+          <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/StackBusterService.java</url>
-          <line>69</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/QuestionStrategy.java</url>
+          <line>52</line>
           <properties />
-          <option name="timeStamp" value="88" />
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/listener/UserQuestionsListener.java</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="95" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="89" />
+      <option name="time" value="96" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
-        <watch expression="qListenerClass.getConstructors()" language="JAVA" />
-        <watch expression="listenerConstructor.newInstance(doClass, workingQuestionFactory)" language="JAVA" />
+        <watch expression="dataSnapshot.getValue(qClass)" language="JAVA" />
+        <watch expression="workingQuestionFactory.fromQuestion(question, stackQuestion.getView_count())" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.m2/repository/com/google/firebase/firebase-admin/5.11.0/firebase-admin-5.11.0-sources.jar!/com/google/firebase/database/core/ChildEventRegistration.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/AbstractWorkingQuestionDO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="35" column="9" lean-forward="false" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="42">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/com/google/firebase/firebase-admin/5.11.0/firebase-admin-5.11.0-sources.jar!/com/google/firebase/database/Query.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/AbstractQuestionDO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="161" column="51" lean-forward="false" selection-start-line="161" selection-start-column="29" selection-end-line="161" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-beans/4.3.14.RELEASE/spring-beans-4.3.14.RELEASE-sources.jar!/org/springframework/beans/factory/annotation/Configurable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/WorkingQuestion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="60" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/UserWorkingQuestion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        <state relative-caret-position="42">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-core/4.3.14.RELEASE/spring-core-4.3.14.RELEASE-sources.jar!/org/springframework/util/ReflectionUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="787" column="25" lean-forward="false" selection-start-line="787" selection-start-column="20" selection-end-line="787" selection-end-column="25" />
-          <folding>
-            <element signature="e#24694#24695#0" expanded="false" />
-            <element signature="e#24730#24731#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/utils/CommonUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://X:/devtools/jdk1.8.0_92/jre/lib/rt.jar!/sun/reflect/ConstructorAccessor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://X:/devtools/jdk1.8.0_92/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="1821" column="26" lean-forward="false" selection-start-line="1821" selection-start-column="26" selection-end-line="1821" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://X:/devtools/jdk1.8.0_92/src.zip!/java/lang/reflect/Constructor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="405" column="13" lean-forward="false" selection-start-line="405" selection-start-column="13" selection-end-line="405" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/listener/WorkingQuestionsListener.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/flat/WorkingQuestionDO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/listener/UserQuestionsListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="41" column="27" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="27" />
+          <caret line="17" column="78" lean-forward="false" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1561#1562#0" expanded="true" />
+            <element signature="e#1591#1592#0" expanded="true" />
+            <element signature="e#1641#1642#0" expanded="true" />
+            <element signature="e#1679#1680#0" expanded="true" />
+            <element signature="e#1715#1716#0" expanded="true" />
+            <element signature="e#1750#1751#0" expanded="true" />
+            <element signature="e#1809#1810#0" expanded="true" />
+            <element signature="e#1857#1858#0" expanded="true" />
+            <element signature="e#1901#1902#0" expanded="true" />
+            <element signature="e#1930#1931#0" expanded="true" />
+            <element signature="e#1977#1978#0" expanded="true" />
+            <element signature="e#2013#2014#0" expanded="true" />
+            <element signature="e#2057#2058#0" expanded="true" />
+            <element signature="e#2083#2084#0" expanded="true" />
+            <element signature="e#2127#2128#0" expanded="true" />
+            <element signature="e#2157#2158#0" expanded="true" />
+            <element signature="e#2213#2214#0" expanded="true" />
+            <element signature="e#2245#2246#0" expanded="true" />
+            <element signature="e#2307#2308#0" expanded="true" />
+            <element signature="e#2349#2350#0" expanded="true" />
+            <element signature="e#2507#2508#0" expanded="true" />
+            <element signature="e#2555#2556#0" expanded="true" />
+            <element signature="e#2761#2762#0" expanded="true" />
+            <element signature="e#2789#2790#0" expanded="true" />
+            <element signature="e#2933#2934#0" expanded="true" />
+            <element signature="e#2971#2972#0" expanded="true" />
+            <element signature="e#3115#3116#0" expanded="true" />
+            <element signature="e#3157#3158#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/FirebaseConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/api/StackApi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1528982593003" expanded="false" signature="1160:1171" ph=" { " />
-            <marker date="1528982593003" expanded="false" signature="1209:1215" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/processor/StackBusterDataProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/UserQuestion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/Question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/structure/BaseQuestion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="63">
+          <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/CompositeWorkingQuestionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="5" column="108" lean-forward="false" selection-start-line="5" selection-start-column="91" selection-end-line="5" selection-end-column="108" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/structure/BaseWorkingQuestionDO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/QuestionDO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/StackBusterApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#421#422#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-beans/4.3.14.RELEASE/spring-beans-4.3.14.RELEASE-sources.jar!/org/springframework/beans/factory/annotation/InitDestroyAnnotationBeanPostProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="145" column="45" lean-forward="false" selection-start-line="145" selection-start-column="45" selection-end-line="145" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-beans/4.3.14.RELEASE/spring-beans-4.3.14.RELEASE-sources.jar!/org/springframework/beans/factory/config/AutowireCapableBeanFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="269" column="11" lean-forward="false" selection-start-line="269" selection-start-column="11" selection-end-line="269" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://X:/devtools/jdk1.8.0_92/src.zip!/java/lang/reflect/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="754" column="16" lean-forward="false" selection-start-line="754" selection-start-column="16" selection-end-line="754" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/utils/ReflectionUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/structure/BaseQuestionDO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/listener/QuestionsListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="382">
-            <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/client/AbstractHttpClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        <state relative-caret-position="399">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1500,68 +1233,120 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/client/AbstractHttpClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="57" lean-forward="true" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+        <state relative-caret-position="168">
+          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/flat/QuestionDO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/constants/Agent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/controller/StackBusterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/exception/StackResourceNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/RequestAnalyzerDO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
-          <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="43" />
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterData.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/AppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        <state relative-caret-position="210">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/FirebaseConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/types/BadgeType.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/StackBusterApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/QuestionDO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/UserQuestionDO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/WorkingQuestion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/types/ProgressType.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/others/HistoryEntryDO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        <state relative-caret-position="252">
+          <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/types/IncrementStrategyType.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/IncrementStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="33" />
+        <state relative-caret-position="84">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/structure/BaseWorkingQuestion.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/dispatcher/IncrementDispatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="87" lean-forward="false" selection-start-line="2" selection-start-column="87" selection-end-line="2" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/processor/StackBusterAnnotationsProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        <state relative-caret-position="294">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1570,29 +1355,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/QuestionStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="45" column="39" lean-forward="false" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="39" />
+        <state relative-caret-position="420">
+          <caret line="62" column="48" lean-forward="false" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://X:/devtools/jdk1.8.0_92/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="271" column="6" lean-forward="false" selection-start-line="271" selection-start-column="6" selection-end-line="271" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/cache/StackBusterCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="43" column="20" lean-forward="false" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1528708890148" expanded="true" signature="2073:4057" ph="//..." />
+            <element signature="e#1432#1433#0" expanded="true" />
+            <element signature="e#1464#1465#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/StackCounterWorker.java">
+    <entry file="jar://$USER_HOME$/.m2/repository/com/google/firebase/firebase-admin/5.11.0/firebase-admin-5.11.0-sources.jar!/com/google/firebase/database/DatabaseReference.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        <state relative-caret-position="182">
+          <caret line="178" column="25" lean-forward="false" selection-start-line="178" selection-start-column="25" selection-end-line="178" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#6441#6442#0" expanded="false" />
+            <element signature="e#6496#6497#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/visitor/IncrementStrategyVisitor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/processor/StackBusterAnnotationsProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="31" column="113" lean-forward="false" selection-start-line="31" selection-start-column="92" selection-end-line="31" selection-end-column="113" />
+        <state relative-caret-position="252">
+          <caret line="45" column="64" lean-forward="false" selection-start-line="45" selection-start-column="64" selection-end-line="45" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1722">
+          <caret line="82" column="107" lean-forward="false" selection-start-line="82" selection-start-column="107" selection-end-line="82" selection-end-column="107" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1601,84 +1411,209 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/UserWorkingQuestionDO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="47" selection-end-column="5" />
+        <state relative-caret-position="273">
+          <caret line="13" column="99" lean-forward="false" selection-start-line="13" selection-start-column="80" selection-end-line="13" selection-end-column="99" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/WorkingQuestionDO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/visitor/IncrementStrategyVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        <state relative-caret-position="182">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/UserWorkingQuestionDO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/client/StackClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="85" column="8" lean-forward="true" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="8" />
+        <state relative-caret-position="168">
+          <caret line="38" column="27" lean-forward="true" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/WorkingQuestionDO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/RequestAnalyzerService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-          <folding>
-            <element signature="e#2009#2010#0" expanded="true" />
-            <element signature="e#2044#2045#0" expanded="true" />
-            <element signature="e#2111#2112#0" expanded="true" />
-            <element signature="e#2159#2160#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/visitor/IncrementStrategyVisitable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/dispatcher/IncrementDispatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        <state relative-caret-position="546">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/cache/StackBusterCache.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/StackCounterWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="81" column="91" lean-forward="false" selection-start-line="81" selection-start-column="91" selection-end-line="81" selection-end-column="91" />
-          <folding />
+        <state relative-caret-position="462">
+          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/flat/WorkingQuestionDO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/UserQuestionStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="50" column="26" lean-forward="false" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+        <state relative-caret-position="777">
+          <caret line="58" column="72" lean-forward="false" selection-start-line="58" selection-start-column="72" selection-end-line="58" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/StackBusterService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        <state relative-caret-position="1">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/UserQuestion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/WorkingQuestionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/CompositeUserWorkingQuestionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/worker/visitor/IncrementStrategyVisitable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/structure/BaseWorkingQuestion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="49" lean-forward="false" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/UserWorkingQuestion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="54" lean-forward="true" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/structure/BaseWorkingQuestionDO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/UserQuestionDO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="46" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/Question.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/structure/BaseQuestion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/listener/WorkingQuestionsListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-90">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/listener/QuestionsListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="39" column="35" lean-forward="true" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/service/listener/UserQuestionsListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="777">
+          <caret line="57" column="32" lean-forward="false" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/QuestionDO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/structure/BaseQuestionDO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/contract/QuestionWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/UserWorkingQuestionDO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="18" column="67" lean-forward="false" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/WorkingQuestionDO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>

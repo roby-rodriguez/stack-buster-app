@@ -1,14 +1,14 @@
 package com.robyrodriguez.stackbuster.transfer.firebase.questions.inheritance;
 
 import com.google.firebase.database.IgnoreExtraProperties;
-import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.structure.BaseQuestion;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.Question;
 import com.robyrodriguez.stackbuster.types.ProgressType;
 
 /**
- * Question items at `/questions`
+ * Question items at `/questions/default`
  */
 @IgnoreExtraProperties
-public class QuestionDO extends AbstractQuestionDO implements BaseQuestion {
+public class QuestionDO extends AbstractQuestionDO implements Question {
 
     private String completed;
     private String user_id;
@@ -28,14 +28,17 @@ public class QuestionDO extends AbstractQuestionDO implements BaseQuestion {
         this.completed = completed;
     }
 
+    @Override
     public String getUser_id() {
         return user_id;
     }
 
+    @Override
     public void setUser_id(final String user_id) {
         this.user_id = user_id;
     }
 
+    @Override
     public ProgressType getProgress() {
         return progress;
     }

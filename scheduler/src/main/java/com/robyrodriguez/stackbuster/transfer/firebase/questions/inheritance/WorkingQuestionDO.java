@@ -3,10 +3,9 @@ package com.robyrodriguez.stackbuster.transfer.firebase.questions.inheritance;
 import com.google.firebase.database.IgnoreExtraProperties;
 import com.robyrodriguez.stackbuster.service.worker.visitor.IncrementStrategyVisitor;
 import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.WorkingQuestion;
-import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.structure.BaseWorkingQuestion;
 
 /**
- * Question items at `/workingQuestions`
+ * Question items at `/workingQuestions/default`
  */
 @IgnoreExtraProperties
 public class WorkingQuestionDO extends AbstractWorkingQuestionDO implements WorkingQuestion {

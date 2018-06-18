@@ -9,6 +9,9 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
+/**
+ * Cached calls to IP checker API
+ */
 @Service
 public class RequestAnalyzerService {
 

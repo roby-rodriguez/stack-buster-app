@@ -1,9 +1,11 @@
 package com.robyrodriguez.stackbuster.transfer.firebase.questions.composition;
 
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.UserQuestion;
+
 /**
- * Question items at `/questions/user`
+ * User question items at `/questions/user`
  */
-public class UserQuestionDO extends QuestionDO {
+public class UserQuestionDO extends QuestionDO implements UserQuestion {
 
     private String uid;
 
@@ -11,6 +13,7 @@ public class UserQuestionDO extends QuestionDO {
         super();
     }
 
+    @Override
     public String getUid() {
         return uid;
     }

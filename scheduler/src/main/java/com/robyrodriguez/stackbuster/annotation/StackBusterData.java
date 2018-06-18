@@ -7,6 +7,8 @@ import com.robyrodriguez.stackbuster.service.listener.WorkingQuestionsListener;
 import com.robyrodriguez.stackbuster.transfer.firebase.questions.factory.CompositeUserWorkingQuestionFactory;
 import com.robyrodriguez.stackbuster.transfer.firebase.questions.factory.CompositeWorkingQuestionFactory;
 import com.robyrodriguez.stackbuster.transfer.firebase.questions.factory.FlatWorkingQuestionFactory;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.factory.InheritedUserWorkingQuestionFactory;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.factory.InheritedWorkingQuestionFactory;
 import com.robyrodriguez.stackbuster.utils.ReflectionUtil;
 
 import java.lang.annotation.Documented;
@@ -16,6 +18,13 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import javax.validation.constraints.NotNull;
 
+/**
+ * Allows switching between data structure types to store working question data:
+ *
+ * - flat based (uses same DO for all working questions)
+ * - inheritance based (
+ * - composition based (a somewhat more flexible alternative)
+ */
 @Documented
 @Target({ ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)
@@ -67,12 +76,12 @@ public @interface StackBusterData {
         IQL(StructureType.INHERITANCE, ListenerType.QUESTION, () -> ReflectionUtil.getQuestionsListener(
                 QuestionsListener.class,
                 com.robyrodriguez.stackbuster.transfer.firebase.questions.inheritance.QuestionDO.class,
-                CompositeWorkingQuestionFactory.class
+                InheritedWorkingQuestionFactory.class
         )),
         IUQL(StructureType.INHERITANCE, ListenerType.USER_QUESTION, () -> ReflectionUtil.getQuestionsListener(
                 UserQuestionsListener.class,
                 com.robyrodriguez.stackbuster.transfer.firebase.questions.inheritance.UserQuestionDO.class,
-                CompositeUserWorkingQuestionFactory.class
+                InheritedUserWorkingQuestionFactory.class
         )),
         IWQL(StructureType.INHERITANCE, ListenerType.WORKING_QUESTION, () -> ReflectionUtil.getWorkingQuestionsListener(
                 WorkingQuestionsListener.class,

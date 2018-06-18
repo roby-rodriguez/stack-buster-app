@@ -1,19 +1,20 @@
 package com.robyrodriguez.stackbuster.transfer.firebase.questions.inheritance;
 
 import com.google.firebase.database.IgnoreExtraProperties;
-import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.structure.BaseQuestion;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.UserQuestion;
 
 /**
- * Question items at `/questions`
+ * User question items at `/questions/user`
  */
 @IgnoreExtraProperties
-public class UserQuestionDO extends QuestionDO implements BaseQuestion {
+public class UserQuestionDO extends QuestionDO implements UserQuestion {
 
     private String uid;
 
     public UserQuestionDO() {
     }
 
+    @Override
     public String getUid() {
         return uid;
     }

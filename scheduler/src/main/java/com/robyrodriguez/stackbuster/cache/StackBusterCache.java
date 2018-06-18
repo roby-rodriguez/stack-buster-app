@@ -10,6 +10,9 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * Cached Firebase data
+ */
 @Component
 public class StackBusterCache {
 
@@ -46,6 +49,12 @@ public class StackBusterCache {
         return cache.toString();
     }
 
+    /**
+     * Creates a temporary mock holding user_id (avoiding multiple calls to Firebase)
+     *
+     * @param user_id StackBuster client's uid
+     * @return mock with user_id
+     */
     private BaseWorkingQuestion mock(final String user_id) {
         return new BaseWorkingQuestion() {
 

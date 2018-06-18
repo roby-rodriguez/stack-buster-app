@@ -65,8 +65,7 @@ public class QuestionsListener<Q extends Question, W extends WorkingQuestion> im
 
                     if (CommonUtil.COMPLETED.equals(completed)) {
                         // if question already has required number of views - reject it
-                        database.getReference("/questions/default/" + question.getId()).removeValueAsync();
-                        QuestionsListener.LOGGER.info("Cleanup garbage question {}", question);
+                        cleanup(question);
                     } else {
                         // otherwise add to working questions for processing
                         database.getReference("/workingQuestions/default/" + question.getId())
@@ -74,13 +73,11 @@ public class QuestionsListener<Q extends Question, W extends WorkingQuestion> im
                     }
                 } else {
                     // TODO extract these strings to constant/functions
-                    database.getReference("/questions/default/" + question.getId()).removeValueAsync();
-                    QuestionsListener.LOGGER.info("Cleanup garbage question {}", question);
+                    cleanup(question);
                 }
             }
         } catch (BadRequestException bre) {
-            database.getReference("/questions/default/" + question.getId()).removeValueAsync();
-            QuestionsListener.LOGGER.info("Cleanup garbage question {}", question);
+            cleanup(question);
         } catch (Exception e) {
             QuestionsListener.LOGGER.error("Encountered error during sanitize {}", e);
         }
@@ -103,5 +100,10 @@ public class QuestionsListener<Q extends Question, W extends WorkingQuestion> im
     @Override
     public void onCancelled(DatabaseError databaseError) {
         QuestionsListener.LOGGER.warn("onCancelled called on '/questions/default' with error={}", databaseError);
+    }
+    private void cleanup(Q question) {
+        database.getReference("/questions/default/" + question.getId()).removeValueAsync();
+        cache.delete(question.getId());
+        QuestionsListener.LOGGER.info("Cleanup garbage question {}", question);
     }
 }

@@ -3,13 +3,12 @@ package com.robyrodriguez.stackbuster.transfer.firebase.questions.inheritance;
 import com.google.firebase.database.IgnoreExtraProperties;
 import com.robyrodriguez.stackbuster.service.worker.visitor.IncrementStrategyVisitor;
 import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.UserWorkingQuestion;
-import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.structure.BaseWorkingQuestion;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * User-question items at `/workingQuestions`
+ * Working user question items at `/workingQuestions/user`
  */
 @IgnoreExtraProperties
 public class UserWorkingQuestionDO extends AbstractWorkingQuestionDO implements UserWorkingQuestion {
