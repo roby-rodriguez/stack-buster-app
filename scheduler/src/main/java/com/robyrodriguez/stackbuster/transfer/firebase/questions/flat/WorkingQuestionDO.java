@@ -3,8 +3,7 @@ package com.robyrodriguez.stackbuster.transfer.firebase.questions.flat;
 import com.google.firebase.database.IgnoreExtraProperties;
 import com.robyrodriguez.stackbuster.service.worker.visitor.IncrementStrategyVisitor;
 import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.UserWorkingQuestion;
-import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.WorkingQuestion;
-import com.robyrodriguez.stackbuster.transfer.firebase.questions.inheritance.UserQuestionDO;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.DefaultWorkingQuestion;
 import com.robyrodriguez.stackbuster.types.BadgeType;
 
 import java.util.ArrayList;
@@ -15,7 +14,7 @@ import java.util.List;
  * Working (& user-working) questions items at `/workingQuestions`
  */
 @IgnoreExtraProperties
-public class WorkingQuestionDO implements WorkingQuestion, UserWorkingQuestion {
+public class WorkingQuestionDO implements DefaultWorkingQuestion, UserWorkingQuestion {
 
     private String id;
     private BadgeType badgeType;
@@ -30,7 +29,7 @@ public class WorkingQuestionDO implements WorkingQuestion, UserWorkingQuestion {
     public WorkingQuestionDO() {
     }
 
-    public WorkingQuestionDO(WorkingQuestionDO question, int viewsCreated) {
+    public WorkingQuestionDO(QuestionDO question, int viewsCreated) {
         this.id = question.getId();
         this.badgeType = question.getBadgeType();
         this.user_id = question.getUser_id();
@@ -105,7 +104,7 @@ public class WorkingQuestionDO implements WorkingQuestion, UserWorkingQuestion {
     }
 
     @Override
-    public void setId(final String pId) {
+    public void setId(final String id) {
         this.id = id;
     }
 

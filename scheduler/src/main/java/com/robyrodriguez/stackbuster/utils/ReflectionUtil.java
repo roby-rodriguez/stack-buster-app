@@ -17,6 +17,11 @@ public class ReflectionUtil {
         field.setAccessible(false);
     }
 
+    public static Object getQuestionsListener(@NotNull Class<?> qListenerClass) throws Exception {
+        Constructor<?> listenerConstructor = qListenerClass.getConstructor();
+        return listenerConstructor.newInstance();
+    }
+
     public static Object getQuestionsListener(@NotNull Class<?> qListenerClass, @NotNull Class<?> doClass,
             @NotNull Class<?> wqFactoryClass) throws Exception {
         Constructor<?> workingQuestionFactoryConstructor = wqFactoryClass.getConstructor();

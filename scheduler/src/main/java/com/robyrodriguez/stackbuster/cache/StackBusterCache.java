@@ -1,7 +1,7 @@
 package com.robyrodriguez.stackbuster.cache;
 
 import com.robyrodriguez.stackbuster.service.worker.visitor.IncrementStrategyVisitor;
-import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.Question;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.DefaultQuestion;
 import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.structure.BaseWorkingQuestion;
 import com.robyrodriguez.stackbuster.types.BadgeType;
 import org.springframework.stereotype.Component;
@@ -22,7 +22,7 @@ public class StackBusterCache {
         return cache.entrySet();
     }
 
-    public BaseWorkingQuestion get(Question question) {
+    public BaseWorkingQuestion get(DefaultQuestion question) {
         BaseWorkingQuestion existing = cache.get(question.getId());
         if (existing == null) {
             cache.put(question.getId(), mock(question.getUser_id()));

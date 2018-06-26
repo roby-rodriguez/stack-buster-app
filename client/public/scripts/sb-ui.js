@@ -61,15 +61,17 @@ var StackBusterUI = (new function () {
      *
      * @param id table id
      * @param questionObject question object
+     * @param type (optional) 'user' or 'default' question type
      */
-    this.buildQuestions = function (id, questionObject) {
+    this.buildQuestions = function (id, questionObject, type) {
         var table = document.getElementById(id).getElementsByTagName('tbody')[0];
         // always clear out table
-        table.innerHTML = null;
+        if (!type || type === 'user')
+            table.innerHTML = null;
 
         for (var key in questionObject) {
             if (questionObject.hasOwnProperty(key)) {
-                var question = Object.assign({}, questionObject[key], {id: key});
+                var question = Object.assign({}, questionObject[key], {id: key}, {type: type});
                 _appendQuestion(table, question)
             }
         }
@@ -109,7 +111,7 @@ var StackBusterUI = (new function () {
         var img = document.createElement('img');
         img.src = 'resources/trash.png';
         img.addEventListener('click', function () {
-            StackBusterAPI.remove(question.id)
+            StackBusterAPI.remove(question)
         });
         img.classList.add('sb-status-table-delete');
         tdi.appendChild(img);

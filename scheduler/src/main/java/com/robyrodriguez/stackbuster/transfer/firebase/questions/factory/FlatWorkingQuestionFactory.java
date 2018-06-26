@@ -7,6 +7,6 @@ public class FlatWorkingQuestionFactory implements WorkingQuestionFactory<Questi
 
     @Override
     public WorkingQuestionDO fromQuestion(final QuestionDO question, final int views) {
-        return null;
+        return new WorkingQuestionDO(question, views);
     }
 }

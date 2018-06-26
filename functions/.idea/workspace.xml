@@ -2,33 +2,221 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83a02c61-94ff-4929-9395-a4f49e63f98f" name="Default" comment="add &quot;light&quot; ruleset for validation">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase_new/contract/QuestionWrapper.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/AbstractQuestionDO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/AbstractWorkingQuestionDO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/HistoryEntryDO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/QuestionDO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/UserDO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/UserQuestionDO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/UserWorkingQuestionDO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/WorkingQuestionDO.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/.idea/jsLibraryMappings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/deploy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/deploy.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/deploy.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/structures/composite/sb-api.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/structures/composition/sb-api.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/structures/inheritance/sb-api.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../database-rules/.firebaserc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../database-rules/deploy.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../database-rules/deploy.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../database-rules/firebase.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../database-rules/structures/composition/rules.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../database-rules/structures/flat/rules.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/deploy.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/deploy.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/legacy/index.lite.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/legacy/index.ultra.lite.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/structures/inheritance/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler-annotations/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler-annotations/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler-annotations/.idea/libraries/Maven__commons_configuration_commons_configuration_1_10.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler-annotations/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler-annotations/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler-annotations/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler-annotations/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler-annotations/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler-annotations/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler-annotations/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler-annotations/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler-annotations/scheduler-annotations.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler-annotations/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler-annotations/src/main/java/com/robyrodriguez/stackbuster/processor/StackBusterMavenAnnotationsProcessor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_robyrodriguez_stackbuster_scheduler_annotations_1_0_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__commons_configuration_commons_configuration_1_10.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler/deploy.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler/deploy.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/constants/DatabasePaths.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/database/DatabaseManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/listener/DefaultQuestionsListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/listener/FirebaseListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/types/ListenerLookup.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterData.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../client/public/scripts/sb-api.js" afterPath="$PROJECT_DIR$/../client/structures/flat/sb-api.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../database-rules/rules.json" afterPath="$PROJECT_DIR$/../database-rules/structures/inheritance/rules.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../database-rules/rules.lite.json" afterPath="$PROJECT_DIR$/../database-rules/legacy/rules.lite.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/index.js" afterPath="$PROJECT_DIR$/legacy/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/index.lite.js" afterPath="$PROJECT_DIR$/structures/composition/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/index.ultra.lite.js" afterPath="$PROJECT_DIR$/structures/flat/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterListener.java" afterPath="$PROJECT_DIR$/../scheduler-annotations/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/QuestionStrategy.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/DefaultQuestionStrategy.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/QuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/DefaultQuestionDO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/WorkingQuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/DefaultWorkingQuestionDO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/Question.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/DefaultQuestion.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/WorkingQuestion.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/DefaultWorkingQuestion.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/QuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/DefaultQuestionDO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/WorkingQuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/DefaultWorkingQuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.gitignore" afterPath="$PROJECT_DIR$/../.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../README.md" afterPath="$PROJECT_DIR$/../README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../client/public/index.html" afterPath="$PROJECT_DIR$/../client/public/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../client/public/scripts/firebase-config.js" afterPath="$PROJECT_DIR$/../client/public/scripts/firebase-config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../client/public/scripts/sb-ui.js" afterPath="$PROJECT_DIR$/../client/public/scripts/sb-ui.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../database-rules/README.md" afterPath="$PROJECT_DIR$/../database-rules/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_11.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_11.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_classmate_1_3_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_classmate_1_3_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_4.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_4.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_10.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_10.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_jaxrs_jackson_jaxrs_base_2_8_4.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_jaxrs_jackson_jaxrs_base_2_8_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_jaxrs_jackson_jaxrs_json_provider_2_8_4.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_jaxrs_jackson_jaxrs_json_provider_2_8_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_8_4.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_8_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_api_common_1_2_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_api_common_1_2_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_client_google_api_client_1_23_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_client_google_api_client_1_23_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_client_google_api_client_gson_1_23_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_client_google_api_client_gson_1_23_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_gax_1_23_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_gax_1_23_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_gax_grpc_1_23_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_gax_grpc_1_23_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_gax_httpjson_0_40_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_gax_httpjson_0_40_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_grpc_proto_google_cloud_firestore_v1beta1_0_10_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_grpc_proto_google_cloud_firestore_v1beta1_0_10_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_grpc_proto_google_common_protos_1_9_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_grpc_proto_google_common_protos_1_9_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_grpc_proto_google_iam_v1_0_10_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_grpc_proto_google_iam_v1_0_10_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_apis_google_api_services_storage_v1_rev114_1_23_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_apis_google_api_services_storage_v1_rev114_1_23_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_auth_google_auth_library_credentials_0_8_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_auth_google_auth_library_credentials_0_8_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_auth_google_auth_library_oauth2_http_0_8_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_auth_google_auth_library_oauth2_http_0_8_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_auto_value_auto_value_1_4.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_auto_value_auto_value_1_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_cloud_google_cloud_core_1_27_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_cloud_google_cloud_core_1_27_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_cloud_google_cloud_core_grpc_1_27_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_cloud_google_cloud_core_grpc_1_27_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_cloud_google_cloud_core_http_1_27_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_cloud_google_cloud_core_http_1_27_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_cloud_google_cloud_firestore_0_45_0_beta.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_cloud_google_cloud_firestore_0_45_0_beta.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_cloud_google_cloud_storage_1_27_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_cloud_google_cloud_storage_1_27_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_code_gson_gson_2_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_code_gson_gson_2_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_2_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_2_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_firebase_firebase_admin_5_11_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_firebase_firebase_admin_5_11_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_http_client_google_http_client_1_23_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_http_client_google_http_client_1_23_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_http_client_google_http_client_appengine_1_23_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_http_client_google_http_client_appengine_1_23_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_http_client_google_http_client_gson_1_23_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_http_client_google_http_client_gson_1_23_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_http_client_google_http_client_jackson2_1_23_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_http_client_google_http_client_jackson2_1_23_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_http_client_google_http_client_jackson_1_23_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_http_client_google_http_client_jackson_1_23_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_oauth_client_google_oauth_client_1_23_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_oauth_client_google_oauth_client_1_23_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_5_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_5_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_protobuf_protobuf_java_util_3_5_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_protobuf_protobuf_java_util_3_5_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_2_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_2_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_auth_1_10_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_auth_1_10_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_context_1_10_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_context_1_10_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_core_1_10_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_core_1_10_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_netty_shaded_1_10_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_netty_shaded_1_10_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_protobuf_1_10_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_protobuf_1_10_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_protobuf_lite_1_10_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_protobuf_lite_1_10_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_stub_1_10_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_stub_1_10_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_buffer_4_1_22_Final.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_buffer_4_1_22_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_codec_4_1_22_Final.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_codec_4_1_22_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_22_Final.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_22_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_common_4_1_22_Final.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_common_4_1_22_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_handler_4_1_22_Final.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_handler_4_1_22_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_resolver_4_1_22_Final.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_resolver_4_1_22_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_transport_4_1_22_Final.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_transport_4_1_22_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_opencensus_opencensus_api_0_11_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_opencensus_opencensus_api_0_11_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_opencensus_opencensus_contrib_grpc_metrics_0_11_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_opencensus_opencensus_contrib_grpc_metrics_0_11_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_opencensus_opencensus_contrib_http_util_0_11_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_opencensus_opencensus_contrib_http_util_0_11_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_2.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__javax_ws_rs_javax_ws_rs_api_2_0_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__javax_ws_rs_javax_ws_rs_api_2_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__joda_time_joda_time_2_9_2.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__joda_time_joda_time_2_9_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__junit_junit_3_8_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__net_minidev_accessors_smart_1_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__net_minidev_accessors_smart_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__net_minidev_json_smart_2_2_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__net_minidev_json_smart_2_2_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_5.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_9.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_9.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_27.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_27.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_27.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_27.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_27.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_27.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_tomcat_tomcat_annotations_api_8_5_27.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_tomcat_tomcat_annotations_api_8_5_27.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_assertj_assertj_core_2_6_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_assertj_assertj_core_2_6_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_11.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_11.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_eclipse_jetty_jetty_client_9_2_3_v20140905.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_eclipse_jetty_jetty_client_9_2_3_v20140905.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_9_2_3_v20140905.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_9_2_3_v20140905.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_2_3_v20140905.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_2_3_v20140905.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_2_3_v20140905.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_2_3_v20140905.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_external_aopalliance_repackaged_2_5_0_b32.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_external_aopalliance_repackaged_2_5_0_b32.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_external_javax_inject_2_5_0_b32.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_external_javax_inject_2_5_0_b32.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_hk2_api_2_5_0_b32.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_hk2_api_2_5_0_b32.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_hk2_locator_2_5_0_b32.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_hk2_locator_2_5_0_b32.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_hk2_utils_2_5_0_b32.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_hk2_utils_2_5_0_b32.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_osgi_resource_locator_1_0_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_osgi_resource_locator_1_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_jersey_bundles_repackaged_jersey_guava_2_25_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_jersey_bundles_repackaged_jersey_guava_2_25_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_client_2_25_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_client_2_25_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_common_2_25_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_common_2_25_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_jersey_ext_jersey_entity_filtering_2_25_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_jersey_ext_jersey_entity_filtering_2_25_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_jersey_media_jersey_media_json_jackson_2_25_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_jersey_media_jersey_media_json_jackson_2_25_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_3_6_Final.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_3_6_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_json_json_20160810.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_json_json_20160810.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_4_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_25.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_25.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_25.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_25.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_5_10_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_5_10_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_5_10_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_5_10_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_5_10_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_5_10_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_5_10_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_5_10_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_5_10_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_5_10_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_5_10_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_5_10_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_5_10_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_5_10_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_1_5_10_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_1_5_10_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_1_5_10_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_1_5_10_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_aop_4_3_14_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_aop_4_3_14_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_beans_4_3_14_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_beans_4_3_14_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_context_4_3_14_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_context_4_3_14_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_core_4_3_14_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_core_4_3_14_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_expression_4_3_14_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_expression_4_3_14_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_test_4_3_14_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_test_4_3_14_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_web_4_3_14_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_web_4_3_14_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_14_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_14_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_threeten_threetenbp_1_3_3.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_threeten_threetenbp_1_3_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/README.md" afterPath="$PROJECT_DIR$/../scheduler/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/pom.xml" afterPath="$PROJECT_DIR$/../scheduler/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/cache/StackBusterCache.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/cache/StackBusterCache.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/listener/ListenerConfig.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/listener/ListenerConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/processor/StackBusterAnnotationsProcessor.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/processor/StackBusterAnnotationsProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/StackBusterService.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/StackBusterService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/listener/QuestionsListener.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/listener/QuestionsListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/listener/UserQuestionsListener.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/listener/UserQuestionsListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/listener/WorkingQuestionsListener.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/listener/WorkingQuestionsListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/worker/StackCounterWorker.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/worker/StackCounterWorker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/worker/dispatcher/IncrementDispatcher.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/worker/dispatcher/IncrementDispatcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/IncrementStrategy.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/IncrementStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/QuestionStrategy.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/QuestionStrategy.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/UserQuestionStrategy.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/UserQuestionStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase_new/QuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase_new/QuestionDO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase_new/UserWorkingQuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase_new/UserWorkingQuestionDO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase_new/WorkingQuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase_new/WorkingQuestionDO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase_new/structure/BaseWorkingQuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase_new/structure/BaseWorkingQuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/worker/visitor/IncrementStrategyVisitor.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/worker/visitor/IncrementStrategyVisitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/UserQuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/UserQuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/UserWorkingQuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/UserWorkingQuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/structure/BaseQuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/structure/BaseQuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/UserQuestion.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/UserQuestion.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/CompositeWorkingQuestionFactory.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/CompositeWorkingQuestionFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/FlatWorkingQuestionFactory.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/FlatWorkingQuestionFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/InheritedWorkingQuestionFactory.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/InheritedWorkingQuestionFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/flat/QuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/flat/QuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/flat/WorkingQuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/flat/WorkingQuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/AbstractWorkingQuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/AbstractWorkingQuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/UserQuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/UserQuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/utils/ReflectionUtil.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/utils/ReflectionUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/stack-buster-app.iml" afterPath="$PROJECT_DIR$/../scheduler/stack-buster-app.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,18 +226,19 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="stack-buster-functions.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stack-buster-functions.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions/package.json">
           <provider selected="true" editor-type-id="text-editor">
@@ -60,21 +249,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="firebase.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firebase.json">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/structures/flat/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+            <state relative-caret-position="588">
+              <caret line="49" column="55" lean-forward="false" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.lite.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/functions/index.lite.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/structures/composition/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="123" column="29" lean-forward="true" selection-start-line="123" selection-start-column="29" selection-end-line="123" selection-end-column="29" />
+            <state relative-caret-position="273">
+              <caret line="37" column="61" lean-forward="false" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -84,8 +273,8 @@
         <entry file="file://$PROJECT_DIR$/README.MD">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="252">
-                <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="53" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -93,41 +282,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.ultra.lite.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions/index.ultra.lite.js">
+      <file leaf-file-name="deploy.bat" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deploy.bat">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="25" column="57" lean-forward="false" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="progress.type.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions/types/progress.type.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="badge.type.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions/types/badge.type.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            <state relative-caret-position="105">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -179,8 +338,17 @@
         <option value="$PROJECT_DIR$/functions/types/progress.type.js" />
         <option value="$PROJECT_DIR$/.firebaserc" />
         <option value="$PROJECT_DIR$/functions/index.ultra.lite.js" />
-        <option value="$PROJECT_DIR$/functions/index.js" />
         <option value="$PROJECT_DIR$/functions/index.lite.js" />
+        <option value="$PROJECT_DIR$/functions/inheritance/index.js" />
+        <option value="$PROJECT_DIR$/functions/flat/index.js" />
+        <option value="$PROJECT_DIR$/launcher.js" />
+        <option value="$PROJECT_DIR$/structures/flat/old.js" />
+        <option value="$PROJECT_DIR$/structures/inheritance/index.js" />
+        <option value="$PROJECT_DIR$/deploy.bat" />
+        <option value="$PROJECT_DIR$/structures/flat/index.js" />
+        <option value="$PROJECT_DIR$/structures/composition/index.js" />
+        <option value="$PROJECT_DIR$/functions/index.js" />
+        <option value="$PROJECT_DIR$/../database-rules/rules.json" />
       </list>
     </option>
   </component>
@@ -203,10 +371,10 @@
     <handled-path value="$PROJECT_DIR$/functions/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+    <option name="x" value="1912" />
+    <option name="y" value="-15" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -321,9 +489,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -339,14 +508,35 @@
             <path>
               <item name="functions" type="b2602c69:ProjectViewProjectNode" />
               <item name="functions" type="462c0819:PsiDirectoryNode" />
+              <item name="legacy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="functions" type="b2602c69:ProjectViewProjectNode" />
               <item name="functions" type="462c0819:PsiDirectoryNode" />
-              <item name="types" type="462c0819:PsiDirectoryNode" />
+              <item name="structures" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="functions" type="b2602c69:ProjectViewProjectNode" />
+              <item name="functions" type="462c0819:PsiDirectoryNode" />
+              <item name="structures" type="462c0819:PsiDirectoryNode" />
+              <item name="composition" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="functions" type="b2602c69:ProjectViewProjectNode" />
+              <item name="functions" type="462c0819:PsiDirectoryNode" />
+              <item name="structures" type="462c0819:PsiDirectoryNode" />
+              <item name="flat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="functions" type="b2602c69:ProjectViewProjectNode" />
+              <item name="functions" type="462c0819:PsiDirectoryNode" />
+              <item name="structures" type="462c0819:PsiDirectoryNode" />
+              <item name="inheritance" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -357,12 +547,20 @@
     <property name="javascript.nodejs.core.library.configured.version" value="6.2.2" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../database-rules/rules.json" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\robaa\Projects\stack-buster-app\functions" />
+      <recent name="C:\Users\robaa\Projects\stack-buster-app\functions\structures" />
+      <recent name="C:\Users\robaa\Projects\stack-buster-app\functions\functions\legacy" />
       <recent name="C:\Users\robaa\Projects\stack-buster-app\functions\functions\types" />
       <recent name="C:\Users\robaa\Projects\stack-buster-functions\functions" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\robaa\Projects\stack-buster-app\functions\functions\composition" />
+      <recent name="C:\Users\robaa\Projects\stack-buster-app\functions\functions\inheritance" />
+      <recent name="C:\Users\robaa\Projects\stack-buster-app\functions\functions\flat" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -377,7 +575,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.haha.js">
+  <component name="RunManager" selected="Node.js.launcher.js">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -460,13 +658,16 @@
       <listeners />
     </configuration>
     <configuration name="haha.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="haha.js" working-dir="$PROJECT_DIR$" />
-    <list size="2">
+    <configuration name="launcher.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="launcher.js" working-dir="$PROJECT_DIR$" />
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Node.js.bin\www" />
       <item index="1" class="java.lang.String" itemvalue="Node.js.haha.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.launcher.js" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.haha.js" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.launcher.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.haha.js" />
       </list>
     </recent_temporary>
   </component>
@@ -494,7 +695,8 @@
       <workItem from="1525861891233" duration="48000" />
       <workItem from="1525861963942" duration="1072000" />
       <workItem from="1525864057109" duration="25000" />
-      <workItem from="1526374069480" duration="77450000" />
+      <workItem from="1526374069480" duration="84482000" />
+      <workItem from="1529426645528" duration="24778000" />
     </task>
     <task id="LOCAL-00001" summary="bugfixing validate uid when user-badge">
       <created>1526487123616</created>
@@ -507,38 +709,37 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143093000" />
+    <option name="totallyTimeSpent" value="174903000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <frame x="1912" y="-15" width="1936" height="1096" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28454334" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30329672" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24543501" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2835165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17185822" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28337237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4063232" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5386364" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -557,111 +758,17 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="NodeJSConfigurationType">
         <watch expression="response.toJSON()" language="JavaScript" />
         <watch expression="JSON.parse(body)" language="JavaScript" />
+        <watch expression="process.argv[2]" language="JavaScript" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/functions/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firebase.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.firebaserc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.MD">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="63">
-            <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stack-buster-functions.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/index2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firebase.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.firebaserc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.MD">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="63">
-            <caret line="3" column="17" lean-forward="true" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stack-buster-functions.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/package-lock.json" />
     <entry file="file://$PROJECT_DIR$/firebase.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -686,19 +793,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/index2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1407">
-          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/index2.js" />
     <entry file="file://$PROJECT_DIR$/stack-buster-functions.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -710,19 +809,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/index2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/index2.js" />
     <entry file="file://$PROJECT_DIR$/stack-buster-functions.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -734,19 +825,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/index2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/index2.js" />
     <entry file="file://$PROJECT_DIR$/stack-buster-functions.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -758,20 +841,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/index2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/index2.js" />
     <entry file="file://$PROJECT_DIR$/haha.js" />
     <entry file="file://$PROJECT_DIR$/stack-buster-functions.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -786,7 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -801,7 +875,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -816,59 +889,41 @@
     <entry file="file://$PROJECT_DIR$/haha.js" />
     <entry file="file://$PROJECT_DIR$/package-lock.json" />
     <entry file="file://$PROJECT_DIR$/firebase-debug.log" />
-    <entry file="file://$PROJECT_DIR$/functions/index2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="63" column="9" lean-forward="false" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/index2.js" />
     <entry file="file://$PROJECT_DIR$/stack-buster-functions.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/package-lock.json" />
-    <entry file="file://$PROJECT_DIR$/functions/node_modules/badge.type.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/node_modules/badge.type.js" />
     <entry file="file://$PROJECT_DIR$/functions/node_modules/firebase-admin/lib/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="331" column="16" lean-forward="true" selection-start-line="331" selection-start-column="16" selection-end-line="331" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/index2.js">
+    <entry file="file://$PROJECT_DIR$/functions/index2.js" />
+    <entry file="file://$PROJECT_DIR$/functions/types/badge.type.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-          <folding />
+        <state relative-caret-position="231">
+          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/package.json">
+    <entry file="file://$PROJECT_DIR$/functions/types/progress.type.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="21">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.firebaserc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -881,10 +936,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/types/badge.type.js">
+    <entry file="file://$PROJECT_DIR$/functions/flat/firebase.json" />
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/javascript/nodejs/library/node-globals-stub.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        <state relative-caret-position="126">
+          <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legacy/index.lite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2646">
+          <caret line="126" column="31" lean-forward="false" selection-start-line="126" selection-start-column="31" selection-end-line="126" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legacy/index.ultra.lite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legacy/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="33" column="19" lean-forward="false" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="908" column="0" lean-forward="false" selection-start-line="908" selection-start-column="0" selection-end-line="908" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/launcher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/structures/flat/old.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="791">
+          <caret line="109" column="29" lean-forward="true" selection-start-line="109" selection-start-column="29" selection-end-line="109" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deploy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/structures/inheritance/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="69" column="20" lean-forward="false" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -892,42 +1027,50 @@
     <entry file="file://$PROJECT_DIR$/README.MD">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="252">
-            <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="53" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/index.ultra.lite.js">
+    <entry file="file://$PROJECT_DIR$/deploy.bat">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/types/progress.type.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="23" />
+        <state relative-caret-position="105">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="57" lean-forward="false" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
+        <state relative-caret-position="321">
+          <caret line="49" column="40" lean-forward="false" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/index.lite.js">
+    <entry file="file://$PROJECT_DIR$/structures/composition/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="123" column="29" lean-forward="true" selection-start-line="123" selection-start-column="29" selection-end-line="123" selection-end-column="29" />
+        <state relative-caret-position="273">
+          <caret line="37" column="61" lean-forward="false" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../database-rules/rules.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="32" column="30" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/structures/flat/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="49" column="55" lean-forward="false" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
           <folding />
         </state>
       </provider>

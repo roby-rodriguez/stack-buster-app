@@ -15,6 +15,7 @@ public final class BaseQuestionDO {
     private BadgeType badgeType;
     private String user_id;
     private ProgressType progress;
+    private String completed;
 
     public BaseQuestionDO() {
     }
@@ -55,12 +56,22 @@ public final class BaseQuestionDO {
         this.progress = progress;
     }
 
+    public String getCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(final String completed) {
+        this.completed = completed;
+    }
+
     @Override
     public String toString() {
         return "{" +
                 "id='" + id + '\'' +
                 ", badgeType=" + badgeType +
                 ", user_id='" + user_id + '\'' +
+                ", completed='" + completed + '\'' +
+                ", progress='" + progress + '\'' +
                 '}';
     }
 }

@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="16e0e4c7-9e8d-4d17-aad2-030293de89d2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/.idea/jsLibraryMappings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/deploy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/deploy.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/deploy.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/structures/composite/sb-api.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/structures/composition/sb-api.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../client/structures/inheritance/sb-api.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../database-rules/.firebaserc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../database-rules/deploy.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../database-rules/deploy.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../database-rules/firebase.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../database-rules/structures/composition/rules.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../database-rules/structures/flat/rules.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../functions/deploy.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../functions/deploy.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../functions/legacy/index.lite.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../functions/legacy/index.ultra.lite.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../functions/structures/inheritance/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_configuration_commons_configuration_1_10.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheduler-annotations.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/processor/StackBusterMavenAnnotationsProcessor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_robyrodriguez_stackbuster_scheduler_annotations_1_0_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__commons_configuration_commons_configuration_1_10.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler/deploy.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler/deploy.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/constants/DatabasePaths.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/database/DatabaseManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/listener/DefaultQuestionsListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/listener/FirebaseListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/types/ListenerLookup.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterData.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../client/public/scripts/sb-api.js" afterPath="$PROJECT_DIR$/../client/structures/flat/sb-api.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../database-rules/rules.json" afterPath="$PROJECT_DIR$/../database-rules/structures/inheritance/rules.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../database-rules/rules.lite.json" afterPath="$PROJECT_DIR$/../database-rules/legacy/rules.lite.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../functions/functions/index.js" afterPath="$PROJECT_DIR$/../functions/legacy/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../functions/functions/index.lite.js" afterPath="$PROJECT_DIR$/../functions/structures/composition/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../functions/functions/index.ultra.lite.js" afterPath="$PROJECT_DIR$/../functions/structures/flat/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterListener.java" afterPath="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/QuestionStrategy.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/DefaultQuestionStrategy.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/QuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/DefaultQuestionDO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/WorkingQuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/DefaultWorkingQuestionDO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/Question.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/DefaultQuestion.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/WorkingQuestion.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/DefaultWorkingQuestion.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/QuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/DefaultQuestionDO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/WorkingQuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/DefaultWorkingQuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.gitignore" afterPath="$PROJECT_DIR$/../.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../README.md" afterPath="$PROJECT_DIR$/../README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../client/public/index.html" afterPath="$PROJECT_DIR$/../client/public/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../client/public/scripts/firebase-config.js" afterPath="$PROJECT_DIR$/../client/public/scripts/firebase-config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../client/public/scripts/sb-ui.js" afterPath="$PROJECT_DIR$/../client/public/scripts/sb-ui.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../database-rules/README.md" afterPath="$PROJECT_DIR$/../database-rules/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../functions/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../functions/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_11.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_11.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_classmate_1_3_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_classmate_1_3_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_4.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_4.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_10.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_10.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_jaxrs_jackson_jaxrs_base_2_8_4.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_jaxrs_jackson_jaxrs_base_2_8_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_jaxrs_jackson_jaxrs_json_provider_2_8_4.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_jaxrs_jackson_jaxrs_json_provider_2_8_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_8_4.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_8_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_api_common_1_2_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_api_common_1_2_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_client_google_api_client_1_23_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_client_google_api_client_1_23_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_client_google_api_client_gson_1_23_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_client_google_api_client_gson_1_23_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_gax_1_23_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_gax_1_23_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_gax_grpc_1_23_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_gax_grpc_1_23_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_gax_httpjson_0_40_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_gax_httpjson_0_40_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_grpc_proto_google_cloud_firestore_v1beta1_0_10_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_grpc_proto_google_cloud_firestore_v1beta1_0_10_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_grpc_proto_google_common_protos_1_9_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_grpc_proto_google_common_protos_1_9_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_grpc_proto_google_iam_v1_0_10_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_api_grpc_proto_google_iam_v1_0_10_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_apis_google_api_services_storage_v1_rev114_1_23_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_apis_google_api_services_storage_v1_rev114_1_23_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_auth_google_auth_library_credentials_0_8_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_auth_google_auth_library_credentials_0_8_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_auth_google_auth_library_oauth2_http_0_8_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_auth_google_auth_library_oauth2_http_0_8_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_auto_value_auto_value_1_4.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_auto_value_auto_value_1_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_cloud_google_cloud_core_1_27_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_cloud_google_cloud_core_1_27_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_cloud_google_cloud_core_grpc_1_27_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_cloud_google_cloud_core_grpc_1_27_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_cloud_google_cloud_core_http_1_27_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_cloud_google_cloud_core_http_1_27_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_cloud_google_cloud_firestore_0_45_0_beta.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_cloud_google_cloud_firestore_0_45_0_beta.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_cloud_google_cloud_storage_1_27_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_cloud_google_cloud_storage_1_27_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_code_gson_gson_2_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_code_gson_gson_2_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_2_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_2_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_firebase_firebase_admin_5_11_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_firebase_firebase_admin_5_11_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_http_client_google_http_client_1_23_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_http_client_google_http_client_1_23_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_http_client_google_http_client_appengine_1_23_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_http_client_google_http_client_appengine_1_23_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_http_client_google_http_client_gson_1_23_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_http_client_google_http_client_gson_1_23_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_http_client_google_http_client_jackson2_1_23_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_http_client_google_http_client_jackson2_1_23_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_http_client_google_http_client_jackson_1_23_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_http_client_google_http_client_jackson_1_23_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_oauth_client_google_oauth_client_1_23_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_oauth_client_google_oauth_client_1_23_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_5_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_5_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_protobuf_protobuf_java_util_3_5_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_google_protobuf_protobuf_java_util_3_5_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_2_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_2_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_auth_1_10_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_auth_1_10_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_context_1_10_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_context_1_10_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_core_1_10_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_core_1_10_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_netty_shaded_1_10_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_netty_shaded_1_10_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_protobuf_1_10_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_protobuf_1_10_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_protobuf_lite_1_10_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_protobuf_lite_1_10_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_stub_1_10_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_grpc_grpc_stub_1_10_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_buffer_4_1_22_Final.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_buffer_4_1_22_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_codec_4_1_22_Final.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_codec_4_1_22_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_22_Final.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_22_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_common_4_1_22_Final.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_common_4_1_22_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_handler_4_1_22_Final.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_handler_4_1_22_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_resolver_4_1_22_Final.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_resolver_4_1_22_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_transport_4_1_22_Final.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_netty_netty_transport_4_1_22_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_opencensus_opencensus_api_0_11_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_opencensus_opencensus_api_0_11_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_opencensus_opencensus_contrib_grpc_metrics_0_11_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_opencensus_opencensus_contrib_grpc_metrics_0_11_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_opencensus_opencensus_contrib_http_util_0_11_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__io_opencensus_opencensus_contrib_http_util_0_11_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_2.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__javax_ws_rs_javax_ws_rs_api_2_0_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__javax_ws_rs_javax_ws_rs_api_2_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__joda_time_joda_time_2_9_2.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__joda_time_joda_time_2_9_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__junit_junit_3_8_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__net_minidev_accessors_smart_1_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__net_minidev_accessors_smart_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__net_minidev_json_smart_2_2_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__net_minidev_json_smart_2_2_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_5.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_9.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_9.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_27.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_27.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_27.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_27.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_27.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_27.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_tomcat_tomcat_annotations_api_8_5_27.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_apache_tomcat_tomcat_annotations_api_8_5_27.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_assertj_assertj_core_2_6_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_assertj_assertj_core_2_6_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_11.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_11.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_eclipse_jetty_jetty_client_9_2_3_v20140905.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_eclipse_jetty_jetty_client_9_2_3_v20140905.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_9_2_3_v20140905.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_9_2_3_v20140905.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_2_3_v20140905.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_2_3_v20140905.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_2_3_v20140905.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_2_3_v20140905.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_external_aopalliance_repackaged_2_5_0_b32.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_external_aopalliance_repackaged_2_5_0_b32.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_external_javax_inject_2_5_0_b32.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_external_javax_inject_2_5_0_b32.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_hk2_api_2_5_0_b32.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_hk2_api_2_5_0_b32.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_hk2_locator_2_5_0_b32.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_hk2_locator_2_5_0_b32.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_hk2_utils_2_5_0_b32.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_hk2_utils_2_5_0_b32.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_osgi_resource_locator_1_0_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_hk2_osgi_resource_locator_1_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_jersey_bundles_repackaged_jersey_guava_2_25_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_jersey_bundles_repackaged_jersey_guava_2_25_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_client_2_25_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_client_2_25_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_common_2_25_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_common_2_25_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_jersey_ext_jersey_entity_filtering_2_25_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_jersey_ext_jersey_entity_filtering_2_25_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_jersey_media_jersey_media_json_jackson_2_25_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_glassfish_jersey_media_jersey_media_json_jackson_2_25_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_3_6_Final.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_3_6_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_json_json_20160810.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_json_json_20160810.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_4_0.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_25.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_25.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_25.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_25.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_5_10_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_5_10_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_5_10_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_5_10_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_5_10_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_5_10_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_5_10_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_5_10_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_5_10_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_5_10_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_5_10_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_5_10_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_5_10_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_5_10_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_1_5_10_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_1_5_10_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_1_5_10_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_1_5_10_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_aop_4_3_14_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_aop_4_3_14_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_beans_4_3_14_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_beans_4_3_14_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_context_4_3_14_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_context_4_3_14_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_core_4_3_14_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_core_4_3_14_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_expression_4_3_14_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_expression_4_3_14_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_test_4_3_14_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_test_4_3_14_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_web_4_3_14_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_web_4_3_14_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_14_RELEASE.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_14_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_threeten_threetenbp_1_3_3.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_threeten_threetenbp_1_3_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../scheduler/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/README.md" afterPath="$PROJECT_DIR$/../scheduler/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/pom.xml" afterPath="$PROJECT_DIR$/../scheduler/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/cache/StackBusterCache.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/cache/StackBusterCache.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/processor/StackBusterAnnotationsProcessor.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/processor/StackBusterAnnotationsProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/StackBusterService.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/StackBusterService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/listener/QuestionsListener.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/listener/QuestionsListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/listener/UserQuestionsListener.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/listener/UserQuestionsListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/listener/WorkingQuestionsListener.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/listener/WorkingQuestionsListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/UserQuestionStrategy.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/worker/strategy/UserQuestionStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/worker/visitor/IncrementStrategyVisitor.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/service/worker/visitor/IncrementStrategyVisitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/UserQuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/UserQuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/UserWorkingQuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/UserWorkingQuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/structure/BaseQuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/composition/structure/BaseQuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/UserQuestion.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/contract/UserQuestion.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/CompositeWorkingQuestionFactory.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/CompositeWorkingQuestionFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/FlatWorkingQuestionFactory.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/FlatWorkingQuestionFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/InheritedWorkingQuestionFactory.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/factory/InheritedWorkingQuestionFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/flat/QuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/flat/QuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/flat/WorkingQuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/flat/WorkingQuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/AbstractWorkingQuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/AbstractWorkingQuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/UserQuestionDO.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/transfer/firebase/questions/inheritance/UserQuestionDO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/utils/ReflectionUtil.java" afterPath="$PROJECT_DIR$/../scheduler/src/main/java/com/robyrodriguez/stackbuster/utils/ReflectionUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scheduler/stack-buster-app.iml" afterPath="$PROJECT_DIR$/../scheduler/stack-buster-app.iml" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="861">
+              <caret line="41" column="14" lean-forward="false" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="84">
+                <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StackBusterMavenAnnotationsProcessor.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/processor/StackBusterMavenAnnotationsProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StackBusterData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>setURL</find>
+      <find>basePath</find>
+      <find>getPath</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/scheduler-annotations/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterData.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/processor/StackBusterMavenAnnotationsProcessor.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:/#MSG/PiMa/devtools/apache-maven-3.3.9" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="scheduler-annotations" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="scheduler-annotations" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="3832" />
+    <option name="y" value="-15" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource ProjectPane="true" />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="scheduler-annotations" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scheduler-annotations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scheduler-annotations" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scheduler-annotations" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scheduler-annotations" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scheduler-annotations" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scheduler-annotations" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scheduler-annotations" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scheduler-annotations" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scheduler-annotations" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="stackbuster" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scheduler-annotations" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scheduler-annotations" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="stackbuster" type="462c0819:PsiDirectoryNode" />
+              <item name="annotation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scheduler-annotations" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scheduler-annotations" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="stackbuster" type="462c0819:PsiDirectoryNode" />
+              <item name="processor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scheduler-annotations" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\robaa\Projects\stack-buster-app\scheduler-annotations\src\main\java\com\robyrodriguez\stackbuster\annotation" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.robyrodriguez.stackbuster.annotation" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\robaa\Projects\stack-buster-app\scheduler-annotations" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="16e0e4c7-9e8d-4d17-aad2-030293de89d2" name="Default" comment="" />
+      <created>1529425436849</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1529425436849</updated>
+      <workItem from="1529425439482" duration="837000" />
+      <workItem from="1529426676286" duration="27741000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="28578000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="3832" y="-15" width="1936" height="1096" extended-state="7" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30879122" sideWeight="0.5021482" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19548872" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30879122" sideWeight="0.49785176" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15252417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.m2/settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scheduler-annotations.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/App.java" />
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://X:/devtools/jdk1.8.0_92/src.zip!/java/util/HashSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-249">
+          <caret line="116" column="11" lean-forward="false" selection-start-line="116" selection-start-column="11" selection-end-line="116" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-configuration2/2.2/commons-configuration2-2.2.jar!/org/apache/commons/configuration2/PropertiesConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-186">
+          <caret line="54" column="11" lean-forward="false" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
+          <folding>
+            <element signature="e#2595#2596#0" expanded="true" />
+            <element signature="e#2650#2651#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_6.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar!/org/apache/commons/configuration/AbstractFileConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="274" column="9" lean-forward="false" selection-start-line="274" selection-start-column="9" selection-end-line="274" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar!/org/apache/commons/configuration/PropertiesConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="53" column="11" lean-forward="false" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://X:/devtools/jdk1.8.0_92/src.zip!/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="1434" column="30" lean-forward="false" selection-start-line="1434" selection-start-column="30" selection-end-line="1434" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://X:/devtools/jdk1.8.0_92/src.zip!/java/lang/Runtime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="410" column="48" lean-forward="false" selection-start-line="410" selection-start-column="48" selection-end-line="410" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="861">
+          <caret line="41" column="14" lean-forward="false" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="84">
+            <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://X:/devtools/jdk1.8.0_92/src.zip!/java/lang/Enum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="75" column="24" lean-forward="false" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
+          <folding>
+            <element signature="e#2036#2037#0" expanded="false" />
+            <element signature="e#2063#2064#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/annotation/StackBusterListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://X:/devtools/jdk1.8.0_92/src.zip!/java/nio/file/spi/FileSystemProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="268" column="31" lean-forward="false" selection-start-line="268" selection-start-column="31" selection-end-line="268" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://X:/devtools/jdk1.8.0_92/src.zip!/java/nio/file/FileSystems.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="102" column="41" lean-forward="false" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="41" />
+          <folding>
+            <element signature="e#7920#7921#0" expanded="false" />
+            <element signature="e#7984#7985#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://X:/devtools/jdk1.8.0_92/jre/lib/rt.jar!/sun/nio/fs/WindowsFileSystem.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="156" column="25" lean-forward="false" selection-start-line="156" selection-start-column="21" selection-end-line="156" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://X:/devtools/jdk1.8.0_92/src.zip!/java/nio/file/FileSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="97" column="32" lean-forward="false" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://X:/devtools/jdk1.8.0_92/src.zip!/java/nio/file/Paths.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="83" column="47" lean-forward="false" selection-start-line="83" selection-start-column="40" selection-end-line="83" selection-end-column="47" />
+          <folding>
+            <element signature="e#2673#2674#0" expanded="false" />
+            <element signature="e#2741#2742#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/robyrodriguez/stackbuster/processor/StackBusterMavenAnnotationsProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>scheduler-annotations</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: commons-configuration:commons-configuration:1.10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

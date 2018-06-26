@@ -1,12 +1,12 @@
 package com.robyrodriguez.stackbuster.transfer.firebase.questions.factory;
 
-import com.robyrodriguez.stackbuster.transfer.firebase.questions.composition.QuestionDO;
-import com.robyrodriguez.stackbuster.transfer.firebase.questions.composition.WorkingQuestionDO;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.composition.DefaultQuestionDO;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.composition.DefaultWorkingQuestionDO;
 
-public class CompositeWorkingQuestionFactory implements WorkingQuestionFactory<QuestionDO, WorkingQuestionDO> {
+public class CompositeWorkingQuestionFactory implements WorkingQuestionFactory<DefaultQuestionDO, DefaultWorkingQuestionDO> {
 
     @Override
-    public WorkingQuestionDO fromQuestion(final QuestionDO question, final int views) {
-        return new WorkingQuestionDO(question, views);
+    public DefaultWorkingQuestionDO fromQuestion(final DefaultQuestionDO question, final int views) {
+        return new DefaultWorkingQuestionDO(question, views);
     }
 }

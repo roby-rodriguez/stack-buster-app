@@ -14,6 +14,12 @@ scheduler/src/main/resources/serviceAccountKey.json
 
 # Targets & generated sources
 scheduler/target
+scheduler-annotations/target
+functions/functions/index.js
+client/public/scripts/sb-api.js
+
+# Firebase generated cli token
+token.key
 
 # Dependencies
 functions/functions/node_modules

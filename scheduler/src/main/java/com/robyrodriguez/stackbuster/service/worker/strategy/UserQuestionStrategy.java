@@ -5,6 +5,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.robyrodriguez.stackbuster.client.StackClient;
+import com.robyrodriguez.stackbuster.constants.DatabasePaths;
 import com.robyrodriguez.stackbuster.exception.StackResourceNotFoundException;
 import com.robyrodriguez.stackbuster.service.RequestAnalyzerService;
 import com.robyrodriguez.stackbuster.transfer.RequestAnalyzerDO;
@@ -42,6 +43,9 @@ public class UserQuestionStrategy implements IncrementStrategy<UserWorkingQuesti
     private StackClient stackClient;
 
     @Autowired
+    private DatabasePaths paths;
+
+    @Autowired
     private FirebaseDatabase database;
 
     @Override
@@ -58,9 +62,9 @@ public class UserQuestionStrategy implements IncrementStrategy<UserWorkingQuesti
                 Map<String, Object> updates = updateQuestion(question, address.getIp());
                 String completed = CommonUtil.getCompletionPercentage(question.getClicks(), badge.getClicks());
 
-                database.getReference("/questions/user/" + question.getId() + "/completed")
+                database.getReference(paths.resolve(this).questionsCompleted(question.getId()))
                         .setValueAsync(completed);
-                database.getReference("/workingQuestions/user/" + question.getId())
+                database.getReference(paths.resolve(this).workingQuestions(question.getId()))
                         .updateChildren(updates, (error, firebase) -> {
                             if (error != null) {
                                 UserQuestionStrategy.LOGGER.warn("Could not update question progress for working question id {}"
@@ -86,20 +90,20 @@ public class UserQuestionStrategy implements IncrementStrategy<UserWorkingQuesti
      */
     private void complete(UserWorkingQuestion question) {
         // remove from `/workingQuestions` and add to history
-        database.getReference("/questions/user/" + question.getId() + "/progress")
+        database.getReference(paths.resolve(this).questionsProgress(question.getId()))
                 .setValueAsync(ProgressType.COMPLETED);
-        database.getReference("/history/" + question.getId())
+        database.getReference(paths.history(question.getId()))
                 .setValueAsync(new HistoryEntryDO<>(question, ProgressType.COMPLETED));
-        database.getReference("/workingQuestions/user/" + question.getId())
+        database.getReference(paths.resolve(this).workingQuestions(question.getId()))
                 .removeValueAsync();
         // update user data
-        database.getReference("/users/" + question.getUser_id())
+        database.getReference(paths.users(question.getUser_id()))
                 .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot snapshot) {
                         UserDO user = snapshot.getValue(UserDO.class);
                         int activeQuestions = user.getActiveQuestions();
-                        database.getReference("/users/" + question.getUser_id() + "/activeQuestions")
+                        database.getReference(paths.usersActiveQuestions(question.getUser_id()))
                                 .setValueAsync(activeQuestions - 1);
                     }
                     @Override
@@ -111,16 +115,16 @@ public class UserQuestionStrategy implements IncrementStrategy<UserWorkingQuesti
     }
 
     /**
-     * Question probably meanwhile deleted -> abort & move to history
+     * DefaultQuestion probably meanwhile deleted -> abort & move to history
      *
      * @param question current question
      */
     private void abort(UserWorkingQuestion question) {
-        database.getReference("/history/" + question.getId())
+        database.getReference(paths.history(question.getId()))
                 .setValueAsync(new HistoryEntryDO<>(question, ProgressType.ABORTED));
-        database.getReference("/questions/user/" + question.getId() + "/progress")
+        database.getReference(paths.resolve(this).questionsProgress(question.getId()))
                 .setValueAsync(ProgressType.ABORTED);
-        database.getReference("/workingQuestions/user/" + question.getId())
+        database.getReference(paths.resolve(this).workingQuestions(question.getId()))
                 .removeValueAsync();
     }
 

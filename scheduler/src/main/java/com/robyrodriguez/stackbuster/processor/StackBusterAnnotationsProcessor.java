@@ -2,9 +2,9 @@ package com.robyrodriguez.stackbuster.processor;
 
 import com.robyrodriguez.stackbuster.annotation.StackBusterData;
 import com.robyrodriguez.stackbuster.annotation.StackBusterData.StructureType;
-import com.robyrodriguez.stackbuster.annotation.StackBusterData.ListenerLookup;
 import com.robyrodriguez.stackbuster.annotation.StackBusterListener;
 import com.robyrodriguez.stackbuster.annotation.StackBusterListener.ListenerType;
+import com.robyrodriguez.stackbuster.types.ListenerLookup;
 import com.robyrodriguez.stackbuster.utils.ReflectionUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +12,7 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
@@ -33,6 +34,9 @@ public class StackBusterAnnotationsProcessor implements BeanPostProcessor {
     @Autowired
     private AutowireCapableBeanFactory factory;
 
+    @Autowired
+    private ConfigurableListableBeanFactory listableFactory;
+
     @Override
     public Object postProcessBeforeInitialization(final Object bean, final String beanName) throws BeansException {
         Class<?> beanClass = bean.getClass();
@@ -51,9 +55,12 @@ public class StackBusterAnnotationsProcessor implements BeanPostProcessor {
                     }
 
                     Object listener = lookup.create();
-                    factory.autowireBean(listener);
-                    Object initialized = factory.initializeBean(listener, field.getName());
-                    ReflectionUtil.updateField(field, bean, initialized);
+                    if (listener != null) {
+                        Object initialized = factory.initializeBean(listener, field.getName());
+                        listableFactory.registerSingleton(field.getName(), initialized);
+                        factory.autowireBean(initialized);
+                        ReflectionUtil.updateField(field, bean, initialized);
+                    }
                 } catch (Exception e) {
                     LOGGER.error("Fatal error: could not wire listener bean {}", e);
                     SpringApplication.exit(appContext, () -> -1);

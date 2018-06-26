@@ -1,9 +1,9 @@
 package com.robyrodriguez.stackbuster.service.worker.visitor;
 
-import com.robyrodriguez.stackbuster.service.worker.strategy.QuestionStrategy;
+import com.robyrodriguez.stackbuster.service.worker.strategy.DefaultQuestionStrategy;
 import com.robyrodriguez.stackbuster.service.worker.strategy.UserQuestionStrategy;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.composition.DefaultWorkingQuestionDO;
 import com.robyrodriguez.stackbuster.transfer.firebase.questions.composition.UserWorkingQuestionDO;
-import com.robyrodriguez.stackbuster.transfer.firebase.questions.composition.WorkingQuestionDO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -14,22 +14,22 @@ import org.springframework.stereotype.Component;
 public class IncrementStrategyVisitor {
 
     @Autowired
-    private QuestionStrategy questionStrategy;
+    private DefaultQuestionStrategy defaultQuestionStrategy;
 
     @Autowired
     private UserQuestionStrategy userQuestionStrategy;
 
-    public void visit(WorkingQuestionDO workingQuestion) throws Exception {
-        questionStrategy.execute(workingQuestion);
+    public void visit(DefaultWorkingQuestionDO workingQuestion) throws Exception {
+        defaultQuestionStrategy.execute(workingQuestion);
     }
 
     public void visit(UserWorkingQuestionDO workingQuestion) throws Exception {
         userQuestionStrategy.execute(workingQuestion);
     }
 
-    public void visit(com.robyrodriguez.stackbuster.transfer.firebase.questions.inheritance.WorkingQuestionDO workingQuestion)
+    public void visit(com.robyrodriguez.stackbuster.transfer.firebase.questions.inheritance.DefaultWorkingQuestionDO workingQuestion)
             throws Exception {
-        questionStrategy.execute(workingQuestion);
+        defaultQuestionStrategy.execute(workingQuestion);
     }
 
     public void visit(com.robyrodriguez.stackbuster.transfer.firebase.questions.inheritance.UserWorkingQuestionDO workingQuestion)
@@ -40,7 +40,7 @@ public class IncrementStrategyVisitor {
     public void visit(com.robyrodriguez.stackbuster.transfer.firebase.questions.flat.WorkingQuestionDO workingQuestion)
             throws Exception {
         if (workingQuestion.getUid() == null) {
-            questionStrategy.execute(workingQuestion);
+            defaultQuestionStrategy.execute(workingQuestion);
         } else {
             userQuestionStrategy.execute(workingQuestion);
         }

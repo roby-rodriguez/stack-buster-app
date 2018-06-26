@@ -130,10 +130,10 @@
         });
 
         function loadQuestions() {
-            StackBusterAPI.loadQuestions(function (questionsObject) {
+            StackBusterAPI.loadQuestions(function (questionsObject, type) {
                 StackBusterUI.hide('sb-status-loader-container');
                 StackBusterUI.show('sb-status-table-container');
-                StackBusterUI.buildQuestions('sb-status-table-container', questionsObject)
+                StackBusterUI.buildQuestions('sb-status-table-container', questionsObject, type)
             })
         }
 

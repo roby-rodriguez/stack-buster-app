@@ -7,6 +7,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.robyrodriguez.stackbuster.api.StackApi;
 import com.robyrodriguez.stackbuster.cache.StackBusterCache;
 import com.robyrodriguez.stackbuster.client.DefaultClient;
+import com.robyrodriguez.stackbuster.constants.DatabasePaths;
 import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.UserQuestion;
 import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.UserWorkingQuestion;
 import com.robyrodriguez.stackbuster.transfer.firebase.questions.factory.WorkingQuestionFactory;
@@ -26,12 +27,16 @@ import javax.ws.rs.BadRequestException;
  * Checks if new items added at `/questions/user` are valid and manages corresponding `/workingQuestions/user`
  */
 @Configurable
-public class UserQuestionsListener<Q extends UserQuestion, U extends UserWorkingQuestion> implements ChildEventListener {
+public class UserQuestionsListener<Q extends UserQuestion, U extends UserWorkingQuestion> implements
+        FirebaseListener<Q> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UserQuestionsListener.class);
 
     @Autowired
     private DefaultClient defaultClient;
+
+    @Autowired
+    private DatabasePaths paths;
 
     @Autowired
     private FirebaseDatabase database;
@@ -48,10 +53,7 @@ public class UserQuestionsListener<Q extends UserQuestion, U extends UserWorking
     }
 
     @Override
-    public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-        Q question = dataSnapshot.getValue(qClass);
-        question.setId(dataSnapshot.getKey());
-
+    public void process(Q question) {
         try {
             if (ProgressType.isPending(question.getProgress()) && cache.get(question) == null) {
                 // lookup original question and in case it does not exist, remove this "question" (garbage)
@@ -64,13 +66,12 @@ public class UserQuestionsListener<Q extends UserQuestion, U extends UserWorking
                             .get(StackApi.USER(question.getUid()), StackUserWrapperDO.class);
 
                     if (userWrapper.getItems().size() > 0) {
-                        database.getReference("/workingQuestions/user/" + question.getId())
+                        database.getReference(paths.resolve(this).workingQuestions(question.getId()))
                                 .setValueAsync(workingQuestionFactory.fromQuestion(question, stackQuestion.getView_count()));
                     } else {
                         cleanup(question);
                     }
                 } else {
-                    // TODO extract these strings to constant/functions
                     cleanup(question);
                 }
             }
@@ -81,26 +82,34 @@ public class UserQuestionsListener<Q extends UserQuestion, U extends UserWorking
         }
     }
     @Override
+    public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+        Q question = dataSnapshot.getValue(qClass);
+        question.setId(dataSnapshot.getKey());
+
+        process(question);
+    }
+    @Override
     public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-        UserQuestionsListener.LOGGER.info("onChildChanged called on '/questions/user' with args key={} value={}",
-                dataSnapshot.getKey(), dataSnapshot.getValue());
+        UserQuestionsListener.LOGGER.info("onChildChanged called on '{}' with args key={} value={}",
+                paths.resolve(this).root("questions"), dataSnapshot.getKey(), dataSnapshot.getValue());
     }
     @Override
     public void onChildRemoved(DataSnapshot dataSnapshot) {
-        UserQuestionsListener.LOGGER.info("onChildRemoved called on '/questions/user' with args key={} value={}",
-                dataSnapshot.getKey(), dataSnapshot.getValue());
+        UserQuestionsListener.LOGGER.info("onChildRemoved called on '{}' with args key={} value={}",
+                paths.resolve(this).root("questions"), dataSnapshot.getKey(), dataSnapshot.getValue());
     }
     @Override
     public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-        UserQuestionsListener.LOGGER.warn("onChildMoved called on '/questions/user' with args key={} value={}",
-                dataSnapshot.getKey(), dataSnapshot.getValue());
+        UserQuestionsListener.LOGGER.warn("onChildMoved called on '{}' with args key={} value={}",
+                paths.resolve(this).root("questions"), dataSnapshot.getKey(), dataSnapshot.getValue());
     }
     @Override
     public void onCancelled(DatabaseError databaseError) {
-        UserQuestionsListener.LOGGER.warn("onCancelled called on '/questions/user' with error={}", databaseError);
+        UserQuestionsListener.LOGGER.warn("onCancelled called on '{}' with error={}",
+                paths.resolve(this).root("questions"), databaseError);
     }
     private void cleanup(Q question) {
-        database.getReference("/questions/user/" + question.getId()).removeValueAsync();
+        database.getReference(paths.resolve(this).questions(question.getId())).removeValueAsync();
         cache.delete(question.getId());
         UserQuestionsListener.LOGGER.info("Cleanup garbage question {}", question);
     }

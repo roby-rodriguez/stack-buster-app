@@ -19,7 +19,7 @@ public abstract class AbstractWorkingQuestionDO extends AbstractQuestionDO {
     public AbstractWorkingQuestionDO() {
     }
 
-    public AbstractWorkingQuestionDO(QuestionDO question, int viewsCreated) {
+    public AbstractWorkingQuestionDO(DefaultQuestionDO question, int viewsCreated) {
         this.setId(question.getId());
         this.setBadgeType(question.getBadgeType());
         this.setUser_id(question.getUser_id());

@@ -1,12 +1,15 @@
 package com.robyrodriguez.stackbuster.service;
 
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.FirebaseDatabase;
 import com.robyrodriguez.stackbuster.annotation.StackBusterData;
 import com.robyrodriguez.stackbuster.annotation.StackBusterData.StructureType;
 import com.robyrodriguez.stackbuster.annotation.StackBusterListener;
 import com.robyrodriguez.stackbuster.annotation.StackBusterListener.ListenerType;
 import com.robyrodriguez.stackbuster.cache.StackBusterCache;
+import com.robyrodriguez.stackbuster.database.DatabaseManager;
+import com.robyrodriguez.stackbuster.service.listener.DefaultQuestionsListener;
+import com.robyrodriguez.stackbuster.service.listener.QuestionsListener;
+import com.robyrodriguez.stackbuster.service.listener.UserQuestionsListener;
+import com.robyrodriguez.stackbuster.service.listener.WorkingQuestionsListener;
 import com.robyrodriguez.stackbuster.service.worker.StackCounterWorker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,22 +42,25 @@ public class StackBusterService {
     private ThreadPoolTaskScheduler taskScheduler;
 
     @Autowired
-    private FirebaseDatabase database;
+    private DatabaseManager database;
 
     @Autowired
     private StackBusterCache cache;
 
-    @StackBusterListener(type = ListenerType.QUESTION)
-    private ChildEventListener questionsListener;
+    @StackBusterListener(type = ListenerType.QUESTION_DEFAULT)
+    private DefaultQuestionsListener defaultQuestionsListener;
 
-    @StackBusterListener(type = ListenerType.USER_QUESTION)
-    private ChildEventListener userQuestionsListener;
+    @StackBusterListener(type = ListenerType.QUESTION_USER)
+    private UserQuestionsListener userQuestionsListener;
 
-    @StackBusterListener(type = ListenerType.WORKING_QUESTION)
-    private ChildEventListener workingQuestionsListener;
+    @StackBusterListener
+    private QuestionsListener questionsListener;
 
-    @StackBusterListener(type = ListenerType.WORKING_USER_QUESTION)
-    private ChildEventListener userWorkingQuestionsListener;
+    @StackBusterListener(type = ListenerType.WORKING_QUESTION_DEFAULT)
+    private WorkingQuestionsListener defaultWorkingQuestionsListener;
+
+    @StackBusterListener(type = ListenerType.WORKING_QUESTION_USER)
+    private WorkingQuestionsListener userWorkingQuestionsListener;
 
     @Autowired
     private StackCounterWorker stackCounterWorker;
@@ -67,16 +73,19 @@ public class StackBusterService {
     @PostConstruct
     public void start() throws Exception {
         /* caching section */
-        this.database.getReference("/workingQuestions/default").addChildEventListener(workingQuestionsListener);
-        this.database.getReference("/workingQuestions/user").addChildEventListener(userWorkingQuestionsListener);
+        this.database.registerListeners(
+            defaultWorkingQuestionsListener,
+            userWorkingQuestionsListener
+        );
 
         /* wait for loading then spit out cache */
         Thread.sleep(cacheLoadingTimeout);
         StackBusterService.LOGGER.info("cache loaded: {}", cache);
 
         /* sanitizer section */
-        this.database.getReference("/questions/default").addChildEventListener(questionsListener);
-        this.database.getReference("/questions/user").addChildEventListener(userQuestionsListener);
+        this.database.registerListener(questionsListener);
+        this.database.registerListener(defaultQuestionsListener);
+        this.database.registerListener(userQuestionsListener);
 
         Thread.sleep(cacheLoadingTimeout);
 

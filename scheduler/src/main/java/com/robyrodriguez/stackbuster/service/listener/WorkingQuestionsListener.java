@@ -4,7 +4,6 @@ import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.robyrodriguez.stackbuster.cache.StackBusterCache;
-import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.WorkingQuestion;
 import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.structure.BaseWorkingQuestion;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,7 +42,7 @@ public class WorkingQuestionsListener<W extends BaseWorkingQuestion> implements 
     @Override
     public void onChildMoved(DataSnapshot dataSnapshot, String s) {
         WorkingQuestionsListener.LOGGER.info("onChildMoved called on '/workingQuestions' with args key={} value={}",
-                dataSnapshot.getKey(), dataSnapshot.getValue());
+            dataSnapshot.getKey(), dataSnapshot.getValue());
     }
     @Override
     public void onCancelled(DatabaseError databaseError) {

@@ -7,7 +7,7 @@ import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.UserQu
  * User question items at `/questions/user`
  */
 @IgnoreExtraProperties
-public class UserQuestionDO extends QuestionDO implements UserQuestion {
+public class UserQuestionDO extends DefaultQuestionDO implements UserQuestion {
 
     private String uid;
 

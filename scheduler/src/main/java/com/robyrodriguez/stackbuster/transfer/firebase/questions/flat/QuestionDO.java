@@ -1,7 +1,7 @@
 package com.robyrodriguez.stackbuster.transfer.firebase.questions.flat;
 
 import com.google.firebase.database.IgnoreExtraProperties;
-import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.Question;
+import com.robyrodriguez.stackbuster.transfer.firebase.questions.contract.UserQuestion;
 import com.robyrodriguez.stackbuster.types.BadgeType;
 import com.robyrodriguez.stackbuster.types.ProgressType;
 
@@ -9,7 +9,7 @@ import com.robyrodriguez.stackbuster.types.ProgressType;
  * Questions (& user-question) items at `/questions`
  */
 @IgnoreExtraProperties
-public class QuestionDO implements Question {
+public class QuestionDO implements UserQuestion {
 
     private String id;
     private BadgeType badgeType;
@@ -43,8 +43,8 @@ public class QuestionDO implements Question {
     }
 
     @Override
-    public void setId(final String pId) {
-        this.id = pId;
+    public void setId(final String id) {
+        this.id = id;
     }
 
     @Override
@@ -66,6 +66,7 @@ public class QuestionDO implements Question {
         this.badgeType = badgeType;
     }
 
+    @Override
     public String getUid() {
         return uid;
     }

@@ -59,6 +59,12 @@
       <version>5.11.0</version>
     </dependency>
     <dependency>
+      <groupId>com.robyrodriguez.stackbuster</groupId>
+      <artifactId>scheduler-annotations</artifactId>
+      <version>1.0.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
@@ -72,6 +78,63 @@
         <artifactId>spring-boot-maven-plugin</artifactId>
         <version>${springBootVersion}</version>
       </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+          <annotationProcessors>
+            <annotationProcessor>com.robyrodriguez.stackbuster.processor.StackBusterMavenAnnotationsProcessor</annotationProcessor>
+          </annotationProcessors>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.6.0</version>
+        <executions>
+          <execution>
+            <id>deploy-functions</id>
+            <phase>deploy</phase>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+            <configuration>
+              <workingDirectory>${basedir}/../functions</workingDirectory>
+              <executable>${basedir}/../functions/deploy.bat</executable>
+            </configuration>
+          </execution>
+          <execution>
+            <id>deploy-database-rules</id>
+            <phase>deploy</phase>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+            <configuration>
+              <workingDirectory>${basedir}/../database-rules</workingDirectory>
+              <executable>${basedir}/../database-rules/deploy.bat</executable>
+            </configuration>
+          </execution>
+          <execution>
+            <id>deploy-hosting</id>
+            <phase>deploy</phase>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+            <configuration>
+              <workingDirectory>${basedir}/../client</workingDirectory>
+              <executable>${basedir}/../client/deploy.bat</executable>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
+  <distributionManagement>
+    <!-- TODO adapt this to use with SSH to deploy directly to cloud IDE workspace -->
+    <repository>
+      <id>local.disk.repo</id>
+      <name>Local disk repo</name>
+      <url>file:${basedir}/target/deployment</url>
+    </repository>
+  </distributionManagement>
 </project>

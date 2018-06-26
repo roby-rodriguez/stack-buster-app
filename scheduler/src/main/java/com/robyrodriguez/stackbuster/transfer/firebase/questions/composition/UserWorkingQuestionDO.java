@@ -63,8 +63,8 @@ public class UserWorkingQuestionDO implements UserWorkingQuestion {
     }
 
     @Override
-    public void setId(final String pId) {
-        t.getT().setId(pId);
+    public void setId(final String id) {
+        t.getT().setId(id);
     }
 
     @Override
